@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33EE1E29-F8A5-4322-AFF6-FA44BAFF3505}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SalesManagment</RootNamespace>
+    <AssemblyName>SalesManagment</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\draft\ccc\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDialogs.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VIBlend.WinForms.Controls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=6feea38fef5ea0cf" />
+    <Reference Include="VIBlend.WinForms.Utilities, Version=10.1.0.0, Culture=neutral, PublicKeyToken=970a5af59bc48043" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomTextBox.designer.cs">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OffersSellPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OffersSellPrice.Designer.cs">
+      <DependentUpon>OffersSellPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsSellPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductsSellPrice.designer.cs">
+      <DependentUpon>ProductsSellPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSellPricesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductSellPricesReport.designer.cs">
+      <DependentUpon>ProductSellPricesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProductsSellPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductsSellPriceForm.Designer.cs">
+      <DependentUpon>ProductsSellPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesMainForm.designer.cs">
+      <DependentUpon>SalesMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecordSellPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordSellPriceForm.Designer.cs">
+      <DependentUpon>RecordSellPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSellPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateSellPriceForm.Designer.cs">
+      <DependentUpon>UpdateSellPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductsSellPrice.resx">
+      <DependentUpon>ProductsSellPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductSellPricesReport.resx">
+      <DependentUpon>ProductSellPricesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ProductsSellPriceForm.resx">
+      <DependentUpon>ProductsSellPriceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesMainForm.resx">
+      <DependentUpon>SalesMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordSellPriceForm.resx">
+      <DependentUpon>RecordSellPriceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateSellPriceForm.resx">
+      <DependentUpon>UpdateSellPriceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\66.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\77.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\88.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\99.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\844002_close_512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22815050_745381125647238_3436108014248455431_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26169220_778374455681238_6575113916689389907_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\29467975_815279478657402_3913470180302258176_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animated-gif-loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundF.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundF1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundF2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Basic_Dashboard_UI_minimize_restore_down_box-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camara.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camara1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car Service_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car_Service.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cash in Hand_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cash in Hand_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cash in Hand_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Collapse Arrow_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conference_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conference_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customer Support_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customer Support_50px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expand Arrow_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flow Chart_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flow Chart_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flow Chart_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\General Ledger_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginscreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male User_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male User_52px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male User_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minus_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minus_Math__32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money Bag_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notFound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notification_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notification_20px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notification_20px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notification_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notification_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POS Terminal_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle_Stroked_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle_Stroked_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shipped.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shipped_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shipped1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopping Cart_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopping Cart_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopping Cart_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopping Cart_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Total Sales_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trolley_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trolley_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unsave %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unsave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Virtual_Machine6_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\افرع-الشركه--Light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\نقطيه-البيع---white.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
