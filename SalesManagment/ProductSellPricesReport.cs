@@ -81,7 +81,7 @@ namespace SalesManagment
             PageImageBrick pageImageBrick;
 
             // Define the image to display.
-            Image pageImage = SalesManagment.Properties.Resources.Logo;
+            Image pageImage = SalesManagment.Properties.Resources.Logo3;
 
             // Display the PageImageBrick containing the DevExpress logo.
             pageImageBrick = brickGraphics.DrawPageImage(pageImage, new Rectangle(856, 0, 100, 80), BorderSide.None, Color.Transparent);
@@ -95,7 +95,7 @@ namespace SalesManagment
 
 
             // Declare text strings.
-            string devexpress = "تقرير البنود";
+            string devexpress = "تقرير أسعار البيع";
             // Specify required settings for the brick graphics.
             BrickGraphics brickGraphics2 = e.Graph;
             brickGraphics2.BackColor = Color.White;

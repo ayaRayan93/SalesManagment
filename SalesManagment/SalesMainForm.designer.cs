@@ -714,7 +714,7 @@
             this.Name = "SalesMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "المركز التجاري للسراميك";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SalesMainForm_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SalesMainForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMainContainer)).EndInit();
             this.xtraTabControlMainContainer.ResumeLayout(false);
             this.xtraTabPageMain.ResumeLayout(false);

@@ -51,6 +51,7 @@ namespace SalesManagment
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void btnProductSellPrice_LinkClicked(object sender, NavBarLinkEventArgs e)
         {
             try
@@ -78,6 +79,7 @@ namespace SalesManagment
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void btnOffers_LinkClicked(object sender, NavBarLinkEventArgs e)
         {
             try
@@ -135,6 +137,7 @@ namespace SalesManagment
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void xtraTabControlMainContainer_CloseButtonClick(object sender, EventArgs e)
         {
             try
@@ -166,7 +169,8 @@ namespace SalesManagment
                 MessageBox.Show(ex.Message);
             }
         }
-        private void SalesMainForm_FormClosed(object sender, FormClosedEventArgs e)
+     
+        private void SalesMainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (!IsTabPageSave())
             {
@@ -177,7 +181,7 @@ namespace SalesManagment
                 }
                 else if (dialogResult == DialogResult.No)
                 {
-
+                    e.Cancel = (dialogResult == DialogResult.No);
                 }
             }
             else
@@ -185,7 +189,6 @@ namespace SalesManagment
                 Environment.Exit(0);
             }
         }
-
 
         //functions
         //Products sell price
@@ -313,13 +316,14 @@ namespace SalesManagment
                 item.Appearance.ForeColor = Color.Black;
             }
         }
-    
+
+     
     }
 
     public static class connection
     {
        public static string connectionString = "SERVER=192.168.1.200;DATABASE=test;user=Devccc;PASSWORD=rootroot;CHARSET=utf8";
-    // public static string connectionString = "SERVER=localhost;DATABASE=cccLocal;user=root;PASSWORD=root;CHARSET=utf8";
+      //   public static string connectionString = "SERVER=localhost;DATABASE=cccLocal;user=root;PASSWORD=root;CHARSET=utf8";
 
     }
 }

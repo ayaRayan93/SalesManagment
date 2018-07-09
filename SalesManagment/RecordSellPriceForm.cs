@@ -19,6 +19,7 @@ namespace SalesManagment
         ProductsSellPriceForm productsSellPriceForm = null;
         XtraTabControl xtraTabControlSalesContent = null;
         bool load = false;
+
         public RecordSellPriceForm(ProductsSellPriceForm productsSellPriceForm, XtraTabControl xtraTabControlSalesContent)
         {
             try
@@ -118,66 +119,140 @@ namespace SalesManagment
             dbconnection.Close();
         }
 
+        private void comBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (load)
+            {
+                ComboBox comBox = (ComboBox)sender;
+
+                switch (comBox.Name)
+                {
+                    case "comType":
+                        txtType.Text = comType.SelectedValue.ToString();
+                        displayProducts();
+                        break;
+                    case "comFactory":
+                        txtFactory.Text = comFactory.SelectedValue.ToString();
+                        displayProducts();
+                        break;
+                    case "comGroup":
+                        txtGroup.Text = comGroup.SelectedValue.ToString();
+                        displayProducts();
+                        break;
+                    case "comProduct":
+                        txtProduct.Text = comProduct.SelectedValue.ToString();
+                        displayProducts();
+                        break;
+                }
+            }
+        }
+
+        private void txtBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox txtBox = (TextBox)sender;
+            string query;
+            MySqlCommand com;
+            string Name;
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+                    if (txtBox.Text != "")
+                    {
+                        dbconnection.Open();
+                        switch (txtBox.Name)
+                        {
+                            case "txtType":
+                                query = "select Type_Name from type where Type_ID='" + txtType.Text + "'";
+                                com = new MySqlCommand(query, dbconnection);
+                                if (com.ExecuteScalar() != null)
+                                {
+                                    Name = (string)com.ExecuteScalar();
+                                    comType.Text = Name;
+                                    txtFactory.Focus();
+                                    dbconnection.Close();
+                                    displayProducts();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("there is no item with this id");
+                                    dbconnection.Close();
+                                    return;
+                                }
+                                break;
+                            case "txtFactory":
+                                query = "select Factory_Name from factory where Factory_ID='" + txtFactory.Text + "'";
+                                com = new MySqlCommand(query, dbconnection);
+                                if (com.ExecuteScalar() != null)
+                                {
+                                    Name = (string)com.ExecuteScalar();
+                                    comFactory.Text = Name;
+                                    txtGroup.Focus();
+                                    dbconnection.Close();
+                                    displayProducts();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("there is no item with this id");
+                                    dbconnection.Close();
+                                    return;
+                                }
+                                break;
+                            case "txtGroup":
+                                query = "select Group_Name from groupo where Group_ID='" + txtGroup.Text + "'";
+                                com = new MySqlCommand(query, dbconnection);
+                                if (com.ExecuteScalar() != null)
+                                {
+                                    Name = (string)com.ExecuteScalar();
+                                    comGroup.Text = Name;
+                                    txtProduct.Focus();
+                                    dbconnection.Close();
+                                    displayProducts();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("there is no item with this id");
+                                    dbconnection.Close();
+                                    return;
+                                }
+                                break;
+                            case "txtProduct":
+                                query = "select Product_Name from product where Product_ID='" + txtProduct.Text + "'";
+                                com = new MySqlCommand(query, dbconnection);
+                                if (com.ExecuteScalar() != null)
+                                {
+                                    Name = (string)com.ExecuteScalar();
+                                    comProduct.Text = Name;
+                                    txtType.Focus();
+                                    dbconnection.Close();
+                                    displayProducts();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("there is no item with this id");
+                                    dbconnection.Close();
+                                    return;
+                                }
+                                break;
+                        }
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                dbconnection.Close();
+            }
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             try
             {
-                string q1, q2, q3, q4, fQuery = "";
-                if (txtType.Text == "")
-                {
-                    q1 = "select Type_ID from data";
-                }
-                else
-                {
-                    q1 = txtType.Text;
-                }
-                if (txtFactory.Text == "")
-                {
-                    q2 = "select Factory_ID from data";
-                }
-                else
-                {
-                    q2 = txtFactory.Text;
-                }
-                if (txtProduct.Text == "")
-                {
-                    q3 = "select Product_ID from data";
-                }
-                else
-                {
-                    q3 = txtProduct.Text;
-                }
-                if (txtGroup.Text == "")
-                {
-                    q4 = "select Group_ID from data";
-                }
-                else
-                {
-                    q4 = txtGroup.Text;
-                }
-                if (comSize.Text != "")
-                {
-                    fQuery += "and data.Size='" + comSize.Text + "'";
-                }
-                if (txtClassification.Text != "")
-                {
-                    fQuery += "and data.Classification='" + txtClassification.Text + "'";
-                }
-                if (comColor.Text != "")
-                {
-                    fQuery += "and data.Color='" + comColor.Text + "'";
-                }
-                if (comSort.Text != "")
-                {
-                    fQuery += "and data.Sort='" + comSort.Text + "'";
-                }
-
-                string query = "SELECT data.Code as 'الكود',product.Product_Name as 'الصنف',type.Type_Name as 'النوع',factory.Factory_Name as 'المصنع',groupo.Group_Name as 'المجموعة',color.Color_Name as 'اللون',size.Size_Value as 'المقاس',sort.Sort_Value as 'الفرز',data.Classification as 'التصنيف',data.Description as 'الوصف',data.Carton as 'الكرتنة' from data INNER JOIN type ON type.Type_ID = data.Type_ID INNER JOIN product ON product.Product_ID = data.Product_ID INNER JOIN factory ON data.Factory_ID = factory.Factory_ID INNER JOIN groupo ON data.Group_ID = groupo.Group_ID LEFT outer JOIN color ON data.Color_ID = color.Color_ID LEFT outer  JOIN size ON data.Size_ID = size.Size_ID LEFT outer  JOIN sort ON data.Sort_ID = sort.Sort_ID where  data.Type_ID IN(" + q1 + ") and  data.Factory_ID  IN(" + q2 + ") and  data.Product_ID  IN(" + q3 + ") and data.Group_ID IN (" + q4 + ") " + fQuery;
-                MySqlDataAdapter da = new MySqlDataAdapter(query, dbconnection);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                gridControl1.DataSource = dt;
-                fQuery = "";
+                displayProducts();
             }
             catch (Exception ex)
             {
@@ -245,79 +320,129 @@ namespace SalesManagment
             }
         }
 
+        private void comType_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (load)
+                {
+                    displayProducts();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                dbconnection.Open();
-                double price = double.Parse(txtPrice.Text);
-                double SellPercent = double.Parse(txtSell.Text);
-
-                if (radioQata3y.Checked == true)
+                if (txtCode.Text != "" || chBoxSelectAll.Checked)
                 {
-                    #region set qata3yPrice for list item
-                    if (txtCode.Text == "")
+                    dbconnection.Open();
+                    double price = double.Parse(txtPrice.Text);
+                    double SellPercent = double.Parse(txtSell.Text);
+
+                    if (radioQata3y.Checked == true)
                     {
-                        double NormalPercent = double.Parse(txtNormal.Text);
-                        double UnNormalPercent = double.Parse(txtUnNormal.Text);
-                        DataTable dataTable = (DataTable)gridControl1.DataSource;
-                        for (int i = 0; i <dataTable.Rows.Count ; i++)
+                        #region set qata3yPrice for list item
+                        if (txtCode.Text == "" && chBoxSelectAll.Checked)
                         {
-                            string query = "INSERT INTO sellprice (Price_Type, Sell_Price, ProfitRatio, Code, Sell_Discount, Price, PercentageDelegate,Date) VALUES(?Price_Type,?Sell_Price,?ProfitRatio,?Code,?Sell_Discount,?Buy_Discount,?Price,?PercentageDelegate,?Date)";
-                            MySqlCommand command = new MySqlCommand(query,dbconnection);
+                            double NormalPercent = double.Parse(txtNormal.Text);
+                            double UnNormalPercent = double.Parse(txtUnNormal.Text);
+                            DataTable dataTable = (DataTable)gridControl1.DataSource;
+                            for (int i = 0; i < dataTable.Rows.Count; i++)
+                            {
+                                string query = "INSERT INTO sellprice (Price_Type, Sell_Price, ProfitRatio, Code, Price, PercentageDelegate,Date) VALUES(?Price_Type,?Sell_Price,?ProfitRatio,?Code,?Price,?PercentageDelegate,?Date)";
+                                MySqlCommand command = new MySqlCommand(query, dbconnection);
+                                command.Parameters.AddWithValue("?Price_Type", "قطعى");
+                                command.Parameters.AddWithValue("?Sell_Price", price + (price * SellPercent / 100.0));
+                                command.Parameters.AddWithValue("?Code", dataTable.Rows[i][0].ToString());
+                                command.Parameters.AddWithValue("?ProfitRatio", double.Parse(txtSell.Text));
+                                command.Parameters.AddWithValue("?Price", price);
+                                command.Parameters.AddWithValue("?PercentageDelegate", double.Parse(txtPercentageDelegate.Text));
+                                command.Parameters.Add("?Date", MySqlDbType.Date);
+                                command.Parameters["?Date"].Value = DateTime.Now.Date;
+
+                                command.ExecuteNonQuery();
+                                UserControl.UserRecord("sellprice", "اضافة", dataTable.Rows[i][0].ToString(), DateTime.Now, dbconnection);
+                                dbconnection.Open();
+                            }
+                        }
+                        #endregion
+                        #region set qata3yPrice for one item
+                        else
+                        {
+                            string query = "INSERT INTO sellprice (Price_Type, Sell_Price, ProfitRatio, Code, Price, PercentageDelegate,Date) VALUES(?Price_Type,?Sell_Price,?ProfitRatio,?Code,?Price,?PercentageDelegate,?Date)";
+                            MySqlCommand command = new MySqlCommand(query, dbconnection);
                             command.Parameters.AddWithValue("?Price_Type", "قطعى");
                             command.Parameters.AddWithValue("?Sell_Price", price + (price * SellPercent / 100.0));
-                            command.Parameters.AddWithValue("?Code", dataTable.Rows[i][0].ToString());
+                            command.Parameters.AddWithValue("?Code", txtCode.Text);
                             command.Parameters.AddWithValue("?ProfitRatio", double.Parse(txtSell.Text));
                             command.Parameters.AddWithValue("?Price", price);
                             command.Parameters.AddWithValue("?PercentageDelegate", double.Parse(txtPercentageDelegate.Text));
-                            command.Parameters.Add("?Date", MySqlDbType.Date).Value = DateTime.Now.Date;
-                            
+                            command.Parameters.Add("?Date", MySqlDbType.Date);
+                            command.Parameters["?Date"].Value = DateTime.Now.Date;
+
+
                             command.ExecuteNonQuery();
-                            UserControl.UserRecord("sellprice", "اضافة", dataTable.Rows[i][0].ToString(), DateTime.Now, dbconnection);
+                            UserControl.UserRecord("sellprice", "اضافة", txtCode.Text, DateTime.Now, dbconnection);
+                            dbconnection.Open();
                         }
+                        #endregion
                     }
-                    #endregion
-                    #region set qata3yPrice for one item
                     else
                     {
-                        string query = "INSERT INTO sellprice (Price_Type, Sell_Price, ProfitRatio, Code, Price, PercentageDelegate) VALUES(?Price_Type,?Sell_Price,?ProfitRatio,?Code,?Price,?PercentageDelegate)";
-                        MySqlCommand command = new MySqlCommand(query, dbconnection);
-                        command.Parameters.AddWithValue("?Price_Type", "قطعى");
-                        command.Parameters.AddWithValue("?Sell_Price", price + (price * SellPercent / 100.0));
-                        command.Parameters.AddWithValue("?Code", txtCode.Text);
-                        command.Parameters.AddWithValue("?ProfitRatio", double.Parse(txtSell.Text));
-                        command.Parameters.AddWithValue("?Price", price);
-                        command.Parameters.AddWithValue("?PercentageDelegate", double.Parse(txtPercentageDelegate.Text));
-                        command.Parameters.Add("?Date", MySqlDbType.Date);
-                        command.Parameters["?Date"].Value = DateTime.Now.Date;
-
-
-                        command.ExecuteNonQuery();
-                        UserControl.UserRecord("sellprice", "اضافة", txtCode.Text, DateTime.Now, dbconnection);
-                    }
-                    #endregion
-                }
-                else
-                {
-                    #region set priceList for collection of items
-                    if (txtCode.Text == "")
-                    {
-                        double NormalPercent = double.Parse(txtNormal.Text);
-                        double unNormalPercent = double.Parse(txtUnNormal.Text);
-
-                        double sellPrice = (price + NormalPercent) - ((price + NormalPercent) * SellPercent / 100.0);
-
-                        sellPrice = sellPrice + unNormalPercent;
-                        DataTable dataTable = (DataTable)gridControl1.DataSource;
-                        for (int i = 0; i < dataTable.Rows.Count; i++)
+                        #region set priceList for collection of items
+                        if (txtCode.Text == "" && chBoxSelectAll.Checked)
                         {
-                       
-                            string query= "INSERT INTO sellprice (Price_Type,Sell_Price,Code,Sell_Discount,Price,Normal_Increase,Categorical_Increase,PercentageDelegate,Date) VALUES (?Price_Type,?Sell_Price,?Code,?Sell_Discount,?Price,?Normal_Increase,?Categorical_Increase,?PercentageDelegate,?Date)";
-                            MySqlCommand command = new MySqlCommand(query,dbconnection);
+                            double NormalPercent = double.Parse(txtNormal.Text);
+                            double unNormalPercent = double.Parse(txtUnNormal.Text);
+
+                            double sellPrice = (price + NormalPercent) - ((price + NormalPercent) * SellPercent / 100.0);
+
+                            sellPrice = sellPrice + unNormalPercent;
+                            DataTable dataTable = (DataTable)gridControl1.DataSource;
+                            for (int i = 0; i < dataTable.Rows.Count; i++)
+                            {
+
+                                string query = "INSERT INTO sellprice (Price_Type,Sell_Price,Code,Sell_Discount,Price,Normal_Increase,Categorical_Increase,PercentageDelegate,Date) VALUES (?Price_Type,?Sell_Price,?Code,?Sell_Discount,?Price,?Normal_Increase,?Categorical_Increase,?PercentageDelegate,?Date)";
+                                MySqlCommand command = new MySqlCommand(query, dbconnection);
+                                command.Parameters.AddWithValue("@Price_Type", "لستة");
+                                command.Parameters.AddWithValue("@Sell_Price", sellPrice);
+                                command.Parameters.AddWithValue("?Code", dataTable.Rows[i][0].ToString());
+                                command.Parameters.AddWithValue("@Sell_Discount", double.Parse(txtSell.Text));
+                                command.Parameters.AddWithValue("@Price", price);
+                                command.Parameters.AddWithValue("@Normal_Increase", double.Parse(txtNormal.Text));
+                                command.Parameters.AddWithValue("@Categorical_Increase", double.Parse(txtUnNormal.Text));
+                                command.Parameters.AddWithValue("@PercentageDelegate", double.Parse(txtPercentageDelegate.Text));
+                                command.Parameters.Add("?Date", MySqlDbType.Date);
+                                command.Parameters["?Date"].Value = DateTime.Now.Date;
+
+                                command.ExecuteNonQuery();
+                                UserControl.UserRecord("sellprice", "اضافة", txtCode.Text, DateTime.Now, dbconnection);
+                                dbconnection.Open();
+                            }
+                        }
+
+                        #endregion
+                        #region set priceList for one item
+                        else
+                        {
+                            double NormalPercent = double.Parse(txtNormal.Text);
+                            double unNormalPercent = double.Parse(txtUnNormal.Text);
+
+                            double sellPrice = (price + NormalPercent) - ((price + NormalPercent) * SellPercent / 100.0);
+
+                            sellPrice = sellPrice + unNormalPercent;
+
+                            string query = "INSERT INTO sellprice (Price_Type,Sell_Price,Code,Sell_Discount,Price,Normal_Increase,Categorical_Increase,PercentageDelegate,Date) VALUES (?Price_Type,?Sell_Price,?Code,?Sell_Discount,?Price,?Normal_Increase,?Categorical_Increase,?PercentageDelegate,?Date)";
+                            MySqlCommand command = new MySqlCommand(query, dbconnection);
                             command.Parameters.AddWithValue("@Price_Type", "لستة");
                             command.Parameters.AddWithValue("@Sell_Price", sellPrice);
-                            command.Parameters.AddWithValue("?Code", dataTable.Rows[i][0].ToString());
+                            command.Parameters.AddWithValue("?Code", txtCode.Text);
                             command.Parameters.AddWithValue("@Sell_Discount", double.Parse(txtSell.Text));
                             command.Parameters.AddWithValue("@Price", price);
                             command.Parameters.AddWithValue("@Normal_Increase", double.Parse(txtNormal.Text));
@@ -327,47 +452,51 @@ namespace SalesManagment
                             command.Parameters["?Date"].Value = DateTime.Now.Date;
 
                             command.ExecuteNonQuery();
-                        
+
+                            UserControl.UserRecord("sellprice", "اضافة", txtCode.Text, DateTime.Now, dbconnection);
+                            dbconnection.Open();
+
                         }
+                        #endregion
                     }
-
-                    #endregion
-                    #region set priceList for one item
-                    else
-                    {
-                        double NormalPercent = double.Parse(txtNormal.Text);
-                        double unNormalPercent = double.Parse(txtUnNormal.Text);
-
-                        double sellPrice = (price + NormalPercent) - ((price + NormalPercent) * SellPercent / 100.0);
-
-                        sellPrice = sellPrice + unNormalPercent;
-
-                        string query = "INSERT INTO sellprice (Price_Type,Sell_Price,Code,Sell_Discount,Price,Normal_Increase,Categorical_Increase,PercentageDelegate,Date) VALUES (?Price_Type,?Sell_Price,?Code,?Sell_Discount,?Price,?Normal_Increase,?Categorical_Increase,?PercentageDelegate,?Date)";
-                        MySqlCommand command = new MySqlCommand(query, dbconnection);
-                        command.Parameters.AddWithValue("@Price_Type", "لستة");
-                        command.Parameters.AddWithValue("@Sell_Price", sellPrice);
-                        command.Parameters.AddWithValue("?Code", txtCode.Text);
-                        command.Parameters.AddWithValue("@Sell_Discount", double.Parse(txtSell.Text));
-                        command.Parameters.AddWithValue("@Price", price);
-                        command.Parameters.AddWithValue("@Normal_Increase", double.Parse(txtNormal.Text));
-                        command.Parameters.AddWithValue("@Categorical_Increase", double.Parse(txtUnNormal.Text));
-                        command.Parameters.AddWithValue("@PercentageDelegate", double.Parse(txtPercentageDelegate.Text));
-                        command.Parameters.Add("?Date", MySqlDbType.Date);
-                        command.Parameters["?Date"].Value = DateTime.Now.Date;
-
-                        command.ExecuteNonQuery();
-                 
-                    }
-                    #endregion
+                    MessageBox.Show("Done");
+                    Clear();
+                    productsSellPriceForm.displayProducts();
                 }
-                MessageBox.Show("Done");
-                productsSellPriceForm.displayProducts();
+                else
+                {
+                    MessageBox.Show("select item");
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             dbconnection.Close();
+        }
+
+        private void chBoxSelectAll_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                gridView1.OptionsSelection.MultiSelect = true;
+                if (chBoxSelectAll.Checked)
+                {
+                    gridView1.SelectRows(0, gridView1.RowCount - 1);
+                }
+                else
+                {
+                    int selectedRowsCount = gridView1.SelectedRowsCount;
+                    for (int i = 0; i < selectedRowsCount; i++)
+                    {
+                        gridView1.UnselectRow(i);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void txtBox_TextChanged(object sender, EventArgs e)
@@ -381,7 +510,70 @@ namespace SalesManagment
                     xtraTabPage.ImageOptions.Image = null;
             }
         }
+        
         //function 
+        public void displayProducts()
+        {
+            string q1, q2, q3, q4, fQuery = "";
+            if (txtType.Text == "")
+            {
+                q1 = "select Type_ID from data";
+            }
+            else
+            {
+                q1 = txtType.Text;
+            }
+            if (txtFactory.Text == "")
+            {
+                q2 = "select Factory_ID from data";
+            }
+            else
+            {
+                q2 = txtFactory.Text;
+            }
+            if (txtProduct.Text == "")
+            {
+                q3 = "select Product_ID from data";
+            }
+            else
+            {
+                q3 = txtProduct.Text;
+            }
+            if (txtGroup.Text == "")
+            {
+                q4 = "select Group_ID from data";
+            }
+            else
+            {
+                q4 = txtGroup.Text;
+            }
+            if (comSize.Text != "")
+            {
+                fQuery += "and size.Size_ID='" + comSize.SelectedValue + "'";
+            }
+            if (txtClassification.Text != "")
+            {
+                fQuery += "and data.Classification='" + txtClassification.Text + "'";
+            }
+            if (comColor.Text != "")
+            {
+                fQuery += "and color.Color_ID='" + comColor.SelectedValue + "'";
+            }
+            if (comSort.Text != "")
+            {
+                fQuery += "and Sort.Sort_ID='" + comSort.SelectedValue + "'";
+            }
+
+            string query = "SELECT data.Code as 'الكود',product.Product_Name as 'الصنف',type.Type_Name as 'النوع',factory.Factory_Name as 'المصنع',groupo.Group_Name as 'المجموعة',color.Color_Name as 'اللون',size.Size_Value as 'المقاس',sort.Sort_Value as 'الفرز',data.Classification as 'التصنيف',data.Description as 'الوصف',data.Carton as 'الكرتنة' from data INNER JOIN type ON type.Type_ID = data.Type_ID INNER JOIN product ON product.Product_ID = data.Product_ID INNER JOIN factory ON data.Factory_ID = factory.Factory_ID INNER JOIN groupo ON data.Group_ID = groupo.Group_ID LEFT outer JOIN color ON data.Color_ID = color.Color_ID LEFT outer  JOIN size ON data.Size_ID = size.Size_ID LEFT outer  JOIN sort ON data.Sort_ID = sort.Sort_ID where  data.Type_ID IN(" + q1 + ") and  data.Factory_ID  IN(" + q2 + ") and  data.Product_ID  IN(" + q3 + ") and data.Group_ID IN (" + q4 + ") " + fQuery;
+            MySqlDataAdapter da = new MySqlDataAdapter(query, dbconnection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            gridControl1.DataSource = dt;
+            gridView1.Columns[0].Width = 140;
+            fQuery = "";
+            chBoxSelectAll.Checked = false;
+        }
+
         public XtraTabPage getTabPage(string text)
         {
             for (int i = 0; i < xtraTabControlSalesContent.TabPages.Count; i++)
@@ -391,6 +583,7 @@ namespace SalesManagment
                 }
             return null;
         }
+
         public bool IsClear()
         {
             if (txtCode.Text == "" &&
@@ -405,6 +598,17 @@ namespace SalesManagment
                 return false;
 
         }
-        
+
+        public void Clear()
+        {
+            txtCode.Text = "";
+            txtPrice.Text = "0";
+            txtSell.Text = "0";
+            txtNormal.Text = "0";
+            txtUnNormal.Text = "0";
+            radioList.Checked = true;
+        }
+
+       
     }
 }

@@ -247,6 +247,7 @@
             this.comSort.Name = "comSort";
             this.comSort.Size = new System.Drawing.Size(45, 21);
             this.comSort.TabIndex = 43;
+            this.comSort.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // comColor
             // 
@@ -255,6 +256,7 @@
             this.comColor.Name = "comColor";
             this.comColor.Size = new System.Drawing.Size(45, 21);
             this.comColor.TabIndex = 42;
+            this.comColor.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // comSize
             // 
@@ -263,6 +265,7 @@
             this.comSize.Name = "comSize";
             this.comSize.Size = new System.Drawing.Size(45, 21);
             this.comSize.TabIndex = 41;
+            this.comSize.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // btnSearch
             // 
@@ -281,6 +284,7 @@
             this.txtClassification.Name = "txtClassification";
             this.txtClassification.Size = new System.Drawing.Size(45, 20);
             this.txtClassification.TabIndex = 28;
+            this.txtClassification.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // gridControl1
             // 
@@ -305,6 +309,8 @@
             this.comFactory.Name = "comFactory";
             this.comFactory.Size = new System.Drawing.Size(128, 21);
             this.comFactory.TabIndex = 25;
+            this.comFactory.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
+            this.comFactory.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // txtProduct
             // 
@@ -312,6 +318,8 @@
             this.txtProduct.Name = "txtProduct";
             this.txtProduct.Size = new System.Drawing.Size(49, 20);
             this.txtProduct.TabIndex = 24;
+            this.txtProduct.TextChanged += new System.EventHandler(this.comType_TextChanged);
+            this.txtProduct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBox_KeyDown);
             // 
             // txtGroup
             // 
@@ -319,6 +327,8 @@
             this.txtGroup.Name = "txtGroup";
             this.txtGroup.Size = new System.Drawing.Size(49, 20);
             this.txtGroup.TabIndex = 23;
+            this.txtGroup.TextChanged += new System.EventHandler(this.comType_TextChanged);
+            this.txtGroup.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBox_KeyDown);
             // 
             // comProduct
             // 
@@ -327,6 +337,8 @@
             this.comProduct.Name = "comProduct";
             this.comProduct.Size = new System.Drawing.Size(126, 21);
             this.comProduct.TabIndex = 22;
+            this.comProduct.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
+            this.comProduct.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // comType
             // 
@@ -335,6 +347,8 @@
             this.comType.Name = "comType";
             this.comType.Size = new System.Drawing.Size(128, 21);
             this.comType.TabIndex = 21;
+            this.comType.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
+            this.comType.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // txtType
             // 
@@ -342,6 +356,8 @@
             this.txtType.Name = "txtType";
             this.txtType.Size = new System.Drawing.Size(60, 20);
             this.txtType.TabIndex = 20;
+            this.txtType.TextChanged += new System.EventHandler(this.comType_TextChanged);
+            this.txtType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBox_KeyDown);
             // 
             // txtFactory
             // 
@@ -349,6 +365,8 @@
             this.txtFactory.Name = "txtFactory";
             this.txtFactory.Size = new System.Drawing.Size(60, 20);
             this.txtFactory.TabIndex = 19;
+            this.txtFactory.TextChanged += new System.EventHandler(this.comType_TextChanged);
+            this.txtFactory.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBox_KeyDown);
             // 
             // comGroup
             // 
@@ -357,6 +375,8 @@
             this.comGroup.Name = "comGroup";
             this.comGroup.Size = new System.Drawing.Size(126, 21);
             this.comGroup.TabIndex = 18;
+            this.comGroup.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
+            this.comGroup.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // layoutControlGroup1
             // 
@@ -538,7 +558,7 @@
             this.Name = "ProductsSellPriceForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "SellPriceForm";
-            this.Load += new System.EventHandler(this.UpdateSellPriceForm_Load);
+            this.Load += new System.EventHandler(this.ProductsSellPriceForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
