@@ -87,6 +87,7 @@
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.chBoxSelectAll = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -169,6 +170,7 @@
             this.comSort.Name = "comSort";
             this.comSort.Size = new System.Drawing.Size(20, 21);
             this.comSort.TabIndex = 43;
+            this.comSort.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // comColor
             // 
@@ -177,6 +179,7 @@
             this.comColor.Name = "comColor";
             this.comColor.Size = new System.Drawing.Size(20, 21);
             this.comColor.TabIndex = 42;
+            this.comColor.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // comSize
             // 
@@ -185,6 +188,7 @@
             this.comSize.Name = "comSize";
             this.comSize.Size = new System.Drawing.Size(20, 21);
             this.comSize.TabIndex = 41;
+            this.comSize.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // btnSearch
             // 
@@ -215,6 +219,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.75F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.chBoxSelectAll, 2, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 444);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -298,6 +303,7 @@
             this.txtClassification.Name = "txtClassification";
             this.txtClassification.Size = new System.Drawing.Size(20, 20);
             this.txtClassification.TabIndex = 28;
+            this.txtClassification.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // gridControl1
             // 
@@ -322,6 +328,8 @@
             this.comFactory.Name = "comFactory";
             this.comFactory.Size = new System.Drawing.Size(103, 21);
             this.comFactory.TabIndex = 25;
+            this.comFactory.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
+            this.comFactory.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // txtProduct
             // 
@@ -329,6 +337,8 @@
             this.txtProduct.Name = "txtProduct";
             this.txtProduct.Size = new System.Drawing.Size(49, 20);
             this.txtProduct.TabIndex = 24;
+            this.txtProduct.TextChanged += new System.EventHandler(this.comType_TextChanged);
+            this.txtProduct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBox_KeyDown);
             // 
             // txtGroup
             // 
@@ -336,6 +346,8 @@
             this.txtGroup.Name = "txtGroup";
             this.txtGroup.Size = new System.Drawing.Size(49, 20);
             this.txtGroup.TabIndex = 23;
+            this.txtGroup.TextChanged += new System.EventHandler(this.comType_TextChanged);
+            this.txtGroup.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBox_KeyDown);
             // 
             // comProduct
             // 
@@ -344,6 +356,8 @@
             this.comProduct.Name = "comProduct";
             this.comProduct.Size = new System.Drawing.Size(101, 21);
             this.comProduct.TabIndex = 22;
+            this.comProduct.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
+            this.comProduct.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // comType
             // 
@@ -352,6 +366,8 @@
             this.comType.Name = "comType";
             this.comType.Size = new System.Drawing.Size(103, 21);
             this.comType.TabIndex = 21;
+            this.comType.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
+            this.comType.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // txtType
             // 
@@ -359,6 +375,8 @@
             this.txtType.Name = "txtType";
             this.txtType.Size = new System.Drawing.Size(60, 20);
             this.txtType.TabIndex = 20;
+            this.txtType.TextChanged += new System.EventHandler(this.comType_TextChanged);
+            this.txtType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBox_KeyDown);
             // 
             // txtFactory
             // 
@@ -366,6 +384,8 @@
             this.txtFactory.Name = "txtFactory";
             this.txtFactory.Size = new System.Drawing.Size(60, 20);
             this.txtFactory.TabIndex = 19;
+            this.txtFactory.TextChanged += new System.EventHandler(this.comType_TextChanged);
+            this.txtFactory.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBox_KeyDown);
             // 
             // comGroup
             // 
@@ -374,6 +394,8 @@
             this.comGroup.Name = "comGroup";
             this.comGroup.Size = new System.Drawing.Size(101, 21);
             this.comGroup.TabIndex = 18;
+            this.comGroup.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
+            this.comGroup.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // txtNormal
             // 
@@ -730,6 +752,20 @@
             this.layoutControlItem13.Text = "الفرز";
             this.layoutControlItem13.TextSize = new System.Drawing.Size(82, 17);
             // 
+            // chBoxSelectAll
+            // 
+            this.chBoxSelectAll.AutoSize = true;
+            this.chBoxSelectAll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chBoxSelectAll.Font = new System.Drawing.Font("Neo Sans Arabic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chBoxSelectAll.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.chBoxSelectAll.Location = new System.Drawing.Point(3, 3);
+            this.chBoxSelectAll.Name = "chBoxSelectAll";
+            this.chBoxSelectAll.Size = new System.Drawing.Size(338, 39);
+            this.chBoxSelectAll.TabIndex = 6;
+            this.chBoxSelectAll.Text = "تحديد الكل";
+            this.chBoxSelectAll.UseVisualStyleBackColor = true;
+            this.chBoxSelectAll.CheckedChanged += new System.EventHandler(this.chBoxSelectAll_CheckedChanged);
+            // 
             // RecordSellPriceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -743,6 +779,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -843,5 +880,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private System.Windows.Forms.CheckBox chBoxSelectAll;
     }
 }
