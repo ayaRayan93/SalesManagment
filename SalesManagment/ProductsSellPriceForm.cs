@@ -263,15 +263,21 @@ namespace SalesManagment
         {
             try
             {
-                DataRowView row1 = (DataRowView)(((GridView)gridControl1.MainView).GetRow(((GridView)gridControl1.MainView).GetSelectedRows()[0]));
-
+                int[] rows = (((GridView)gridControl1.MainView).GetSelectedRows());
+               List<DataRowView> recordList=new List<DataRowView>();
+                for (int i = 0; i < rows.Length; i++)
+                {
+                    DataRowView a = (DataRowView)(((GridView)gridControl1.MainView).GetRow(rows[i]));
+                    recordList.Add(a);
+                }
+                
                 if (chBoxSelectAll.Checked)
                 {
                     salesMainForm.bindUpdateSellPriceForm(null, this, query);
                 }
-                else if (row1 != null)
+                else if (recordList != null)
                 {
-                    salesMainForm.bindUpdateSellPriceForm(row1, this, "");
+                    salesMainForm.bindUpdateSellPriceForm(recordList, this, "");
                 }
                 else
                 {

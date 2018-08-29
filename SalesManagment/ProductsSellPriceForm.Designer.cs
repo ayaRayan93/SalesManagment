@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btnDelete = new Bunifu.Framework.UI.BunifuTileButton();
@@ -112,7 +113,7 @@
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(557, 95, 650, 400);
             this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(809, 501);
+            this.layoutControl1.Size = new System.Drawing.Size(809, 531);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -133,13 +134,13 @@
             this.tableLayoutPanel4.Controls.Add(this.btnUpdate, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnAdd, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.chBoxSelectAll, 6, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(12, 446);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(12, 473);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(785, 43);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(785, 46);
             this.tableLayoutPanel4.TabIndex = 44;
             // 
             // btnDelete
@@ -153,13 +154,13 @@
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = global::SalesManagment.Properties.Resources.Delete_321;
             this.btnDelete.ImagePosition = 1;
-            this.btnDelete.ImageZoom = 20;
+            this.btnDelete.ImageZoom = 25;
             this.btnDelete.LabelPosition = 18;
             this.btnDelete.LabelText = "حذف";
             this.btnDelete.Location = new System.Drawing.Point(319, 4);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(72, 35);
+            this.btnDelete.Size = new System.Drawing.Size(72, 38);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -174,13 +175,13 @@
             this.btnReport.ForeColor = System.Drawing.Color.White;
             this.btnReport.Image = global::SalesManagment.Properties.Resources.Print_321;
             this.btnReport.ImagePosition = 1;
-            this.btnReport.ImageZoom = 20;
+            this.btnReport.ImageZoom = 25;
             this.btnReport.LabelPosition = 18;
             this.btnReport.LabelText = "تقرير";
             this.btnReport.Location = new System.Drawing.Point(241, 4);
             this.btnReport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(72, 35);
+            this.btnReport.Size = new System.Drawing.Size(72, 38);
             this.btnReport.TabIndex = 3;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
@@ -195,13 +196,13 @@
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Image = global::SalesManagment.Properties.Resources.Edit_321;
             this.btnUpdate.ImagePosition = 1;
-            this.btnUpdate.ImageZoom = 20;
+            this.btnUpdate.ImageZoom = 25;
             this.btnUpdate.LabelPosition = 18;
             this.btnUpdate.LabelText = "تعديل";
             this.btnUpdate.Location = new System.Drawing.Point(397, 4);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(72, 35);
+            this.btnUpdate.Size = new System.Drawing.Size(72, 38);
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -216,13 +217,13 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::SalesManagment.Properties.Resources.File_321;
             this.btnAdd.ImagePosition = 1;
-            this.btnAdd.ImageZoom = 20;
+            this.btnAdd.ImageZoom = 25;
             this.btnAdd.LabelPosition = 18;
             this.btnAdd.LabelText = "اضافة";
             this.btnAdd.Location = new System.Drawing.Point(475, 4);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(72, 35);
+            this.btnAdd.Size = new System.Drawing.Size(72, 38);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -234,7 +235,7 @@
             this.chBoxSelectAll.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.chBoxSelectAll.Location = new System.Drawing.Point(163, 3);
             this.chBoxSelectAll.Name = "chBoxSelectAll";
-            this.chBoxSelectAll.Size = new System.Drawing.Size(72, 37);
+            this.chBoxSelectAll.Size = new System.Drawing.Size(72, 40);
             this.chBoxSelectAll.TabIndex = 5;
             this.chBoxSelectAll.Text = "تحديد الكل";
             this.chBoxSelectAll.UseVisualStyleBackColor = true;
@@ -245,7 +246,7 @@
             this.comSort.FormattingEnabled = true;
             this.comSort.Location = new System.Drawing.Point(84, 37);
             this.comSort.Name = "comSort";
-            this.comSort.Size = new System.Drawing.Size(45, 21);
+            this.comSort.Size = new System.Drawing.Size(51, 21);
             this.comSort.TabIndex = 43;
             this.comSort.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
@@ -254,7 +255,7 @@
             this.comColor.FormattingEnabled = true;
             this.comColor.Location = new System.Drawing.Point(84, 12);
             this.comColor.Name = "comColor";
-            this.comColor.Size = new System.Drawing.Size(45, 21);
+            this.comColor.Size = new System.Drawing.Size(51, 21);
             this.comColor.TabIndex = 42;
             this.comColor.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
@@ -263,26 +264,28 @@
             this.comSize.FormattingEnabled = true;
             this.comSize.Location = new System.Drawing.Point(193, 12);
             this.comSize.Name = "comSize";
-            this.comSize.Size = new System.Drawing.Size(45, 21);
+            this.comSize.Size = new System.Drawing.Size(51, 21);
             this.comSize.TabIndex = 41;
             this.comSize.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // btnSearch
             // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(65)))), ((int)(((byte)(146)))));
             this.btnSearch.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSearch.Location = new System.Drawing.Point(12, 12);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(68, 46);
             this.btnSearch.TabIndex = 40;
             this.btnSearch.Text = "بحث";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtClassification
             // 
             this.txtClassification.Location = new System.Drawing.Point(193, 37);
             this.txtClassification.Name = "txtClassification";
-            this.txtClassification.Size = new System.Drawing.Size(45, 20);
+            this.txtClassification.Size = new System.Drawing.Size(51, 20);
             this.txtClassification.TabIndex = 28;
             this.txtClassification.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
@@ -291,15 +294,24 @@
             this.gridControl1.Location = new System.Drawing.Point(12, 62);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(785, 380);
+            this.gridControl1.Size = new System.Drawing.Size(785, 407);
             this.gridControl1.TabIndex = 26;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Neo Sans Arabic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Neo Sans Arabic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.Row.Options.UseFont = true;
+            this.gridView1.Appearance.Row.Options.UseTextOptions = true;
+            this.gridView1.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.MultiSelect = true;
             this.gridView1.OptionsView.ColumnAutoWidth = false;
             // 
             // comFactory
@@ -307,7 +319,7 @@
             this.comFactory.FormattingEnabled = true;
             this.comFactory.Location = new System.Drawing.Point(609, 37);
             this.comFactory.Name = "comFactory";
-            this.comFactory.Size = new System.Drawing.Size(128, 21);
+            this.comFactory.Size = new System.Drawing.Size(134, 21);
             this.comFactory.TabIndex = 25;
             this.comFactory.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
             this.comFactory.TextChanged += new System.EventHandler(this.comType_TextChanged);
@@ -335,7 +347,7 @@
             this.comProduct.FormattingEnabled = true;
             this.comProduct.Location = new System.Drawing.Point(355, 37);
             this.comProduct.Name = "comProduct";
-            this.comProduct.Size = new System.Drawing.Size(126, 21);
+            this.comProduct.Size = new System.Drawing.Size(132, 21);
             this.comProduct.TabIndex = 22;
             this.comProduct.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
             this.comProduct.TextChanged += new System.EventHandler(this.comType_TextChanged);
@@ -345,7 +357,7 @@
             this.comType.FormattingEnabled = true;
             this.comType.Location = new System.Drawing.Point(609, 12);
             this.comType.Name = "comType";
-            this.comType.Size = new System.Drawing.Size(128, 21);
+            this.comType.Size = new System.Drawing.Size(134, 21);
             this.comType.TabIndex = 21;
             this.comType.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
             this.comType.TextChanged += new System.EventHandler(this.comType_TextChanged);
@@ -373,7 +385,7 @@
             this.comGroup.FormattingEnabled = true;
             this.comGroup.Location = new System.Drawing.Point(355, 12);
             this.comGroup.Name = "comGroup";
-            this.comGroup.Size = new System.Drawing.Size(126, 21);
+            this.comGroup.Size = new System.Drawing.Size(132, 21);
             this.comGroup.TabIndex = 18;
             this.comGroup.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
             this.comGroup.TextChanged += new System.EventHandler(this.comType_TextChanged);
@@ -407,7 +419,7 @@
             this.layoutControlItem14});
             this.layoutControlGroup1.MoveFocusRightToLeft = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(809, 501);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(809, 531);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem3
@@ -430,21 +442,29 @@
             // 
             // layoutControlItem4
             // 
+            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem4.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem4.Control = this.comType;
             this.layoutControlItem4.Location = new System.Drawing.Point(597, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(192, 25);
             this.layoutControlItem4.Text = "النوع";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(57, 17);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(51, 16);
             // 
             // layoutControlItem5
             // 
+            this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem5.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem5.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem5.Control = this.comFactory;
             this.layoutControlItem5.Location = new System.Drawing.Point(597, 25);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(192, 25);
             this.layoutControlItem5.Text = "المصنع";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(57, 17);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(51, 16);
             // 
             // layoutControlItem6
             // 
@@ -460,22 +480,30 @@
             // 
             // layoutControlItem2
             // 
+            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem2.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem2.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem2.Control = this.comGroup;
             this.layoutControlItem2.Location = new System.Drawing.Point(343, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(190, 25);
             this.layoutControlItem2.Text = "المجموعة";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(57, 17);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(51, 16);
             // 
             // layoutControlItem8
             // 
+            this.layoutControlItem8.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem8.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem8.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem8.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem8.Control = this.comProduct;
             this.layoutControlItem8.Location = new System.Drawing.Point(343, 25);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(190, 25);
             this.layoutControlItem8.Text = "الصنف";
             this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Right;
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(57, 17);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(51, 16);
             // 
             // layoutControlItem7
             // 
@@ -491,18 +519,22 @@
             this.layoutControlItem9.Control = this.gridControl1;
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(789, 384);
+            this.layoutControlItem9.Size = new System.Drawing.Size(789, 411);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
             // layoutControlItem11
             // 
+            this.layoutControlItem11.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem11.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem11.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem11.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem11.Control = this.txtClassification;
             this.layoutControlItem11.Location = new System.Drawing.Point(181, 25);
             this.layoutControlItem11.Name = "layoutControlItem11";
             this.layoutControlItem11.Size = new System.Drawing.Size(109, 25);
             this.layoutControlItem11.Text = "التصنيف";
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(57, 17);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(51, 16);
             // 
             // layoutControlItem18
             // 
@@ -515,37 +547,49 @@
             // 
             // layoutControlItem10
             // 
+            this.layoutControlItem10.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem10.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem10.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem10.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem10.Control = this.comSize;
             this.layoutControlItem10.Location = new System.Drawing.Point(181, 0);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(109, 25);
             this.layoutControlItem10.Text = "المقاس";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(57, 17);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(51, 16);
             // 
             // layoutControlItem12
             // 
+            this.layoutControlItem12.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem12.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem12.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem12.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem12.Control = this.comColor;
             this.layoutControlItem12.Location = new System.Drawing.Point(72, 0);
             this.layoutControlItem12.Name = "layoutControlItem12";
             this.layoutControlItem12.Size = new System.Drawing.Size(109, 25);
             this.layoutControlItem12.Text = "اللون";
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(57, 17);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(51, 16);
             // 
             // layoutControlItem13
             // 
+            this.layoutControlItem13.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem13.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem13.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem13.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem13.Control = this.comSort;
             this.layoutControlItem13.Location = new System.Drawing.Point(72, 25);
             this.layoutControlItem13.Name = "layoutControlItem13";
             this.layoutControlItem13.Size = new System.Drawing.Size(109, 25);
             this.layoutControlItem13.Text = "الفرز";
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(57, 17);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(51, 16);
             // 
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.tableLayoutPanel4;
-            this.layoutControlItem14.Location = new System.Drawing.Point(0, 434);
+            this.layoutControlItem14.Location = new System.Drawing.Point(0, 461);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(789, 47);
+            this.layoutControlItem14.Size = new System.Drawing.Size(789, 50);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextVisible = false;
             // 
@@ -553,7 +597,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 501);
+            this.ClientSize = new System.Drawing.Size(809, 531);
             this.Controls.Add(this.layoutControl1);
             this.Name = "ProductsSellPriceForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

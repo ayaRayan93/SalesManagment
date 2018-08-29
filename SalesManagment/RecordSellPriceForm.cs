@@ -108,7 +108,6 @@ namespace SalesManagment
                 comSort.DisplayMember = dt.Columns["Sort_Value"].ToString();
                 comSort.ValueMember = dt.Columns["Sort_ID"].ToString();
                 comSort.Text = "";
-
                 load = true;
 
             }
@@ -311,7 +310,7 @@ namespace SalesManagment
                 DataRowView row = (DataRowView)(((GridView)gridControl1.MainView).GetRow(((GridView)gridControl1.MainView).GetSelectedRows()[0]));
                 if (row != null)
                 {
-                    txtCode.Text = row[0].ToString();
+                    txtCode.Text = row[0].ToString();              
                 }
             }
             catch (Exception ex)
@@ -501,14 +500,22 @@ namespace SalesManagment
 
         private void txtBox_TextChanged(object sender, EventArgs e)
         {
-            if (load)
+            try
             {
-                XtraTabPage xtraTabPage = getTabPage("تسجيل اسعار البنود");
-                if (!IsClear())
-                    xtraTabPage.ImageOptions.Image = Properties.Resources.unsave__2_;
-                else
-                    xtraTabPage.ImageOptions.Image = null;
+                if (load)
+                {
+                    XtraTabPage xtraTabPage = getTabPage("تسجيل اسعار البنود");
+                    if (!IsClear())
+                        xtraTabPage.ImageOptions.Image = Properties.Resources.unsave__2_;
+                    else
+                        xtraTabPage.ImageOptions.Image = null;
+                }
             }
+            catch (Exception)
+            {
+                
+            }
+           
         }
         
         //function 

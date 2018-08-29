@@ -227,7 +227,7 @@ namespace SalesManagment
         }
 
         //update sell price 
-        public void bindUpdateSellPriceForm(DataRowView row1,ProductsSellPriceForm productsSellPriceForm,String query)
+        public void bindUpdateSellPriceForm(List<DataRowView> rows,ProductsSellPriceForm productsSellPriceForm,String query)
         {
             if (!xtraTabControlSalesContent.Visible)
                 xtraTabControlSalesContent.Visible = true;
@@ -243,7 +243,7 @@ namespace SalesManagment
 
             xtraTabControlSalesContent.SelectedTabPage = xtraTabPage;
 
-            UpdateSellPriceForm objForm = new UpdateSellPriceForm(row1,productsSellPriceForm, query,xtraTabControlSalesContent);
+            UpdateSellPriceForm objForm = new UpdateSellPriceForm(rows,productsSellPriceForm, query,xtraTabControlSalesContent);
             objForm.TopLevel = false;
 
             xtraTabPage.Controls.Add(objForm);
@@ -280,13 +280,13 @@ namespace SalesManagment
         //offers
         public void bindDisplayOffersForm(XtraTabPage xtraTabPage)
         {
-            OffersSellPrice objForm = new OffersSellPrice();
-            objForm.TopLevel = false;
+            //OffersSellPrice objForm = new OffersSellPrice();
+            //objForm.TopLevel = false;
 
-            xtraTabPage.Controls.Add(objForm);
-            objForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            objForm.Dock = DockStyle.Fill;
-            objForm.Show();
+            //xtraTabPage.Controls.Add(objForm);
+            //objForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            //objForm.Dock = DockStyle.Fill;
+            //objForm.Show();
         }
 
         public XtraTabPage getTabPage(string text)

@@ -17,18 +17,18 @@ namespace SalesManagment
     public partial class UpdateSellPriceForm : Form
     {
         MySqlConnection dbconnection;
-        DataRowView row1 = null;
+        List<DataRowView> rows = null;
         ProductsSellPriceForm productsSellPriceForm = null;
         String query = "";
         XtraTabControl xtraTabControlSalesContent = null;
         bool load = false,flag=false;
-        public UpdateSellPriceForm(DataRowView row1,ProductsSellPriceForm productsSellPriceForm,string query, XtraTabControl xtraTabControlSalesContent)
+        public UpdateSellPriceForm(List<DataRowView> rows,ProductsSellPriceForm productsSellPriceForm,string query, XtraTabControl xtraTabControlSalesContent)
         {
             try
             {
                 InitializeComponent();
                 this.xtraTabControlSalesContent = xtraTabControlSalesContent;
-                this.row1 = row1;
+                this.rows = rows;
                 this.productsSellPriceForm = productsSellPriceForm;
                 this.query = query;
                 dbconnection = new MySqlConnection(connection.connectionString);
@@ -40,38 +40,28 @@ namespace SalesManagment
           
         }
 
-
         private void UpdateSellPriceForm_Load(object sender, EventArgs e)
         {
             try
             {
                 dbconnection.Open();
-                if (query == "")
+                string ids = "";
+                for (int i = 0; i < rows.Count-1; i++)
                 {
-                    query = "SELECT SellPrice.SellPrice_ID, data.Code as 'الكود',concat( product.Product_Name,' ',type.Type_Name,' ',factory.Factory_Name,' ',groupo.Group_Name,' ' ,color.Color_Name,' ' ,size.Size_Value )as 'البند',sort.Sort_Value as 'الفرز',data.Classification as 'التصنيف',data.Description as 'الوصف',data.Carton as 'الكرتنة',sellprice.Price as 'السعر',sellprice.Price_Type as 'نوع السعر',sellprice.Sell_Discount as 'خصم البيع',sellprice.Normal_Increase as 'الزيادة العادية',sellprice.Categorical_Increase as 'الزيادة القطعية',sellprice.ProfitRatio as 'نسبة البيع',sellprice.Sell_Price as 'سعر البيع',sellprice.PercentageDelegate as 'نسية المندوب',sellprice.Date as 'التاريخ'   from data INNER JOIN sellprice on sellprice.Code=data.Code  INNER JOIN type ON type.Type_ID = data.Type_ID INNER JOIN product ON product.Product_ID = data.Product_ID INNER JOIN factory ON data.Factory_ID = factory.Factory_ID INNER JOIN groupo ON data.Group_ID = groupo.Group_ID LEFT outer JOIN color ON data.Color_ID = color.Color_ID LEFT outer  JOIN size ON data.Size_ID = size.Size_ID LEFT outer  JOIN sort ON data.Sort_ID = sort.Sort_ID where   SellPrice.SellPrice_ID='" + row1[0].ToString() + "'";
+                    ids += rows[i][0] + ",";
+                }
+                ids += rows[rows.Count - 1][0] ;
+                query = "SELECT SellPrice.SellPrice_ID, data.Code as 'الكود',concat( product.Product_Name,' ',type.Type_Name,' ',factory.Factory_Name,' ',groupo.Group_Name,' ' ,color.Color_Name,' ' ,size.Size_Value )as 'البند',sort.Sort_Value as 'الفرز',data.Classification as 'التصنيف',data.Description as 'الوصف',data.Carton as 'الكرتنة',sellprice.Price as 'السعر',sellprice.Price_Type as 'نوع السعر',sellprice.Sell_Discount as 'خصم البيع',sellprice.Normal_Increase as 'الزيادة العادية',sellprice.Categorical_Increase as 'الزيادة القطعية',sellprice.ProfitRatio as 'نسبة البيع',sellprice.Sell_Price as 'سعر البيع',sellprice.PercentageDelegate as 'نسية المندوب',sellprice.Date as 'التاريخ'   from data INNER JOIN sellprice on sellprice.Code=data.Code  INNER JOIN type ON type.Type_ID = data.Type_ID INNER JOIN product ON product.Product_ID = data.Product_ID INNER JOIN factory ON data.Factory_ID = factory.Factory_ID INNER JOIN groupo ON data.Group_ID = groupo.Group_ID LEFT outer JOIN color ON data.Color_ID = color.Color_ID LEFT outer  JOIN size ON data.Size_ID = size.Size_ID LEFT outer  JOIN sort ON data.Sort_ID = sort.Sort_ID where   SellPrice.SellPrice_ID in(" + ids + ")";
 
-                    MySqlDataAdapter da = new MySqlDataAdapter(query, dbconnection);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
+                MySqlDataAdapter da = new MySqlDataAdapter(query, dbconnection);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
                    
-                    gridControl1.DataSource = dt;
-                    gridView1.Columns[0].Visible = false;
-                    gridView1.Columns[1].Width = 140;
-                    gridView1.Columns[2].Width = 200;
-                    setData(row1);
-                    flag = false;
-                }
-                else
-                {
-                    MySqlDataAdapter da = new MySqlDataAdapter(query, dbconnection);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    gridControl1.DataSource = dt;
-                    gridView1.Columns[0].Visible = false;
-                    gridView1.Columns[1].Width = 140;
-                    gridView1.Columns[2].Width = 200;
-                    flag = true;
-                }
+                gridControl1.DataSource = dt;
+                gridView1.Columns[0].Visible = false;
+                gridView1.Columns[1].Width = 140;
+                gridView1.Columns[2].Width = 200;
+               
                 load = true;
             }
             catch (Exception ex)
@@ -320,22 +310,22 @@ namespace SalesManagment
         }
         public bool IsClear()
         {
-            if (txtCode.Text == row1["الكود"].ToString() &&
-            txtPrice.Text == row1["السعر"].ToString()
+            if (txtCode.Text == rows[0]["الكود"].ToString() &&
+            txtPrice.Text == rows[0]["السعر"].ToString()
           )
             {
-                string str = row1["نوع السعر"].ToString();
+                string str = rows[0]["نوع السعر"].ToString();
                 if (str == "لسته")
                 {
-                    if (txtSell.Text == row1["خصم البيع"].ToString() &&
-                     txtNormal.Text == row1["زيادة عادية"].ToString() &&
-                     txtUnNormal.Text == row1["زيادة قطعية"].ToString() &&
+                    if (txtSell.Text == rows[0]["خصم البيع"].ToString() &&
+                     txtNormal.Text == rows[0]["زيادة عادية"].ToString() &&
+                     txtUnNormal.Text == rows[0]["زيادة قطعية"].ToString() &&
                      radioList.Checked == true)
                         return true;
                 }
                 else
                 {
-                    if (txtSell.Text == row1["نسبة البيع"].ToString() &&
+                    if (txtSell.Text == rows[0]["نسبة البيع"].ToString() &&
                     radioQata3y.Checked == true)
                         return true;
                 }

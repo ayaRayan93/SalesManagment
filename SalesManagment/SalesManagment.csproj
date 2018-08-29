@@ -79,29 +79,11 @@
     <Compile Include="CustomTextBox.designer.cs">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OffersSellPrice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OffersSellPrice.Designer.cs">
-      <DependentUpon>OffersSellPrice.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProductsSellPrice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProductsSellPrice.designer.cs">
-      <DependentUpon>ProductsSellPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductSellPricesReport.cs">
       <SubType>Form</SubType>
@@ -136,14 +118,8 @@
       <DependentUpon>UpdateSellPriceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProductsSellPrice.resx">
-      <DependentUpon>ProductsSellPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductSellPricesReport.resx">
       <DependentUpon>ProductSellPricesReport.cs</DependentUpon>

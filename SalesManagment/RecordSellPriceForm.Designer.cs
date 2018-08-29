@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.comSort = new System.Windows.Forms.ComboBox();
             this.comColor = new System.Windows.Forms.ComboBox();
             this.comSize = new System.Windows.Forms.ComboBox();
@@ -36,6 +40,7 @@
             this.txtPercentageDelegate = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAdd = new Bunifu.Framework.UI.BunifuTileButton();
+            this.chBoxSelectAll = new System.Windows.Forms.CheckBox();
             this.radioList = new System.Windows.Forms.RadioButton();
             this.radioQata3y = new System.Windows.Forms.RadioButton();
             this.txtSell = new System.Windows.Forms.TextBox();
@@ -87,7 +92,15 @@
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.chBoxSelectAll = new System.Windows.Forms.CheckBox();
+            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem11 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem12 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem13 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.btnNewPlus = new System.Windows.Forms.Button();
+            this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -126,10 +139,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btnNewPlus);
+            this.layoutControl1.Controls.Add(this.checkBox1);
+            this.layoutControl1.Controls.Add(this.textBox2);
+            this.layoutControl1.Controls.Add(this.textBox1);
             this.layoutControl1.Controls.Add(this.comSort);
             this.layoutControl1.Controls.Add(this.comColor);
             this.layoutControl1.Controls.Add(this.comSize);
@@ -159,16 +184,40 @@
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(557, 95, 650, 400);
             this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(809, 501);
+            this.layoutControl1.Size = new System.Drawing.Size(804, 575);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(571, 455);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(148, 20);
+            this.checkBox1.TabIndex = 46;
+            this.checkBox1.Text = "زيادات اخري";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(186, 479);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(155, 20);
+            this.textBox2.TabIndex = 45;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(420, 479);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(166, 20);
+            this.textBox1.TabIndex = 44;
             // 
             // comSort
             // 
             this.comSort.FormattingEnabled = true;
             this.comSort.Location = new System.Drawing.Point(84, 37);
             this.comSort.Name = "comSort";
-            this.comSort.Size = new System.Drawing.Size(20, 21);
+            this.comSort.Size = new System.Drawing.Size(63, 21);
             this.comSort.TabIndex = 43;
             this.comSort.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
@@ -177,35 +226,37 @@
             this.comColor.FormattingEnabled = true;
             this.comColor.Location = new System.Drawing.Point(84, 12);
             this.comColor.Name = "comColor";
-            this.comColor.Size = new System.Drawing.Size(20, 21);
+            this.comColor.Size = new System.Drawing.Size(63, 21);
             this.comColor.TabIndex = 42;
             this.comColor.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // comSize
             // 
             this.comSize.FormattingEnabled = true;
-            this.comSize.Location = new System.Drawing.Point(193, 12);
+            this.comSize.Location = new System.Drawing.Point(226, 12);
             this.comSize.Name = "comSize";
-            this.comSize.Size = new System.Drawing.Size(20, 21);
+            this.comSize.Size = new System.Drawing.Size(63, 21);
             this.comSize.TabIndex = 41;
             this.comSize.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // btnSearch
             // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(65)))), ((int)(((byte)(146)))));
             this.btnSearch.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSearch.Location = new System.Drawing.Point(12, 12);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(68, 46);
             this.btnSearch.TabIndex = 40;
             this.btnSearch.Text = "بحث";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtPercentageDelegate
             // 
-            this.txtPercentageDelegate.Location = new System.Drawing.Point(209, 323);
+            this.txtPercentageDelegate.Location = new System.Drawing.Point(208, 354);
             this.txtPercentageDelegate.Name = "txtPercentageDelegate";
-            this.txtPercentageDelegate.Size = new System.Drawing.Size(108, 20);
+            this.txtPercentageDelegate.Size = new System.Drawing.Size(133, 20);
             this.txtPercentageDelegate.TabIndex = 39;
             this.txtPercentageDelegate.Text = "0";
             this.txtPercentageDelegate.TextChanged += new System.EventHandler(this.txtBox_TextChanged);
@@ -220,12 +271,12 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.chBoxSelectAll, 2, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 444);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 503);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(785, 45);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(780, 60);
             this.tableLayoutPanel2.TabIndex = 38;
             // 
             // btnAdd
@@ -242,19 +293,33 @@
             this.btnAdd.ImageZoom = 25;
             this.btnAdd.LabelPosition = 18;
             this.btnAdd.LabelText = "حفظ";
-            this.btnAdd.Location = new System.Drawing.Point(347, 4);
+            this.btnAdd.Location = new System.Drawing.Point(345, 4);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(92, 37);
+            this.btnAdd.Size = new System.Drawing.Size(91, 52);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // chBoxSelectAll
+            // 
+            this.chBoxSelectAll.AutoSize = true;
+            this.chBoxSelectAll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chBoxSelectAll.Font = new System.Drawing.Font("Neo Sans Arabic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chBoxSelectAll.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.chBoxSelectAll.Location = new System.Drawing.Point(3, 3);
+            this.chBoxSelectAll.Name = "chBoxSelectAll";
+            this.chBoxSelectAll.Size = new System.Drawing.Size(336, 54);
+            this.chBoxSelectAll.TabIndex = 6;
+            this.chBoxSelectAll.Text = "تحديد الكل";
+            this.chBoxSelectAll.UseVisualStyleBackColor = true;
+            this.chBoxSelectAll.CheckedChanged += new System.EventHandler(this.chBoxSelectAll_CheckedChanged);
             // 
             // radioList
             // 
             this.radioList.Checked = true;
-            this.radioList.Location = new System.Drawing.Point(406, 347);
+            this.radioList.Location = new System.Drawing.Point(420, 378);
             this.radioList.Name = "radioList";
-            this.radioList.Size = new System.Drawing.Size(194, 25);
+            this.radioList.Size = new System.Drawing.Size(192, 25);
             this.radioList.TabIndex = 37;
             this.radioList.TabStop = true;
             this.radioList.Text = "لسته";
@@ -263,9 +328,9 @@
             // 
             // radioQata3y
             // 
-            this.radioQata3y.Location = new System.Drawing.Point(209, 347);
+            this.radioQata3y.Location = new System.Drawing.Point(208, 378);
             this.radioQata3y.Name = "radioQata3y";
-            this.radioQata3y.Size = new System.Drawing.Size(193, 25);
+            this.radioQata3y.Size = new System.Drawing.Size(208, 25);
             this.radioQata3y.TabIndex = 36;
             this.radioQata3y.Text = "قطعي";
             this.radioQata3y.UseVisualStyleBackColor = true;
@@ -273,35 +338,35 @@
             // 
             // txtSell
             // 
-            this.txtSell.Location = new System.Drawing.Point(209, 376);
+            this.txtSell.Location = new System.Drawing.Point(208, 407);
             this.txtSell.Name = "txtSell";
-            this.txtSell.Size = new System.Drawing.Size(108, 20);
+            this.txtSell.Size = new System.Drawing.Size(133, 20);
             this.txtSell.TabIndex = 35;
             this.txtSell.Text = "0";
             this.txtSell.TextChanged += new System.EventHandler(this.txtBox_TextChanged);
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(406, 376);
+            this.txtPrice.Location = new System.Drawing.Point(420, 407);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(109, 20);
+            this.txtPrice.Size = new System.Drawing.Size(117, 20);
             this.txtPrice.TabIndex = 34;
             this.txtPrice.Text = "0";
             this.txtPrice.TextChanged += new System.EventHandler(this.txtBox_TextChanged);
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(516, 323);
+            this.txtCode.Location = new System.Drawing.Point(529, 354);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(196, 20);
+            this.txtCode.Size = new System.Drawing.Size(188, 20);
             this.txtCode.TabIndex = 31;
             this.txtCode.TextChanged += new System.EventHandler(this.txtBox_TextChanged);
             // 
             // txtClassification
             // 
-            this.txtClassification.Location = new System.Drawing.Point(193, 37);
+            this.txtClassification.Location = new System.Drawing.Point(226, 37);
             this.txtClassification.Name = "txtClassification";
-            this.txtClassification.Size = new System.Drawing.Size(20, 20);
+            this.txtClassification.Size = new System.Drawing.Size(63, 20);
             this.txtClassification.TabIndex = 28;
             this.txtClassification.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
@@ -310,7 +375,7 @@
             this.gridControl1.Location = new System.Drawing.Point(12, 62);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(785, 257);
+            this.gridControl1.Size = new System.Drawing.Size(780, 288);
             this.gridControl1.TabIndex = 26;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -318,33 +383,43 @@
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gridView1.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Neo Sans Arabic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Neo Sans Arabic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.Row.Options.UseFont = true;
+            this.gridView1.Appearance.Row.Options.UseTextOptions = true;
+            this.gridView1.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
             // comFactory
             // 
             this.comFactory.FormattingEnabled = true;
-            this.comFactory.Location = new System.Drawing.Point(609, 37);
+            this.comFactory.Location = new System.Drawing.Point(631, 37);
             this.comFactory.Name = "comFactory";
-            this.comFactory.Size = new System.Drawing.Size(103, 21);
+            this.comFactory.Size = new System.Drawing.Size(86, 21);
             this.comFactory.TabIndex = 25;
             this.comFactory.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
             this.comFactory.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // txtProduct
             // 
-            this.txtProduct.Location = new System.Drawing.Point(302, 37);
+            this.txtProduct.Location = new System.Drawing.Point(368, 37);
             this.txtProduct.Name = "txtProduct";
-            this.txtProduct.Size = new System.Drawing.Size(49, 20);
+            this.txtProduct.Size = new System.Drawing.Size(41, 20);
             this.txtProduct.TabIndex = 24;
             this.txtProduct.TextChanged += new System.EventHandler(this.comType_TextChanged);
             this.txtProduct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBox_KeyDown);
             // 
             // txtGroup
             // 
-            this.txtGroup.Location = new System.Drawing.Point(302, 12);
+            this.txtGroup.Location = new System.Drawing.Point(368, 12);
             this.txtGroup.Name = "txtGroup";
-            this.txtGroup.Size = new System.Drawing.Size(49, 20);
+            this.txtGroup.Size = new System.Drawing.Size(41, 20);
             this.txtGroup.TabIndex = 23;
             this.txtGroup.TextChanged += new System.EventHandler(this.comType_TextChanged);
             this.txtGroup.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBox_KeyDown);
@@ -352,9 +427,9 @@
             // comProduct
             // 
             this.comProduct.FormattingEnabled = true;
-            this.comProduct.Location = new System.Drawing.Point(355, 37);
+            this.comProduct.Location = new System.Drawing.Point(413, 37);
             this.comProduct.Name = "comProduct";
-            this.comProduct.Size = new System.Drawing.Size(101, 21);
+            this.comProduct.Size = new System.Drawing.Size(90, 21);
             this.comProduct.TabIndex = 22;
             this.comProduct.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
             this.comProduct.TextChanged += new System.EventHandler(this.comType_TextChanged);
@@ -362,27 +437,27 @@
             // comType
             // 
             this.comType.FormattingEnabled = true;
-            this.comType.Location = new System.Drawing.Point(609, 12);
+            this.comType.Location = new System.Drawing.Point(631, 12);
             this.comType.Name = "comType";
-            this.comType.Size = new System.Drawing.Size(103, 21);
+            this.comType.Size = new System.Drawing.Size(86, 21);
             this.comType.TabIndex = 21;
             this.comType.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
             this.comType.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // txtType
             // 
-            this.txtType.Location = new System.Drawing.Point(545, 12);
+            this.txtType.Location = new System.Drawing.Point(582, 12);
             this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(60, 20);
+            this.txtType.Size = new System.Drawing.Size(45, 20);
             this.txtType.TabIndex = 20;
             this.txtType.TextChanged += new System.EventHandler(this.comType_TextChanged);
             this.txtType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBox_KeyDown);
             // 
             // txtFactory
             // 
-            this.txtFactory.Location = new System.Drawing.Point(545, 37);
+            this.txtFactory.Location = new System.Drawing.Point(582, 37);
             this.txtFactory.Name = "txtFactory";
-            this.txtFactory.Size = new System.Drawing.Size(60, 20);
+            this.txtFactory.Size = new System.Drawing.Size(45, 20);
             this.txtFactory.TabIndex = 19;
             this.txtFactory.TextChanged += new System.EventHandler(this.comType_TextChanged);
             this.txtFactory.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBox_KeyDown);
@@ -390,18 +465,18 @@
             // comGroup
             // 
             this.comGroup.FormattingEnabled = true;
-            this.comGroup.Location = new System.Drawing.Point(355, 12);
+            this.comGroup.Location = new System.Drawing.Point(413, 12);
             this.comGroup.Name = "comGroup";
-            this.comGroup.Size = new System.Drawing.Size(101, 21);
+            this.comGroup.Size = new System.Drawing.Size(90, 21);
             this.comGroup.TabIndex = 18;
             this.comGroup.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
             this.comGroup.TextChanged += new System.EventHandler(this.comType_TextChanged);
             // 
             // txtNormal
             // 
-            this.txtNormal.Location = new System.Drawing.Point(406, 400);
+            this.txtNormal.Location = new System.Drawing.Point(420, 431);
             this.txtNormal.Name = "txtNormal";
-            this.txtNormal.Size = new System.Drawing.Size(109, 20);
+            this.txtNormal.Size = new System.Drawing.Size(117, 20);
             this.txtNormal.TabIndex = 34;
             this.txtNormal.Text = "0";
             this.txtNormal.Visible = false;
@@ -409,9 +484,9 @@
             // 
             // txtUnNormal
             // 
-            this.txtUnNormal.Location = new System.Drawing.Point(209, 400);
+            this.txtUnNormal.Location = new System.Drawing.Point(208, 431);
             this.txtUnNormal.Name = "txtUnNormal";
-            this.txtUnNormal.Size = new System.Drawing.Size(108, 20);
+            this.txtUnNormal.Size = new System.Drawing.Size(133, 20);
             this.txtUnNormal.TabIndex = 34;
             this.txtUnNormal.Text = "0";
             this.txtUnNormal.TextChanged += new System.EventHandler(this.txtBox_TextChanged);
@@ -459,85 +534,109 @@
             this.layoutControlItem18,
             this.layoutControlItem10,
             this.layoutControlItem12,
-            this.layoutControlItem13});
+            this.layoutControlItem13,
+            this.layoutControlItem19,
+            this.layoutControlItem20,
+            this.layoutControlItem23,
+            this.emptySpaceItem10,
+            this.emptySpaceItem11,
+            this.emptySpaceItem12,
+            this.emptySpaceItem13,
+            this.layoutControlItem24});
             this.layoutControlGroup1.MoveFocusRightToLeft = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(809, 501);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(804, 575);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txtFactory;
-            this.layoutControlItem3.Location = new System.Drawing.Point(533, 25);
+            this.layoutControlItem3.Location = new System.Drawing.Point(570, 25);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(64, 25);
+            this.layoutControlItem3.Size = new System.Drawing.Size(49, 25);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.txtType;
-            this.layoutControlItem1.Location = new System.Drawing.Point(533, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(570, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(64, 25);
+            this.layoutControlItem1.Size = new System.Drawing.Size(49, 25);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem4
             // 
+            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem4.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem4.Control = this.comType;
-            this.layoutControlItem4.Location = new System.Drawing.Point(597, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(619, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(192, 25);
+            this.layoutControlItem4.Size = new System.Drawing.Size(165, 25);
             this.layoutControlItem4.Text = "النوع";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(82, 17);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(72, 16);
             // 
             // layoutControlItem5
             // 
+            this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem5.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem5.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem5.Control = this.comFactory;
-            this.layoutControlItem5.Location = new System.Drawing.Point(597, 25);
+            this.layoutControlItem5.Location = new System.Drawing.Point(619, 25);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(192, 25);
+            this.layoutControlItem5.Size = new System.Drawing.Size(165, 25);
             this.layoutControlItem5.Text = "المصنع";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(82, 17);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(72, 16);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.txtProduct;
-            this.layoutControlItem6.Location = new System.Drawing.Point(290, 25);
+            this.layoutControlItem6.Location = new System.Drawing.Point(356, 25);
             this.layoutControlItem6.MaxSize = new System.Drawing.Size(0, 24);
             this.layoutControlItem6.MinSize = new System.Drawing.Size(24, 24);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(53, 25);
+            this.layoutControlItem6.Size = new System.Drawing.Size(45, 25);
             this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
             // layoutControlItem2
             // 
+            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem2.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem2.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem2.Control = this.comGroup;
-            this.layoutControlItem2.Location = new System.Drawing.Point(343, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(401, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(190, 25);
+            this.layoutControlItem2.Size = new System.Drawing.Size(169, 25);
             this.layoutControlItem2.Text = "المجموعة";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(82, 17);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(72, 16);
             // 
             // layoutControlItem8
             // 
+            this.layoutControlItem8.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem8.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem8.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem8.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem8.Control = this.comProduct;
-            this.layoutControlItem8.Location = new System.Drawing.Point(343, 25);
+            this.layoutControlItem8.Location = new System.Drawing.Point(401, 25);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(190, 25);
+            this.layoutControlItem8.Size = new System.Drawing.Size(169, 25);
             this.layoutControlItem8.Text = "الصنف";
             this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Right;
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(82, 17);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(72, 16);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.txtGroup;
-            this.layoutControlItem7.Location = new System.Drawing.Point(290, 0);
+            this.layoutControlItem7.Location = new System.Drawing.Point(356, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(53, 25);
+            this.layoutControlItem7.Size = new System.Drawing.Size(45, 25);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
@@ -546,174 +645,202 @@
             this.layoutControlItem9.Control = this.gridControl1;
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(789, 261);
+            this.layoutControlItem9.Size = new System.Drawing.Size(784, 292);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
             // layoutControlItem11
             // 
+            this.layoutControlItem11.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem11.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem11.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem11.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem11.Control = this.txtClassification;
-            this.layoutControlItem11.Location = new System.Drawing.Point(181, 25);
+            this.layoutControlItem11.Location = new System.Drawing.Point(214, 25);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(109, 25);
+            this.layoutControlItem11.Size = new System.Drawing.Size(142, 25);
             this.layoutControlItem11.Text = "التصنيف";
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(82, 17);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(72, 16);
             // 
             // layoutControlItem14
             // 
+            this.layoutControlItem14.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem14.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem14.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem14.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem14.Control = this.txtCode;
-            this.layoutControlItem14.Location = new System.Drawing.Point(504, 311);
+            this.layoutControlItem14.Location = new System.Drawing.Point(517, 342);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(285, 24);
+            this.layoutControlItem14.Size = new System.Drawing.Size(267, 24);
             this.layoutControlItem14.Text = "الكود";
             this.layoutControlItem14.TextLocation = DevExpress.Utils.Locations.Right;
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(82, 17);
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(72, 16);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 335);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 366);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(197, 29);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(196, 29);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 311);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 342);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(197, 24);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(196, 24);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(394, 311);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(408, 342);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(110, 24);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(109, 24);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem17
             // 
+            this.layoutControlItem17.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem17.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem17.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem17.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem17.Control = this.txtPrice;
-            this.layoutControlItem17.Location = new System.Drawing.Point(394, 364);
+            this.layoutControlItem17.Location = new System.Drawing.Point(408, 395);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(198, 24);
+            this.layoutControlItem17.Size = new System.Drawing.Size(196, 24);
             this.layoutControlItem17.Text = "السعر";
-            this.layoutControlItem17.TextSize = new System.Drawing.Size(82, 17);
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(72, 16);
             // 
             // layoutSell
             // 
+            this.layoutSell.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutSell.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutSell.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutSell.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutSell.Control = this.txtSell;
             this.layoutSell.CustomizationFormText = "خصم البيع";
-            this.layoutSell.Location = new System.Drawing.Point(197, 364);
+            this.layoutSell.Location = new System.Drawing.Point(196, 395);
             this.layoutSell.Name = "layoutSell";
-            this.layoutSell.Size = new System.Drawing.Size(197, 24);
+            this.layoutSell.Size = new System.Drawing.Size(212, 24);
             this.layoutSell.Text = "خصم البيع";
-            this.layoutSell.TextSize = new System.Drawing.Size(82, 17);
+            this.layoutSell.TextSize = new System.Drawing.Size(72, 16);
             // 
             // layoutUnNormal
             // 
+            this.layoutUnNormal.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutUnNormal.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutUnNormal.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutUnNormal.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutUnNormal.Control = this.txtUnNormal;
             this.layoutUnNormal.CustomizationFormText = "السعر";
-            this.layoutUnNormal.Location = new System.Drawing.Point(197, 388);
+            this.layoutUnNormal.Location = new System.Drawing.Point(196, 419);
             this.layoutUnNormal.Name = "layoutUnNormal";
-            this.layoutUnNormal.Size = new System.Drawing.Size(197, 24);
+            this.layoutUnNormal.Size = new System.Drawing.Size(212, 24);
             this.layoutUnNormal.Text = "زيادة قطعية";
-            this.layoutUnNormal.TextSize = new System.Drawing.Size(82, 17);
+            this.layoutUnNormal.TextSize = new System.Drawing.Size(72, 16);
             // 
             // layoutNormal
             // 
+            this.layoutNormal.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutNormal.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutNormal.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutNormal.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutNormal.Control = this.txtNormal;
             this.layoutNormal.CustomizationFormText = "السعر";
-            this.layoutNormal.Location = new System.Drawing.Point(394, 388);
+            this.layoutNormal.Location = new System.Drawing.Point(408, 419);
             this.layoutNormal.Name = "layoutNormal";
-            this.layoutNormal.Size = new System.Drawing.Size(198, 24);
+            this.layoutNormal.Size = new System.Drawing.Size(196, 24);
             this.layoutNormal.Text = "زيادة عادية";
-            this.layoutNormal.TextSize = new System.Drawing.Size(82, 17);
+            this.layoutNormal.TextSize = new System.Drawing.Size(72, 16);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(592, 335);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(604, 366);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(197, 29);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(180, 29);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem16
             // 
             this.layoutControlItem16.Control = this.radioQata3y;
-            this.layoutControlItem16.Location = new System.Drawing.Point(197, 335);
+            this.layoutControlItem16.Location = new System.Drawing.Point(196, 366);
             this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(197, 29);
+            this.layoutControlItem16.Size = new System.Drawing.Size(212, 29);
             this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem16.TextVisible = false;
             // 
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.radioList;
-            this.layoutControlItem15.Location = new System.Drawing.Point(394, 335);
+            this.layoutControlItem15.Location = new System.Drawing.Point(408, 366);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(198, 29);
+            this.layoutControlItem15.Size = new System.Drawing.Size(196, 29);
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem15.TextVisible = false;
             // 
             // layoutControlItem21
             // 
             this.layoutControlItem21.Control = this.tableLayoutPanel2;
-            this.layoutControlItem21.Location = new System.Drawing.Point(0, 432);
+            this.layoutControlItem21.Location = new System.Drawing.Point(0, 491);
             this.layoutControlItem21.Name = "layoutControlItem21";
-            this.layoutControlItem21.Size = new System.Drawing.Size(789, 49);
+            this.layoutControlItem21.Size = new System.Drawing.Size(784, 64);
             this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem21.TextVisible = false;
             // 
             // emptySpaceItem6
             // 
             this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.Location = new System.Drawing.Point(0, 364);
+            this.emptySpaceItem6.Location = new System.Drawing.Point(0, 395);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(197, 24);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(196, 24);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem7
             // 
             this.emptySpaceItem7.AllowHotTrack = false;
-            this.emptySpaceItem7.Location = new System.Drawing.Point(0, 388);
+            this.emptySpaceItem7.Location = new System.Drawing.Point(0, 419);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(197, 24);
+            this.emptySpaceItem7.Size = new System.Drawing.Size(196, 24);
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(592, 364);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(604, 395);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(197, 24);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(180, 24);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem8
             // 
             this.emptySpaceItem8.AllowHotTrack = false;
-            this.emptySpaceItem8.Location = new System.Drawing.Point(592, 388);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(604, 419);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(197, 24);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(180, 24);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem22
             // 
+            this.layoutControlItem22.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem22.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem22.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem22.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem22.Control = this.txtPercentageDelegate;
-            this.layoutControlItem22.Location = new System.Drawing.Point(197, 311);
+            this.layoutControlItem22.Location = new System.Drawing.Point(196, 342);
             this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(197, 24);
+            this.layoutControlItem22.Size = new System.Drawing.Size(212, 24);
             this.layoutControlItem22.Text = "نسبة المندوب";
-            this.layoutControlItem22.TextSize = new System.Drawing.Size(82, 17);
+            this.layoutControlItem22.TextSize = new System.Drawing.Size(72, 16);
             // 
             // emptySpaceItem9
             // 
             this.emptySpaceItem9.AllowHotTrack = false;
-            this.emptySpaceItem9.Location = new System.Drawing.Point(0, 412);
+            this.emptySpaceItem9.Location = new System.Drawing.Point(0, 443);
             this.emptySpaceItem9.Name = "emptySpaceItem9";
-            this.emptySpaceItem9.Size = new System.Drawing.Size(789, 20);
+            this.emptySpaceItem9.Size = new System.Drawing.Size(408, 24);
             this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem18
@@ -727,50 +854,134 @@
             // 
             // layoutControlItem10
             // 
+            this.layoutControlItem10.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem10.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem10.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem10.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem10.Control = this.comSize;
-            this.layoutControlItem10.Location = new System.Drawing.Point(181, 0);
+            this.layoutControlItem10.Location = new System.Drawing.Point(214, 0);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(109, 25);
+            this.layoutControlItem10.Size = new System.Drawing.Size(142, 25);
             this.layoutControlItem10.Text = "المقاس";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(82, 17);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(72, 16);
             // 
             // layoutControlItem12
             // 
+            this.layoutControlItem12.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem12.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem12.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem12.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem12.Control = this.comColor;
             this.layoutControlItem12.Location = new System.Drawing.Point(72, 0);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(109, 25);
+            this.layoutControlItem12.Size = new System.Drawing.Size(142, 25);
             this.layoutControlItem12.Text = "اللون";
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(82, 17);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(72, 16);
             // 
             // layoutControlItem13
             // 
+            this.layoutControlItem13.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem13.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem13.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem13.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem13.Control = this.comSort;
             this.layoutControlItem13.Location = new System.Drawing.Point(72, 25);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(109, 25);
+            this.layoutControlItem13.Size = new System.Drawing.Size(142, 25);
             this.layoutControlItem13.Text = "الفرز";
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(82, 17);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(72, 16);
             // 
-            // chBoxSelectAll
+            // layoutControlItem19
             // 
-            this.chBoxSelectAll.AutoSize = true;
-            this.chBoxSelectAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chBoxSelectAll.Font = new System.Drawing.Font("Neo Sans Arabic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chBoxSelectAll.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.chBoxSelectAll.Location = new System.Drawing.Point(3, 3);
-            this.chBoxSelectAll.Name = "chBoxSelectAll";
-            this.chBoxSelectAll.Size = new System.Drawing.Size(338, 39);
-            this.chBoxSelectAll.TabIndex = 6;
-            this.chBoxSelectAll.Text = "تحديد الكل";
-            this.chBoxSelectAll.UseVisualStyleBackColor = true;
-            this.chBoxSelectAll.CheckedChanged += new System.EventHandler(this.chBoxSelectAll_CheckedChanged);
+            this.layoutControlItem19.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem19.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem19.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem19.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem19.Control = this.textBox1;
+            this.layoutControlItem19.Location = new System.Drawing.Point(408, 467);
+            this.layoutControlItem19.Name = "layoutControlItem19";
+            this.layoutControlItem19.Size = new System.Drawing.Size(245, 24);
+            this.layoutControlItem19.Text = "نوع الزيادة";
+            this.layoutControlItem19.TextSize = new System.Drawing.Size(72, 16);
+            // 
+            // layoutControlItem20
+            // 
+            this.layoutControlItem20.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem20.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+            this.layoutControlItem20.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem20.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem20.Control = this.textBox2;
+            this.layoutControlItem20.Location = new System.Drawing.Point(174, 467);
+            this.layoutControlItem20.Name = "layoutControlItem20";
+            this.layoutControlItem20.Size = new System.Drawing.Size(234, 24);
+            this.layoutControlItem20.Text = "الزيادة";
+            this.layoutControlItem20.TextSize = new System.Drawing.Size(72, 16);
+            // 
+            // layoutControlItem23
+            // 
+            this.layoutControlItem23.Control = this.checkBox1;
+            this.layoutControlItem23.Location = new System.Drawing.Point(559, 443);
+            this.layoutControlItem23.Name = "layoutControlItem23";
+            this.layoutControlItem23.Size = new System.Drawing.Size(152, 24);
+            this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem23.TextVisible = false;
+            // 
+            // emptySpaceItem10
+            // 
+            this.emptySpaceItem10.AllowHotTrack = false;
+            this.emptySpaceItem10.Location = new System.Drawing.Point(653, 467);
+            this.emptySpaceItem10.Name = "emptySpaceItem10";
+            this.emptySpaceItem10.Size = new System.Drawing.Size(131, 24);
+            this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem11
+            // 
+            this.emptySpaceItem11.AllowHotTrack = false;
+            this.emptySpaceItem11.Location = new System.Drawing.Point(0, 467);
+            this.emptySpaceItem11.Name = "emptySpaceItem11";
+            this.emptySpaceItem11.Size = new System.Drawing.Size(87, 24);
+            this.emptySpaceItem11.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem12
+            // 
+            this.emptySpaceItem12.AllowHotTrack = false;
+            this.emptySpaceItem12.Location = new System.Drawing.Point(711, 443);
+            this.emptySpaceItem12.Name = "emptySpaceItem12";
+            this.emptySpaceItem12.Size = new System.Drawing.Size(73, 24);
+            this.emptySpaceItem12.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem13
+            // 
+            this.emptySpaceItem13.AllowHotTrack = false;
+            this.emptySpaceItem13.Location = new System.Drawing.Point(408, 443);
+            this.emptySpaceItem13.Name = "emptySpaceItem13";
+            this.emptySpaceItem13.Size = new System.Drawing.Size(151, 24);
+            this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // btnNewPlus
+            // 
+            this.btnNewPlus.Font = new System.Drawing.Font("Neo Sans Arabic", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewPlus.Location = new System.Drawing.Point(99, 479);
+            this.btnNewPlus.Name = "btnNewPlus";
+            this.btnNewPlus.Size = new System.Drawing.Size(83, 20);
+            this.btnNewPlus.TabIndex = 47;
+            this.btnNewPlus.Text = "button1";
+            this.btnNewPlus.UseVisualStyleBackColor = true;
+            // 
+            // layoutControlItem24
+            // 
+            this.layoutControlItem24.Control = this.btnNewPlus;
+            this.layoutControlItem24.Location = new System.Drawing.Point(87, 467);
+            this.layoutControlItem24.Name = "layoutControlItem24";
+            this.layoutControlItem24.Size = new System.Drawing.Size(87, 24);
+            this.layoutControlItem24.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem24.TextVisible = false;
             // 
             // RecordSellPriceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 501);
+            this.ClientSize = new System.Drawing.Size(804, 575);
             this.Controls.Add(this.layoutControl1);
             this.Name = "RecordSellPriceForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -815,6 +1026,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -881,5 +1100,17 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
         private System.Windows.Forms.CheckBox chBoxSelectAll;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem10;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem11;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem12;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem13;
+        private System.Windows.Forms.Button btnNewPlus;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem24;
     }
 }
