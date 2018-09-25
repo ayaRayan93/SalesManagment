@@ -235,7 +235,7 @@ namespace SalesManagment
                 customerPrint.Show();
                 MainTabControlPS.SelectedTabPage = MainTabPagePrintCustomer;
 
-                Main.loadedPrintCustomer = true;
+                SalesMainForm.loadedPrintCustomer = true;
             }
             catch (Exception ex)
             {

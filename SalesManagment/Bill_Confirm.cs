@@ -739,10 +739,10 @@ namespace SalesManagment
         //functions
         public XtraTabPage getTabPage(string text)
         {
-            for (int i = 0; i < Main.tabControlPointSale.TabPages.Count; i++)
-                if (Main.tabControlPointSale.TabPages[i].Name == text)
+            for (int i = 0; i < SalesMainForm.tabControlSales.TabPages.Count; i++)
+                if (SalesMainForm.tabControlSales.TabPages[i].Name == text)
                 {
-                    return Main.tabControlPointSale.TabPages[i];
+                    return SalesMainForm.tabControlSales.TabPages[i];
                 }
             return null;
         }

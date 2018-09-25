@@ -20,6 +20,9 @@ namespace SalesManagment
         XtraTabPage StoreTP;
         bool flag = false;
         public static XtraTabControl tabControlSales;
+        public static Bill_Confirm objFormBillConfirm;
+        public static bool loadedPrintCustomer = false;
+
         public SalesMainForm()
         {
             try
@@ -360,13 +363,13 @@ namespace SalesManagment
         //confirm bill
         public void bindDisplayConfirmBillForm(XtraTabPage xtraTabPage)
         {
-            Bill_Confirm objForm = new Bill_Confirm();
-            objForm.TopLevel = false;
+            objFormBillConfirm = new Bill_Confirm();
+            objFormBillConfirm.TopLevel = false;
 
-            xtraTabPage.Controls.Add(objForm);
-            objForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            objForm.Dock = DockStyle.Fill;
-            objForm.Show();
+            xtraTabPage.Controls.Add(objFormBillConfirm);
+            objFormBillConfirm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            objFormBillConfirm.Dock = DockStyle.Fill;
+            objFormBillConfirm.Show();
         }
 
         public XtraTabPage getTabPage(string text)

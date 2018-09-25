@@ -69,23 +69,14 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="VIBlend.WinForms.Controls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=6feea38fef5ea0cf" />
-    <Reference Include="VIBlend.WinForms.Utilities, Version=10.1.0.0, Culture=neutral, PublicKeyToken=970a5af59bc48043" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BillDetails_Confirm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BillDetails_Confirm.designer.cs">
-      <DependentUpon>BillDetails_Confirm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Bill_Confirm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Bill_Confirm.designer.cs">
       <DependentUpon>Bill_Confirm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bill_Items.cs" />
     <Compile Include="Customer_Print.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,12 +118,6 @@
     </Compile>
     <Compile Include="Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main.designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductSellPricesReport.cs">
       <SubType>Form</SubType>
@@ -191,9 +176,6 @@
       <DependentUpon>UpdateSellPriceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl.cs" />
-    <EmbeddedResource Include="BillDetails_Confirm.resx">
-      <DependentUpon>BillDetails_Confirm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Bill_Confirm.resx">
       <DependentUpon>Bill_Confirm.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,9 +196,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductSellPricesReport.resx">
       <DependentUpon>ProductSellPricesReport.cs</DependentUpon>

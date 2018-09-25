@@ -240,8 +240,8 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1072, 597);
             this.tableLayoutPanel1.TabIndex = 33;
             // 
@@ -272,9 +272,9 @@
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSave.Font = new System.Drawing.Font("Neo Sans Arabic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Image = global::SalesManagment.Properties.Resources.File_32;
+            this.btnSave.Image = global::SalesManagment.Properties.Resources.Save_32;
             this.btnSave.ImagePosition = 1;
-            this.btnSave.ImageZoom = 20;
+            this.btnSave.ImageZoom = 25;
             this.btnSave.LabelPosition = 18;
             this.btnSave.LabelText = "حفظ";
             this.btnSave.Location = new System.Drawing.Point(484, 4);

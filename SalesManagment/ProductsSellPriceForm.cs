@@ -284,7 +284,7 @@ namespace SalesManagment
                     MessageBox.Show("you must select an item");
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("you must select an item");
             }
@@ -363,7 +363,7 @@ namespace SalesManagment
 
                 displayProducts();
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("you must select an item");
             }

@@ -79,7 +79,7 @@ namespace SalesManagment
                         }
 
                         dbconnection.Close();
-                        Main.BillConfirm.refreshView(rowHandel, quantity, Convert.ToInt16(comStore.SelectedValue.ToString()), comStore.Text);
+                        SalesMainForm.objFormBillConfirm.refreshView(rowHandel, quantity, Convert.ToInt16(comStore.SelectedValue.ToString()), comStore.Text);
                         this.Close();
                     }
                     else

@@ -26,7 +26,7 @@ namespace SalesManagment
         MySqlConnection dbconnection3;
         MySqlConnection dbconnection4;
         MySqlConnection dbconnection5;
-        XtraTabControl MainTabControlPointSale;
+        XtraTabControl MainTabControlSales;
         bool loaded = false;
         XtraTabPage xtraTabPage;
         public static GridControl gridcontrol;
@@ -55,7 +55,7 @@ namespace SalesManagment
             dbconnection3 = new MySqlConnection(connection.connectionString);
             dbconnection4 = new MySqlConnection(connection.connectionString);
             dbconnection5 = new MySqlConnection(connection.connectionString);
-            MainTabControlPointSale = Main.tabControlPointSale;
+            MainTabControlSales = SalesMainForm.tabControlSales;
 
             xtraTabPage = new XtraTabPage();
 
@@ -1436,7 +1436,7 @@ namespace SalesManagment
 
                                     /*****************************************************************************************/
                                     DataRowView row1 = (DataRowView)gridView1.GetRow(gridView1.GetSelectedRows()[0]);
-                                    Main.BillConfirm.addItemToView(row1, TotalMeters, Convert.ToInt16(comStore.SelectedValue.ToString()), comStore.Text);
+                                    SalesMainForm.objFormBillConfirm.addItemToView(row1, TotalMeters, Convert.ToInt16(comStore.SelectedValue.ToString()), comStore.Text);
                                     this.Close();
                                 }
                                 else
@@ -1677,10 +1677,10 @@ namespace SalesManagment
 
         public XtraTabPage getTabPage(string text)
         {
-            for (int i = 0; i < Main.tabControlPointSale.TabPages.Count; i++)
-                if (Main.tabControlPointSale.TabPages[i].Name == text)
+            for (int i = 0; i < SalesMainForm.tabControlSales.TabPages.Count; i++)
+                if (SalesMainForm.tabControlSales.TabPages[i].Name == text)
                 {
-                    return Main.tabControlPointSale.TabPages[i];
+                    return SalesMainForm.tabControlSales.TabPages[i];
                 }
             return null;
         }

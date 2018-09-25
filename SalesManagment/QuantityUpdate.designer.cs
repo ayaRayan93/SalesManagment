@@ -61,7 +61,7 @@
             this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
             this.layoutControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(284, 179);
+            this.layoutControl1.Size = new System.Drawing.Size(284, 192);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -69,14 +69,14 @@
             // 
             this.label1.Location = new System.Drawing.Point(12, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 24);
+            this.label1.Size = new System.Drawing.Size(260, 27);
             this.label1.TabIndex = 7;
             // 
             // comStore
             // 
             this.comStore.Font = new System.Drawing.Font("Neo Sans Arabic", 9.75F);
             this.comStore.FormattingEnabled = true;
-            this.comStore.Location = new System.Drawing.Point(12, 64);
+            this.comStore.Location = new System.Drawing.Point(12, 67);
             this.comStore.Name = "comStore";
             this.comStore.Size = new System.Drawing.Size(214, 24);
             this.comStore.TabIndex = 6;
@@ -89,15 +89,15 @@
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.Font = new System.Drawing.Font("Neo Sans Arabic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Image = global::SalesManagment.Properties.Resources.File_32;
-            this.btnAdd.ImagePosition = 2;
-            this.btnAdd.ImageZoom = 8;
+            this.btnAdd.Image = global::SalesManagment.Properties.Resources.Save_32;
+            this.btnAdd.ImagePosition = 5;
+            this.btnAdd.ImageZoom = 9;
             this.btnAdd.LabelPosition = 20;
             this.btnAdd.LabelText = "حفظ";
-            this.btnAdd.Location = new System.Drawing.Point(12, 124);
+            this.btnAdd.Location = new System.Drawing.Point(12, 131);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(260, 43);
+            this.btnAdd.Size = new System.Drawing.Size(260, 49);
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -120,7 +120,7 @@
             this.layoutControlItem3,
             this.layoutControlItem4});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(284, 179);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(284, 192);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -137,17 +137,17 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 77);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 80);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(264, 35);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(264, 39);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnAdd;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 112);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 119);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(264, 47);
+            this.layoutControlItem2.Size = new System.Drawing.Size(264, 53);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -156,7 +156,7 @@
             this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Neo Sans Arabic", 12F);
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.Control = this.comStore;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 52);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 55);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(264, 25);
             this.layoutControlItem3.Text = "المخزن";
@@ -167,7 +167,7 @@
             this.layoutControlItem4.Control = this.label1;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(264, 28);
+            this.layoutControlItem4.Size = new System.Drawing.Size(264, 31);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -175,7 +175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 179);
+            this.ClientSize = new System.Drawing.Size(284, 192);
             this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;

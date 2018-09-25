@@ -100,7 +100,6 @@
             this.btnLogin.Size = new System.Drawing.Size(92, 30);
             this.btnLogin.TabIndex = 20;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            this.btnLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.btnLogin_Paint);
             // 
             // Login
             // 

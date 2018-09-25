@@ -114,11 +114,11 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 99F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1043, 600);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
@@ -132,12 +132,12 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 543);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 542);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1037, 54);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1037, 55);
             this.tableLayoutPanel2.TabIndex = 11;
             // 
             // btnAdd
@@ -149,15 +149,15 @@
             this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAdd.Font = new System.Drawing.Font("Neo Sans Arabic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Image = global::SalesManagment.Properties.Resources.File_32;
+            this.btnAdd.Image = global::SalesManagment.Properties.Resources.Save_32;
             this.btnAdd.ImagePosition = 1;
-            this.btnAdd.ImageZoom = 20;
+            this.btnAdd.ImageZoom = 25;
             this.btnAdd.LabelPosition = 18;
             this.btnAdd.LabelText = "اضافة";
             this.btnAdd.Location = new System.Drawing.Point(471, 4);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(97, 46);
+            this.btnAdd.Size = new System.Drawing.Size(97, 47);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -165,11 +165,11 @@
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Font = new System.Drawing.Font("Neo Sans Arabic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridControl1.Location = new System.Drawing.Point(3, 129);
+            this.gridControl1.Location = new System.Drawing.Point(3, 136);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gridControl1.Size = new System.Drawing.Size(1037, 372);
+            this.gridControl1.Size = new System.Drawing.Size(1037, 360);
             this.gridControl1.TabIndex = 5;
             this.gridControl1.ToolTipController = this.toolTipController1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -215,11 +215,11 @@
             this.tableLayoutPanel4.Controls.Add(this.label1, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.comStore, 4, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 507);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 502);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1037, 30);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1037, 34);
             this.tableLayoutPanel4.TabIndex = 12;
             // 
             // label3
@@ -242,7 +242,6 @@
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(150, 23);
             this.txtQuantity.TabIndex = 6;
-            //this.txtQuantity.TextChanged += new System.EventHandler(this.txtBox_TextChanged);
             // 
             // label1
             // 
@@ -273,11 +272,11 @@
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 9);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 6);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1037, 78);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1037, 84);
             this.tableLayoutPanel3.TabIndex = 76;
             // 
             // tableLayoutPanel5
@@ -294,7 +293,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(306, 72);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(306, 78);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // label9
@@ -305,7 +304,7 @@
             this.label9.Font = new System.Drawing.Font("Neo Sans Arabic", 12F);
             this.label9.Location = new System.Drawing.Point(4, 1);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(298, 34);
+            this.label9.Size = new System.Drawing.Size(298, 37);
             this.label9.TabIndex = 136;
             this.label9.Text = "بحث بكود البند";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -325,11 +324,11 @@
             this.tableLayoutPanel8.Controls.Add(this.txtCodeSearch4, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.txtCodeSearch5, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(4, 39);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(4, 42);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(298, 29);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(298, 32);
             this.tableLayoutPanel8.TabIndex = 137;
             // 
             // txtCodeSearch1
@@ -409,7 +408,7 @@
             this.groupBox1.Location = new System.Drawing.Point(315, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(719, 72);
+            this.groupBox1.Size = new System.Drawing.Size(719, 78);
             this.groupBox1.TabIndex = 75;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "الفلاتر";
@@ -604,11 +603,11 @@
             this.tableLayoutPanel7.Controls.Add(this.checkEditSets, 3, 0);
             this.tableLayoutPanel7.Controls.Add(this.checkEditOffers, 6, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 93);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 96);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1037, 30);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1037, 34);
             this.tableLayoutPanel7.TabIndex = 77;
             // 
             // label8
@@ -666,7 +665,7 @@
             this.btnSearchAll.ForeColor = System.Drawing.Color.White;
             this.btnSearchAll.Location = new System.Drawing.Point(3, 3);
             this.btnSearchAll.Name = "btnSearchAll";
-            this.btnSearchAll.Size = new System.Drawing.Size(100, 24);
+            this.btnSearchAll.Size = new System.Drawing.Size(100, 28);
             this.btnSearchAll.TabIndex = 14;
             this.btnSearchAll.Text = "بحث عام";
             this.btnSearchAll.UseVisualStyleBackColor = false;
@@ -677,6 +676,9 @@
             this.checkEditSets.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkEditSets.Location = new System.Drawing.Point(544, 3);
             this.checkEditSets.Name = "checkEditSets";
+            // 
+            // 
+            // 
             this.checkEditSets.Properties.Caption = "";
             this.checkEditSets.Size = new System.Drawing.Size(25, 19);
             this.checkEditSets.TabIndex = 15;
@@ -687,6 +689,9 @@
             this.checkEditOffers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkEditOffers.Location = new System.Drawing.Point(110, 3);
             this.checkEditOffers.Name = "checkEditOffers";
+            // 
+            // 
+            // 
             this.checkEditOffers.Properties.Caption = "";
             this.checkEditOffers.Size = new System.Drawing.Size(25, 19);
             this.checkEditOffers.TabIndex = 16;

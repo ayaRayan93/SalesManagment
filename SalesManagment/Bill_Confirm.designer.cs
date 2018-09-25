@@ -97,7 +97,7 @@
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(100, 133);
+            this.groupBox2.Size = new System.Drawing.Size(100, 128);
             this.groupBox2.TabIndex = 148;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "طريقة الاستلام";
@@ -163,7 +163,7 @@
             this.groupBox1.Location = new System.Drawing.Point(109, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(97, 133);
+            this.groupBox1.Size = new System.Drawing.Size(97, 128);
             this.groupBox1.TabIndex = 146;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "طريقة الدفع";
@@ -325,11 +325,11 @@
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(3, 148);
+            this.gridControl1.Location = new System.Drawing.Point(3, 143);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gridControl1.Size = new System.Drawing.Size(1037, 443);
+            this.gridControl1.Size = new System.Drawing.Size(1037, 450);
             this.gridControl1.TabIndex = 153;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -352,7 +352,6 @@
             this.gridView1.OptionsFind.ShowClearButton = false;
             this.gridView1.OptionsFind.ShowFindButton = false;
             this.gridView1.OptionsSelection.MultiSelect = true;
-            //this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView1_RowCellClick);
             this.gridView1.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView1_RowStyle);
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
             // 
@@ -378,9 +377,9 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1043, 661);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -400,12 +399,12 @@
             this.tableLayoutPanel3.Controls.Add(this.btnAddItem, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.ForeColor = System.Drawing.Color.White;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 597);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 599);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1037, 61);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1037, 59);
             this.tableLayoutPanel3.TabIndex = 154;
             // 
             // btnDetails
@@ -417,15 +416,15 @@
             this.btnDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDetails.Font = new System.Drawing.Font("Neo Sans Arabic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetails.ForeColor = System.Drawing.Color.White;
-            this.btnDetails.Image = global::SalesManagment.Properties.Resources.File_32;
+            this.btnDetails.Image = global::SalesManagment.Properties.Resources.Delete_32;
             this.btnDetails.ImagePosition = 1;
-            this.btnDetails.ImageZoom = 20;
+            this.btnDetails.ImageZoom = 25;
             this.btnDetails.LabelPosition = 18;
             this.btnDetails.LabelText = "حذف عنصر";
             this.btnDetails.Location = new System.Drawing.Point(524, 4);
             this.btnDetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Size = new System.Drawing.Size(97, 53);
+            this.btnDetails.Size = new System.Drawing.Size(97, 51);
             this.btnDetails.TabIndex = 0;
             this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
             // 
@@ -438,15 +437,15 @@
             this.btnConfirm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnConfirm.Font = new System.Drawing.Font("Neo Sans Arabic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Image = global::SalesManagment.Properties.Resources.File_32;
+            this.btnConfirm.Image = global::SalesManagment.Properties.Resources.Save_32;
             this.btnConfirm.ImagePosition = 1;
-            this.btnConfirm.ImageZoom = 20;
+            this.btnConfirm.ImageZoom = 25;
             this.btnConfirm.LabelPosition = 18;
             this.btnConfirm.LabelText = "تاكيد";
             this.btnConfirm.Location = new System.Drawing.Point(730, 4);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(97, 53);
+            this.btnConfirm.Size = new System.Drawing.Size(97, 51);
             this.btnConfirm.TabIndex = 94;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
@@ -464,14 +463,14 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(464, 55);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(464, 53);
             this.tableLayoutPanel4.TabIndex = 95;
             // 
             // labTotalDiscount
             // 
             this.labTotalDiscount.AutoSize = true;
             this.labTotalDiscount.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labTotalDiscount.Location = new System.Drawing.Point(461, 27);
+            this.labTotalDiscount.Location = new System.Drawing.Point(461, 26);
             this.labTotalDiscount.Name = "labTotalDiscount";
             this.labTotalDiscount.Size = new System.Drawing.Size(0, 17);
             this.labTotalDiscount.TabIndex = 94;
@@ -498,13 +497,13 @@
             this.btnAddItem.ForeColor = System.Drawing.Color.White;
             this.btnAddItem.Image = global::SalesManagment.Properties.Resources.File_32;
             this.btnAddItem.ImagePosition = 1;
-            this.btnAddItem.ImageZoom = 20;
+            this.btnAddItem.ImageZoom = 25;
             this.btnAddItem.LabelPosition = 18;
             this.btnAddItem.LabelText = "اضافة عنصر";
             this.btnAddItem.Location = new System.Drawing.Point(627, 4);
             this.btnAddItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(97, 53);
+            this.btnAddItem.Size = new System.Drawing.Size(97, 51);
             this.btnAddItem.TabIndex = 96;
             this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
@@ -527,7 +526,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1037, 139);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1037, 134);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // groupBox4
@@ -545,7 +544,7 @@
             this.groupBox4.Location = new System.Drawing.Point(574, 3);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox4.Size = new System.Drawing.Size(460, 133);
+            this.groupBox4.Size = new System.Drawing.Size(460, 128);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "التفاصيل";
@@ -591,7 +590,7 @@
             this.groupBox3.Location = new System.Drawing.Point(212, 3);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox3.Size = new System.Drawing.Size(356, 133);
+            this.groupBox3.Size = new System.Drawing.Size(356, 128);
             this.groupBox3.TabIndex = 149;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "العميل";
