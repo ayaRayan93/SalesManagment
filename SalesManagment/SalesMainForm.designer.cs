@@ -66,15 +66,14 @@
             this.xtraTabControlSalesContent = new DevExpress.XtraTab.XtraTabControl();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.btnProductSellPrice = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnOffers = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.btnStoreRecord = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup6 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.btnStoreRecord = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
+            this.btnProductSellPrice = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem13 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem14 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem15 = new DevExpress.XtraNavBar.NavBarItem();
@@ -85,6 +84,7 @@
             this.navBarItem20 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem21 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem22 = new DevExpress.XtraNavBar.NavBarItem();
+            this.btnOffers = new DevExpress.XtraNavBar.NavBarItem();
             this.panMain = new System.Windows.Forms.Panel();
             this.panContent = new System.Windows.Forms.Panel();
             this.panHeader = new System.Windows.Forms.Panel();
@@ -540,37 +540,15 @@
             this.navBarGroup4.Expanded = true;
             this.navBarGroup4.Name = "navBarGroup4";
             // 
-            // btnProductSellPrice
-            // 
-            this.btnProductSellPrice.Caption = "تسجيل اسعار البيع";
-            this.btnProductSellPrice.Name = "btnProductSellPrice";
-            this.btnProductSellPrice.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnProductSellPrice_LinkClicked);
-            // 
-            // btnOffers
-            // 
-            this.btnOffers.Caption = "تسجيل العروض";
-            this.btnOffers.Name = "btnOffers";
-            this.btnOffers.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnOffers_LinkClicked);
-            // 
             // navBarGroup1
             // 
             this.navBarGroup1.Caption = "العملاء";
             this.navBarGroup1.Name = "navBarGroup1";
             // 
-            // navBarItem1
-            // 
-            this.navBarItem1.Caption = "تسجيل العملاء";
-            this.navBarItem1.Name = "navBarItem1";
-            // 
             // navBarGroup2
             // 
             this.navBarGroup2.Caption = "تاكيد البيع";
             this.navBarGroup2.Name = "navBarGroup2";
-            // 
-            // btnStoreRecord
-            // 
-            this.btnStoreRecord.Caption = "تسجيل فاتورة بيع";
-            this.btnStoreRecord.Name = "btnStoreRecord";
             // 
             // navBarGroup6
             // 
@@ -586,6 +564,22 @@
             // 
             this.navBarGroup5.Caption = "تقارير";
             this.navBarGroup5.Name = "navBarGroup5";
+            // 
+            // btnStoreRecord
+            // 
+            this.btnStoreRecord.Caption = "تسجيل فاتورة بيع";
+            this.btnStoreRecord.Name = "btnStoreRecord";
+            // 
+            // navBarItem1
+            // 
+            this.navBarItem1.Caption = "تسجيل العملاء";
+            this.navBarItem1.Name = "navBarItem1";
+            // 
+            // btnProductSellPrice
+            // 
+            this.btnProductSellPrice.Caption = "تسجيل اسعار البيع";
+            this.btnProductSellPrice.Name = "btnProductSellPrice";
+            this.btnProductSellPrice.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnProductSellPrice_LinkClicked);
             // 
             // navBarItem13
             // 
@@ -637,6 +631,12 @@
             this.navBarItem22.Caption = "المصروفات";
             this.navBarItem22.Name = "navBarItem22";
             // 
+            // btnOffers
+            // 
+            this.btnOffers.Caption = "تسجيل العروض";
+            this.btnOffers.Name = "btnOffers";
+            this.btnOffers.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnOffers_LinkClicked);
+            // 
             // panMain
             // 
             this.panMain.Controls.Add(this.panContent);
@@ -657,6 +657,7 @@
             this.panContent.Name = "panContent";
             this.panContent.Size = new System.Drawing.Size(1177, 525);
             this.panContent.TabIndex = 1;
+            this.panContent.Paint += new System.Windows.Forms.PaintEventHandler(this.panContent_Paint);
             // 
             // panHeader
             // 

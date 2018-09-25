@@ -316,6 +316,11 @@ namespace SalesManagment
                 item.Appearance.ForeColor = Color.Black;
             }
         }
+
+        private void panContent_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
     public static class connection
