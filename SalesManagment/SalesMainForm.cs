@@ -316,8 +316,6 @@ namespace SalesManagment
                 item.Appearance.ForeColor = Color.Black;
             }
         }
-
-     
     }
 
     public static class connection

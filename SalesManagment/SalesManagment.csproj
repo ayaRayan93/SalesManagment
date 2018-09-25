@@ -110,6 +110,12 @@
     <Compile Include="Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductSellPricesReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     </Compile>
     <Compile Include="ProductsSellPriceForm.Designer.cs">
       <DependentUpon>ProductsSellPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuantityUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuantityUpdate.designer.cs">
+      <DependentUpon>QuantityUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="SalesMainForm.cs">
       <SubType>Form</SubType>
@@ -158,6 +170,9 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductSellPricesReport.resx">
       <DependentUpon>ProductSellPricesReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +189,9 @@
     </Compile>
     <EmbeddedResource Include="ProductsSellPriceForm.resx">
       <DependentUpon>ProductsSellPriceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuantityUpdate.resx">
+      <DependentUpon>QuantityUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SalesMainForm.resx">
       <DependentUpon>SalesMainForm.cs</DependentUpon>
