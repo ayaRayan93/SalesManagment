@@ -217,7 +217,7 @@ namespace SalesManagment
             xtraTabPage.Controls.Clear();
 
             xtraTabControlSalesContent.SelectedTabPage = xtraTabPage;
-            RecordSellPriceForm objForm = new RecordSellPriceForm(productsSellPriceForm,xtraTabControlSalesContent);
+            SetSellPrice objForm = new SetSellPrice(productsSellPriceForm,xtraTabControlSalesContent);
             objForm.TopLevel = false;
 
             xtraTabPage.Controls.Add(objForm);
@@ -316,8 +316,6 @@ namespace SalesManagment
                 item.Appearance.ForeColor = Color.Black;
             }
         }
-
-     
     }
 
     public static class connection
