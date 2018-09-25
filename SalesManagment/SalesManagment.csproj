@@ -73,6 +73,31 @@
     <Reference Include="VIBlend.WinForms.Utilities, Version=10.1.0.0, Culture=neutral, PublicKeyToken=970a5af59bc48043" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillDetails_Confirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillDetails_Confirm.designer.cs">
+      <DependentUpon>BillDetails_Confirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bill_Confirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bill_Confirm.designer.cs">
+      <DependentUpon>Bill_Confirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bill_Items.cs" />
+    <Compile Include="Customer_Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_Print.designer.cs">
+      <DependentUpon>Customer_Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_Record.designer.cs">
+      <DependentUpon>Customer_Record.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -105,11 +130,11 @@
     <Compile Include="SalesMainForm.designer.cs">
       <DependentUpon>SalesMainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RecordSellPriceForm.cs">
+    <Compile Include="SetSellPrice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RecordSellPriceForm.Designer.cs">
-      <DependentUpon>RecordSellPriceForm.cs</DependentUpon>
+    <Compile Include="SetSellPrice.Designer.cs">
+      <DependentUpon>SetSellPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateSellPriceForm.cs">
       <SubType>Form</SubType>
@@ -118,6 +143,18 @@
       <DependentUpon>UpdateSellPriceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl.cs" />
+    <EmbeddedResource Include="BillDetails_Confirm.resx">
+      <DependentUpon>BillDetails_Confirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bill_Confirm.resx">
+      <DependentUpon>Bill_Confirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Print.resx">
+      <DependentUpon>Customer_Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Record.resx">
+      <DependentUpon>Customer_Record.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,8 +178,8 @@
     <EmbeddedResource Include="SalesMainForm.resx">
       <DependentUpon>SalesMainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RecordSellPriceForm.resx">
-      <DependentUpon>RecordSellPriceForm.cs</DependentUpon>
+    <EmbeddedResource Include="SetSellPrice.resx">
+      <DependentUpon>SetSellPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateSellPriceForm.resx">
       <DependentUpon>UpdateSellPriceForm.cs</DependentUpon>
