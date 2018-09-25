@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SalesSystem
+namespace SalesManagment
 {
     public partial class Customer_Record : Form
     {

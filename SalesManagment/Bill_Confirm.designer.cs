@@ -1,4 +1,4 @@
-﻿namespace SalesSystem
+﻿namespace SalesManagment
 {
     partial class Bill_Confirm
     {

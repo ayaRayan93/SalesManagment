@@ -98,11 +98,29 @@
     <Compile Include="Customer_Record.designer.cs">
       <DependentUpon>Customer_Record.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_Report.designer.cs">
+      <DependentUpon>Customer_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_Update.designer.cs">
+      <DependentUpon>Customer_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CustomTextBox.designer.cs">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemDetails.designer.cs">
+      <DependentUpon>ItemDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -121,6 +139,12 @@
     </Compile>
     <Compile Include="ProductSellPricesReport.designer.cs">
       <DependentUpon>ProductSellPricesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products_Report.designer.cs">
+      <DependentUpon>Products_Report.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,6 +172,18 @@
     <Compile Include="SetSellPrice.Designer.cs">
       <DependentUpon>SetSellPrice.cs</DependentUpon>
     </Compile>
+    <Compile Include="StoresDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoresDetails.designer.cs">
+      <DependentUpon>StoresDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TipImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipImage.designer.cs">
+      <DependentUpon>TipImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateSellPriceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +203,15 @@
     <EmbeddedResource Include="Customer_Record.resx">
       <DependentUpon>Customer_Record.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Report.resx">
+      <DependentUpon>Customer_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Update.resx">
+      <DependentUpon>Customer_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemDetails.resx">
+      <DependentUpon>ItemDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProductSellPricesReport.resx">
       <DependentUpon>ProductSellPricesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products_Report.resx">
+      <DependentUpon>Products_Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -198,6 +246,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SetSellPrice.resx">
       <DependentUpon>SetSellPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoresDetails.resx">
+      <DependentUpon>StoresDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipImage.resx">
+      <DependentUpon>TipImage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateSellPriceForm.resx">
       <DependentUpon>UpdateSellPriceForm.cs</DependentUpon>
@@ -481,6 +535,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundBlue.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

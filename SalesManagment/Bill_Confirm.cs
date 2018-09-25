@@ -14,7 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SalesSystem
+namespace SalesManagment
 {
     public partial class Bill_Confirm : Form
     {
@@ -1048,25 +1048,25 @@ namespace SalesSystem
             gridView1.SetRowCellValue(rowHandel, "المخزن", storeName);
         }
 
-        void printBill()
-        {
-            List<Bill_Items> bi = new List<Bill_Items>();
-            for (int i = 0; i < gridView1.RowCount; i++)
-            {
-                Bill_Items item = new Bill_Items() { Code = gridView1.GetRowCellDisplayText(i, gridView1.Columns["الكود"]), Product_Type = gridView1.GetRowCellDisplayText(i, gridView1.Columns["النوع"]), Product_Name = gridView1.GetRowCellDisplayText(i, gridView1.Columns["الاسم"]), Color = gridView1.GetRowCellDisplayText(i, gridView1.Columns["اللون"]), Size = gridView1.GetRowCellDisplayText(i, gridView1.Columns["المقاس"]), Sort = gridView1.GetRowCellDisplayText(i, gridView1.Columns["الفرز"]), Quantity = Convert.ToDouble(gridView1.GetRowCellDisplayText(i, gridView1.Columns["الكمية"])), Cost = Convert.ToDouble(gridView1.GetRowCellDisplayText(i, gridView1.Columns["السعر"])), Total_Cost = Convert.ToDouble(gridView1.GetRowCellDisplayText(i, gridView1.Columns["الاجمالى"])), Store_Name = gridView1.GetRowCellDisplayText(i, gridView1.Columns["المخزن"]) };
-                bi.Add(item);
-            }
+        //void printBill()
+        //{
+        //    List<Bill_Items> bi = new List<Bill_Items>();
+        //    for (int i = 0; i < gridView1.RowCount; i++)
+        //    {
+        //        Bill_Items item = new Bill_Items() { Code = gridView1.GetRowCellDisplayText(i, gridView1.Columns["الكود"]), Product_Type = gridView1.GetRowCellDisplayText(i, gridView1.Columns["النوع"]), Product_Name = gridView1.GetRowCellDisplayText(i, gridView1.Columns["الاسم"]), Color = gridView1.GetRowCellDisplayText(i, gridView1.Columns["اللون"]), Size = gridView1.GetRowCellDisplayText(i, gridView1.Columns["المقاس"]), Sort = gridView1.GetRowCellDisplayText(i, gridView1.Columns["الفرز"]), Quantity = Convert.ToDouble(gridView1.GetRowCellDisplayText(i, gridView1.Columns["الكمية"])), Cost = Convert.ToDouble(gridView1.GetRowCellDisplayText(i, gridView1.Columns["السعر"])), Total_Cost = Convert.ToDouble(gridView1.GetRowCellDisplayText(i, gridView1.Columns["الاجمالى"])), Store_Name = gridView1.GetRowCellDisplayText(i, gridView1.Columns["المخزن"]) };
+        //        bi.Add(item);
+        //    }
 
-            Print_Bill_Report f = new Print_Bill_Report();
-            if (comClient.Text != "")
-            {
-                f.PrintInvoice(comClient.Text, type, CustomerBill_ID, Convert.ToDouble(labTotalBillPriceBD.Text.Split('=')[1].Trim()), Convert.ToDouble(labTotalBillPriceAD.Text.Split('=')[1].Trim()), Convert.ToDouble(labTotalDiscount.Text.Split('=')[1].Trim()), bi);
-            }
-            else if (comEngCon.Text != "")
-            {
-                f.PrintInvoice(comEngCon.Text, type, CustomerBill_ID, Convert.ToDouble(labTotalBillPriceBD.Text.Split('=')[1].Trim()), Convert.ToDouble(labTotalBillPriceAD.Text.Split('=')[1].Trim()), Convert.ToDouble(labTotalDiscount.Text.Split('=')[1].Trim()), bi);
-            }
-            f.ShowDialog();
-        }
+        //    Print_Bill_Report f = new Print_Bill_Report();
+        //    if (comClient.Text != "")
+        //    {
+        //        f.PrintInvoice(comClient.Text, type, CustomerBill_ID, Convert.ToDouble(labTotalBillPriceBD.Text.Split('=')[1].Trim()), Convert.ToDouble(labTotalBillPriceAD.Text.Split('=')[1].Trim()), Convert.ToDouble(labTotalDiscount.Text.Split('=')[1].Trim()), bi);
+        //    }
+        //    else if (comEngCon.Text != "")
+        //    {
+        //        f.PrintInvoice(comEngCon.Text, type, CustomerBill_ID, Convert.ToDouble(labTotalBillPriceBD.Text.Split('=')[1].Trim()), Convert.ToDouble(labTotalBillPriceAD.Text.Split('=')[1].Trim()), Convert.ToDouble(labTotalDiscount.Text.Split('=')[1].Trim()), bi);
+        //    }
+        //    f.ShowDialog();
+        //}
     }
 }

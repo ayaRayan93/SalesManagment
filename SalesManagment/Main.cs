@@ -314,9 +314,5 @@ namespace SalesManagment
         }
     }
 
-    public static class connection
-    {
-        //public static string connectionString = "SERVER=localhost;DATABASE=myccc;user=root;PASSWORD=root;CHARSET=utf8";
-        public static string connectionString = "SERVER=192.168.1.200;DATABASE=cccs;user=Devccc;PASSWORD=rootroot;CHARSET=utf8";
-    }
+
 }

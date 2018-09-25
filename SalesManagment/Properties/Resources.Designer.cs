@@ -243,6 +243,16 @@ namespace SalesManagment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BackgroundBlue {
+            get {
+                object obj = ResourceManager.GetObject("BackgroundBlue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BackgroundF {
             get {
                 object obj = ResourceManager.GetObject("BackgroundF", resourceCulture);

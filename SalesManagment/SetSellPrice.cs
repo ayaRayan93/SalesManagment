@@ -567,7 +567,7 @@ namespace SalesManagment
                                 command.Parameters["?Date"].Value = DateTime.Now.Date;
 
                                 command.ExecuteNonQuery();
-                                UserControl.UserRecord("sellprice", "اضافة", dataTable.Rows[i][0].ToString(), DateTime.Now, dbconnection);
+                                UserControl.ItemRecord("sellprice", "اضافة", Convert.ToInt16(dataTable.Rows[i][0].ToString()), DateTime.Now,"", dbconnection);
                                 dbconnection.Open();
                             }
                         }
@@ -590,7 +590,6 @@ namespace SalesManagment
 
 
                                 command.ExecuteNonQuery();
-                                UserControl.UserRecord("sellprice", "اضافة", txtCode.Text, DateTime.Now, dbconnection);
                                 dbconnection.Open();
                             }
                             else
@@ -631,7 +630,6 @@ namespace SalesManagment
                                 command.Parameters["?Date"].Value = DateTime.Now.Date;
 
                                 command.ExecuteNonQuery();
-                                UserControl.UserRecord("sellprice", "اضافة", txtCode.Text, DateTime.Now, dbconnection);
                                 dbconnection.Open();
                             }
                         }
@@ -664,7 +662,6 @@ namespace SalesManagment
 
                                 command.ExecuteNonQuery();
 
-                                UserControl.UserRecord("sellprice", "اضافة", txtCode.Text, DateTime.Now, dbconnection);
                                 dbconnection.Open();
                             }
                             else
@@ -673,24 +670,25 @@ namespace SalesManagment
                                 dbconnection.Close();
                                 return;
                             }
+                            int sellPrice_ID=0;
+                            string queryx = "select SellPrice_ID from sellprice order by SellPrice_ID desc limit 1";
+                            MySqlCommand com = new MySqlCommand(queryx, dbconnection);
+                            if (com.ExecuteScalar() != null)
+                            {
+                                sellPrice_ID = Convert.ToInt16(com.ExecuteScalar());
+                            }
                             foreach (DataGridViewRow item in dataGridView1.Rows)
                             {
-                               double addational = Convert.ToDouble(item.Cells[0].Value);
+                                double addational = Convert.ToDouble(item.Cells[0].Value);
+                                queryx = "insert into additional_increase_sellprice (SellPrice_ID,AdditionalValue,Description) values (@SellPrice_ID,@AdditionalValue,@Description)";
+                                com = new MySqlCommand(queryx, dbconnection);
+                                com.Parameters.AddWithValue("@SellPrice_ID", sellPrice_ID);
+                                com.Parameters.AddWithValue("@AdditionalValue", sellPrice_ID);
+                                com.Parameters.AddWithValue("@Description", item.Cells[1].Value);
+                                com.ExecuteNonQuery();
 
-                                string queryx = "select SellPrice_ID from sellprice order by SellPrice_ID desc limit 1";
-                                MySqlCommand com = new MySqlCommand(queryx, dbconnection);
-                                if (com.ExecuteScalar() != null)
-                                {
-                                    int sellPrice_ID = Convert.ToInt16(com.ExecuteScalar());
-                                    queryx = "insert into additional_increase_sellprice (SellPrice_ID,AdditionalValue,Description) values (@SellPrice_ID,@AdditionalValue,@Description)";
-                                    com = new MySqlCommand(queryx, dbconnection);
-                                    com.Parameters.AddWithValue("@SellPrice_ID", sellPrice_ID);
-                                    com.Parameters.AddWithValue("@AdditionalValue", sellPrice_ID);
-                                    com.Parameters.AddWithValue("@Description", item.Cells[1].Value);
-                                    com.ExecuteNonQuery();
-                                }
                             }
-
+                            UserControl.ItemRecord("sellprice", "اضافة", sellPrice_ID, DateTime.Now,"", dbconnection);
 
                         }
                         #endregion
