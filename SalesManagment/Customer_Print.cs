@@ -14,7 +14,7 @@ using DevExpress.XtraPrinting.Native;
 using static DevExpress.Utils.Drawing.Helpers.NativeMethods;
 using DevExpress.XtraBars.Docking2010;
 
-namespace SalesSystem
+namespace SalesManagment
 {
     public partial class Customer_Print : DevExpress.XtraEditors.XtraForm
     {
@@ -98,7 +98,7 @@ namespace SalesSystem
             PageImageBrick pageImageBrick;
 
             // Define the image to display.
-            Image pageImage = SalesSystem.Properties.Resources.Logo;
+            Image pageImage = SalesManagment.Properties.Resources.Logo;
 
             // Display the PageImageBrick containing the DevExpress logo.
             pageImageBrick = brickGraphics.DrawPageImage(pageImage, new Rectangle(856, 0, 100, 80), BorderSide.None, Color.Transparent);

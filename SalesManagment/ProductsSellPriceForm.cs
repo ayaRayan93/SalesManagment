@@ -333,7 +333,7 @@ namespace SalesManagment
                           
                             comand.ExecuteNonQuery();
 
-                            UserControl.UserRecord("sellprice", "حذف", row1[0].ToString(), DateTime.Now, dbconnection);
+                            UserControl.ItemRecord("sellprice", "حذف", Convert.ToInt16(row1[0].ToString()), DateTime.Now,"", dbconnection);
                             dbconnection.Open();
 
                         }
@@ -350,7 +350,7 @@ namespace SalesManagment
                      
                         comand.ExecuteNonQuery();
 
-                        UserControl.UserRecord("sellprice", "حذف", row1[0].ToString(), DateTime.Now, dbconnection);
+                        UserControl.ItemRecord("sellprice", "حذف", Convert.ToInt16(row1[0].ToString()), DateTime.Now,"", dbconnection);
 
                     }
                     else if (dialogResult == DialogResult.No)

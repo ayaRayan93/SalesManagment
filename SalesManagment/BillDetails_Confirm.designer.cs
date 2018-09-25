@@ -1,4 +1,4 @@
-﻿namespace SalesSystem
+﻿namespace SalesManagment
 {
     partial class BillDetails_Confirm
     {
@@ -433,7 +433,7 @@
             this.btnConfirm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnConfirm.Font = new System.Drawing.Font("Neo Sans Arabic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Image = global::SalesSystem.Properties.Resources.File_32;
+            this.btnConfirm.Image = global::SalesManagment.Properties.Resources.File_32;
             this.btnConfirm.ImagePosition = 1;
             this.btnConfirm.ImageZoom = 20;
             this.btnConfirm.LabelPosition = 18;

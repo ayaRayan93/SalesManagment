@@ -19,7 +19,7 @@ namespace SalesManagment
     {
         XtraTabPage StoreTP;
         bool flag = false;
-
+        public static XtraTabControl tabControlSales;
         public SalesMainForm()
         {
             try
@@ -27,6 +27,8 @@ namespace SalesManagment
                 InitializeComponent();
                 StoreTP = xtraTabPageSales;
                 xtraTabControlMainContainer.TabPages.Remove(xtraTabPageSales);
+
+                tabControlSales = xtraTabControlSalesContent;
             }
             catch (Exception ex)
             {
@@ -45,6 +47,62 @@ namespace SalesManagment
                     flag = true;
                 }
                 xtraTabControlMainContainer.SelectedTabPage = xtraTabControlMainContainer.TabPages[1];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void navBarItemCustomers_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            try
+            {
+                restForeColorOfNavBarItem();
+                NavBarItem navBarItem = (NavBarItem)sender;
+                navBarItem.Appearance.ForeColor = Color.Blue;
+
+                if (!xtraTabControlSalesContent.Visible)
+                    xtraTabControlSalesContent.Visible = true;
+
+                XtraTabPage xtraTabPage = getTabPage("العملاء");
+                if (xtraTabPage == null)
+                {
+                    xtraTabControlSalesContent.TabPages.Add("العملاء");
+                    xtraTabPage = getTabPage("العملاء");
+                }
+                xtraTabPage.Controls.Clear();
+
+                xtraTabControlSalesContent.SelectedTabPage = xtraTabPage;
+                bindDisplayCustomersForm(xtraTabPage);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void navBarItemConfirmBill_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            try
+            {
+                restForeColorOfNavBarItem();
+                NavBarItem navBarItem = (NavBarItem)sender;
+                navBarItem.Appearance.ForeColor = Color.Blue;
+
+                if (!xtraTabControlSalesContent.Visible)
+                    xtraTabControlSalesContent.Visible = true;
+
+                XtraTabPage xtraTabPage = getTabPage("تاكيد الفاتورة");
+                if (xtraTabPage == null)
+                {
+                    xtraTabControlSalesContent.TabPages.Add("تاكيد الفاتورة");
+                    xtraTabPage = getTabPage("تاكيد الفاتورة");
+                }
+                xtraTabPage.Controls.Clear();
+
+                xtraTabControlSalesContent.SelectedTabPage = xtraTabPage;
+                bindDisplayConfirmBillForm(xtraTabPage);
             }
             catch (Exception ex)
             {
@@ -107,6 +165,7 @@ namespace SalesManagment
                 MessageBox.Show(ex.Message);
             }
         }
+
 
         private void xtraTabControlStoresContent_CloseButtonClick(object sender, EventArgs e)
         {
@@ -225,7 +284,6 @@ namespace SalesManagment
             objForm.Dock = DockStyle.Fill;
             objForm.Show();
         }
-
         //update sell price 
         public void bindUpdateSellPriceForm(List<DataRowView> rows,ProductsSellPriceForm productsSellPriceForm,String query)
         {
@@ -251,7 +309,6 @@ namespace SalesManagment
             objForm.Dock = DockStyle.Fill;
             objForm.Show();
         }
-
         //report sell price 
         public void bindReportSellPriceForm( GridControl gridControl)
         {
@@ -289,6 +346,29 @@ namespace SalesManagment
             //objForm.Show();
         }
 
+        //customers
+        public void bindDisplayCustomersForm(XtraTabPage xtraTabPage)
+        {
+            Customer_Report objForm = new Customer_Report();
+            objForm.TopLevel = false;
+
+            xtraTabPage.Controls.Add(objForm);
+            objForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            objForm.Dock = DockStyle.Fill;
+            objForm.Show();
+        }
+        //confirm bill
+        public void bindDisplayConfirmBillForm(XtraTabPage xtraTabPage)
+        {
+            Bill_Confirm objForm = new Bill_Confirm();
+            objForm.TopLevel = false;
+
+            xtraTabPage.Controls.Add(objForm);
+            objForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            objForm.Dock = DockStyle.Fill;
+            objForm.Show();
+        }
+
         public XtraTabPage getTabPage(string text)
         {
             for (int i = 0; i < xtraTabControlSalesContent.TabPages.Count; i++)
@@ -316,11 +396,13 @@ namespace SalesManagment
                 item.Appearance.ForeColor = Color.Black;
             }
         }
+
+      
     }
 
     public static class connection
     {
-       public static string connectionString = "SERVER=192.168.1.200;DATABASE=test;user=Devccc;PASSWORD=rootroot;CHARSET=utf8";
+       public static string connectionString = "SERVER=192.168.1.200;DATABASE=cccs;user=Devccc;PASSWORD=rootroot;CHARSET=utf8";
       //   public static string connectionString = "SERVER=localhost;DATABASE=cccLocal;user=root;PASSWORD=root;CHARSET=utf8";
 
     }

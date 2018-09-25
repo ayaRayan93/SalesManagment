@@ -1,4 +1,4 @@
-﻿namespace SalesSystem
+﻿namespace SalesManagment
 {
     partial class Bill_Confirm
     {
@@ -417,7 +417,7 @@
             this.btnDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDetails.Font = new System.Drawing.Font("Neo Sans Arabic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetails.ForeColor = System.Drawing.Color.White;
-            this.btnDetails.Image = global::SalesSystem.Properties.Resources.File_32;
+            this.btnDetails.Image = global::SalesManagment.Properties.Resources.File_32;
             this.btnDetails.ImagePosition = 1;
             this.btnDetails.ImageZoom = 20;
             this.btnDetails.LabelPosition = 18;
@@ -438,7 +438,7 @@
             this.btnConfirm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnConfirm.Font = new System.Drawing.Font("Neo Sans Arabic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Image = global::SalesSystem.Properties.Resources.File_32;
+            this.btnConfirm.Image = global::SalesManagment.Properties.Resources.File_32;
             this.btnConfirm.ImagePosition = 1;
             this.btnConfirm.ImageZoom = 20;
             this.btnConfirm.LabelPosition = 18;
@@ -496,7 +496,7 @@
             this.btnAddItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAddItem.Font = new System.Drawing.Font("Neo Sans Arabic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddItem.ForeColor = System.Drawing.Color.White;
-            this.btnAddItem.Image = global::SalesSystem.Properties.Resources.File_32;
+            this.btnAddItem.Image = global::SalesManagment.Properties.Resources.File_32;
             this.btnAddItem.ImagePosition = 1;
             this.btnAddItem.ImageZoom = 20;
             this.btnAddItem.LabelPosition = 18;

@@ -188,7 +188,7 @@ namespace SalesManagment
                         
                             command.ExecuteNonQuery();
 
-                            UserControl.UserRecord("sellprice", "تعديل", dataTable.Rows[i][0].ToString(), DateTime.Now, dbconnection);
+                            UserControl.ItemRecord("sellprice", "تعديل", Convert.ToInt16(dataTable.Rows[i][0].ToString()), DateTime.Now,"", dbconnection);
                         dbconnection.Open();
                     }
                                       
@@ -222,7 +222,7 @@ namespace SalesManagment
                         
                             command.ExecuteNonQuery();
 
-                            UserControl.UserRecord("sellprice", "تعديل", dataTable.Rows[i][0].ToString(), DateTime.Now, dbconnection);
+                            UserControl.ItemRecord("sellprice", "تعديل", Convert.ToInt16(dataTable.Rows[i][0].ToString()), DateTime.Now,"", dbconnection);
                             dbconnection.Open();
                        }
 
