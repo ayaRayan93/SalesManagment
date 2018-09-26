@@ -75,6 +75,17 @@ namespace SalesManagment
             comSet.AutoCompleteSource = AutoCompleteSource.ListItems;
             comOffer.AutoCompleteMode = AutoCompleteMode.Suggest;
             comOffer.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+            /*ScrollBar hScrollBar1 = new HScrollBar();
+            hScrollBar1.Dock = DockStyle.Bottom;
+            hScrollBar1.Scroll += (sender, e) => { panel2.HorizontalScroll.Value = hScrollBar1.Value; };
+            panel2.Controls.Add(hScrollBar1);*/
+
+            panel2.AutoScroll = false;
+            panel2.VerticalScroll.Enabled = false;
+            panel2.VerticalScroll.Visible = false;
+            panel2.VerticalScroll.Maximum = 0;
+            panel2.AutoScroll = true;
         }
 
         private void SearchProduct_Load(object sender, EventArgs e)

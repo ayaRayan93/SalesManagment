@@ -20,8 +20,14 @@ namespace SalesManagment
         XtraTabPage StoreTP;
         bool flag = false;
         public static XtraTabControl tabControlSales;
-        public static Bill_Confirm objFormBillConfirm;
+
         public static bool loadedPrintCustomer = false;
+
+        public static Bill_Confirm objFormBillConfirm;
+        public static Customer_Report objFormCustomer;
+        public static XtraTabPage MainTabPageAddCustomer;
+        public static XtraTabPage MainTabPageUpdateCustomer;
+        public static XtraTabPage MainTabPagePrintCustomer;
 
         public SalesMainForm()
         {
@@ -32,6 +38,10 @@ namespace SalesManagment
                 xtraTabControlMainContainer.TabPages.Remove(xtraTabPageSales);
 
                 tabControlSales = xtraTabControlSalesContent;
+
+                MainTabPageAddCustomer = new XtraTabPage();
+                MainTabPageUpdateCustomer = new XtraTabPage();
+                MainTabPagePrintCustomer = new XtraTabPage();
             }
             catch (Exception ex)
             {
@@ -73,11 +83,12 @@ namespace SalesManagment
                 {
                     xtraTabControlSalesContent.TabPages.Add("العملاء");
                     xtraTabPage = getTabPage("العملاء");
+                    bindDisplayCustomersForm(xtraTabPage);
                 }
-                xtraTabPage.Controls.Clear();
+                //xtraTabPage.Controls.Clear();
 
                 xtraTabControlSalesContent.SelectedTabPage = xtraTabPage;
-                bindDisplayCustomersForm(xtraTabPage);
+              
             }
             catch (Exception ex)
             {
@@ -239,7 +250,7 @@ namespace SalesManagment
                 DialogResult dialogResult = MessageBox.Show("There are unsave Pages To you wound close anyway?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Environment.Exit(0);
+                    Application.Exit();
                 }
                 else if (dialogResult == DialogResult.No)
                 {
@@ -248,7 +259,7 @@ namespace SalesManagment
             }
             else
             {
-                Environment.Exit(0);
+                Application.Exit();
             }
         }
 
@@ -352,13 +363,13 @@ namespace SalesManagment
         //customers
         public void bindDisplayCustomersForm(XtraTabPage xtraTabPage)
         {
-            Customer_Report objForm = new Customer_Report();
-            objForm.TopLevel = false;
+            objFormCustomer = new Customer_Report();
+            objFormCustomer.TopLevel = false;
 
-            xtraTabPage.Controls.Add(objForm);
-            objForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            objForm.Dock = DockStyle.Fill;
-            objForm.Show();
+            xtraTabPage.Controls.Add(objFormCustomer);
+            objFormCustomer.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            objFormCustomer.Dock = DockStyle.Fill;
+            objFormCustomer.Show();
         }
         //confirm bill
         public void bindDisplayConfirmBillForm(XtraTabPage xtraTabPage)

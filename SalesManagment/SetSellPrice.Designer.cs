@@ -138,7 +138,7 @@
             this.tLPanCpntent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tLPanCpntent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tLPanCpntent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 210F));
-            this.tLPanCpntent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tLPanCpntent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tLPanCpntent.Size = new System.Drawing.Size(908, 737);
             this.tLPanCpntent.TabIndex = 0;
             // 
@@ -154,12 +154,12 @@
             this.tableLayoutPanel2.Controls.Add(this.chBoxSelectAll, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 690);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 680);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(902, 44);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(902, 54);
             this.tableLayoutPanel2.TabIndex = 39;
             // 
             // btnAdd
@@ -179,7 +179,7 @@
             this.btnAdd.Location = new System.Drawing.Point(399, 4);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(106, 36);
+            this.btnAdd.Size = new System.Drawing.Size(106, 46);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -191,7 +191,7 @@
             this.chBoxSelectAll.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.chBoxSelectAll.Location = new System.Drawing.Point(3, 3);
             this.chBoxSelectAll.Name = "chBoxSelectAll";
-            this.chBoxSelectAll.Size = new System.Drawing.Size(390, 38);
+            this.chBoxSelectAll.Size = new System.Drawing.Size(390, 48);
             this.chBoxSelectAll.TabIndex = 6;
             this.chBoxSelectAll.Text = "تحديد الكل";
             this.chBoxSelectAll.UseVisualStyleBackColor = true;
@@ -204,7 +204,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(511, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(388, 38);
+            this.panel1.Size = new System.Drawing.Size(388, 48);
             this.panel1.TabIndex = 7;
             // 
             // label19
@@ -389,7 +389,7 @@
             this.label9.Location = new System.Drawing.Point(477, 43);
             this.label9.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 16);
+            this.label9.Size = new System.Drawing.Size(30, 16);
             this.label9.TabIndex = 144;
             this.label9.Text = "الفرز";
             // 
@@ -448,7 +448,7 @@
             this.labSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(65)))), ((int)(((byte)(146)))));
             this.labSearch.Location = new System.Drawing.Point(701, 92);
             this.labSearch.Name = "labSearch";
-            this.labSearch.Size = new System.Drawing.Size(123, 19);
+            this.labSearch.Size = new System.Drawing.Size(126, 19);
             this.labSearch.TabIndex = 154;
             this.labSearch.Text = "ادوات بحث اضافية";
             this.labSearch.Click += new System.EventHandler(this.labSearch_Click);
@@ -712,7 +712,7 @@
             this.gridControl1.Location = new System.Drawing.Point(3, 123);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(902, 351);
+            this.gridControl1.Size = new System.Drawing.Size(902, 341);
             this.gridControl1.TabIndex = 41;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -762,7 +762,7 @@
             this.panContent.Controls.Add(this.txtCode);
             this.panContent.Controls.Add(this.label11);
             this.panContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panContent.Location = new System.Drawing.Point(3, 480);
+            this.panContent.Location = new System.Drawing.Point(3, 470);
             this.panContent.Name = "panContent";
             this.panContent.Size = new System.Drawing.Size(902, 204);
             this.panContent.TabIndex = 42;
@@ -902,7 +902,7 @@
             this.label16.Location = new System.Drawing.Point(384, 149);
             this.label16.Name = "label16";
             this.label16.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label16.Size = new System.Drawing.Size(71, 16);
+            this.label16.Size = new System.Drawing.Size(70, 16);
             this.label16.TabIndex = 62;
             this.label16.Text = "زيادة قطعية";
             // 
@@ -926,7 +926,7 @@
             this.label15.Location = new System.Drawing.Point(597, 148);
             this.label15.Name = "label15";
             this.label15.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label15.Size = new System.Drawing.Size(70, 16);
+            this.label15.Size = new System.Drawing.Size(69, 16);
             this.label15.TabIndex = 60;
             this.label15.Text = "زيادة العادية";
             // 
@@ -974,7 +974,7 @@
             this.label13.Location = new System.Drawing.Point(597, 118);
             this.label13.Name = "label13";
             this.label13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label13.Size = new System.Drawing.Size(38, 16);
+            this.label13.Size = new System.Drawing.Size(36, 16);
             this.label13.TabIndex = 56;
             this.label13.Text = "السعر";
             // 
@@ -1015,7 +1015,7 @@
             this.radioQata3y.Location = new System.Drawing.Point(379, 91);
             this.radioQata3y.Name = "radioQata3y";
             this.radioQata3y.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radioQata3y.Size = new System.Drawing.Size(63, 20);
+            this.radioQata3y.Size = new System.Drawing.Size(62, 20);
             this.radioQata3y.TabIndex = 53;
             this.radioQata3y.Text = "قطعي";
             this.radioQata3y.UseVisualStyleBackColor = true;

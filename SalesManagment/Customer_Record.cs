@@ -149,9 +149,10 @@ namespace SalesManagment
                         {
                             AddClientToEng_Con();
                         }
-                        MessageBox.Show("تم");
+                        //MessageBox.Show("تم");
                         clear();
                         xtraTabPage.ImageOptions.Image = null;
+                        SalesMainForm.objFormCustomer.search();
                     }
                     else
                     {
@@ -363,6 +364,10 @@ namespace SalesManagment
                         {
                             checkedListBoxControlPhone.Items.RemoveAt(0);
                         }
+                    }
+                    else if (item is GroupBox)
+                    {
+                        item.Controls.Clear();
                     }
                 }
                 //}

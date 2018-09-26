@@ -184,9 +184,11 @@ namespace SalesManagment
                         
                         UserControl.ItemRecord("customer", "تعديل", Convert.ToInt16(selRow[0].ToString()), DateTime.Now, textBox.Text, dbconnection);
                         
-                        MessageBox.Show("تم");
+                        //MessageBox.Show("تم");
+                        //clear();
                         xtraTabPage.ImageOptions.Image = null;
-                        SalesMainForm.tabControlSales.TabPages.Remove(Customer_Report.MainTabPageUpdateCustomer);
+                        SalesMainForm.objFormCustomer.search();
+                        SalesMainForm.tabControlSales.TabPages.Remove(SalesMainForm.MainTabPageUpdateCustomer);
                     }
                     else
                     {
