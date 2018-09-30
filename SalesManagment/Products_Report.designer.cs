@@ -50,21 +50,23 @@
             this.txtCodeSearch3 = new System.Windows.Forms.TextBox();
             this.txtCodeSearch4 = new System.Windows.Forms.TextBox();
             this.txtCodeSearch5 = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.comColor = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.comSize = new System.Windows.Forms.ComboBox();
+            this.comType = new System.Windows.Forms.ComboBox();
             this.comGroup = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.comSort = new System.Windows.Forms.ComboBox();
+            this.comProduct = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.comFactory = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.comFactory = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comProduct = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comType = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -73,8 +75,6 @@
             this.btnSearchAll = new System.Windows.Forms.Button();
             this.checkEditSets = new DevExpress.XtraEditors.CheckEdit();
             this.checkEditOffers = new DevExpress.XtraEditors.CheckEdit();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -84,11 +84,11 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEditSets.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEditOffers.Properties)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -389,6 +389,37 @@
             this.txtCodeSearch5.TextChanged += new System.EventHandler(this.txtCodeSearch5_TextChanged);
             this.txtCodeSearch5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodeSearch_KeyDown);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(315, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(719, 78);
+            this.panel2.TabIndex = 20;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.comColor);
+            this.panel3.Controls.Add(this.btnSearch);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.comSize);
+            this.panel3.Controls.Add(this.comType);
+            this.panel3.Controls.Add(this.comGroup);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.comSort);
+            this.panel3.Controls.Add(this.comProduct);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.comFactory);
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Location = new System.Drawing.Point(3, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(713, 78);
+            this.panel3.TabIndex = 0;
+            // 
             // comColor
             // 
             this.comColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -414,6 +445,18 @@
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Neo Sans Arabic", 12F);
+            this.label4.Location = new System.Drawing.Point(434, 38);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label4.Size = new System.Drawing.Size(51, 19);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "الصنف";
+            // 
             // comSize
             // 
             this.comSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -423,6 +466,17 @@
             this.comSize.Name = "comSize";
             this.comSize.Size = new System.Drawing.Size(100, 24);
             this.comSize.TabIndex = 18;
+            // 
+            // comType
+            // 
+            this.comType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comType.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.comType.FormattingEnabled = true;
+            this.comType.Location = new System.Drawing.Point(499, 6);
+            this.comType.Name = "comType";
+            this.comType.Size = new System.Drawing.Size(150, 24);
+            this.comType.TabIndex = 0;
+            this.comType.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
             // 
             // comGroup
             // 
@@ -435,6 +489,18 @@
             this.comGroup.TabIndex = 6;
             this.comGroup.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
             // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Neo Sans Arabic", 12F);
+            this.label7.Location = new System.Drawing.Point(664, 9);
+            this.label7.Name = "label7";
+            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label7.Size = new System.Drawing.Size(31, 19);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "نوع";
+            // 
             // comSort
             // 
             this.comSort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -444,6 +510,17 @@
             this.comSort.Name = "comSort";
             this.comSort.Size = new System.Drawing.Size(50, 24);
             this.comSort.TabIndex = 17;
+            // 
+            // comProduct
+            // 
+            this.comProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comProduct.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.comProduct.FormattingEnabled = true;
+            this.comProduct.Location = new System.Drawing.Point(270, 35);
+            this.comProduct.Name = "comProduct";
+            this.comProduct.Size = new System.Drawing.Size(150, 24);
+            this.comProduct.TabIndex = 9;
+            this.comProduct.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
             // 
             // label15
             // 
@@ -457,6 +534,17 @@
             this.label15.TabIndex = 5;
             this.label15.Text = "المصنع";
             // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Neo Sans Arabic", 12F);
+            this.label11.Location = new System.Drawing.Point(62, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(36, 19);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "الفرز";
+            // 
             // label13
             // 
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -467,6 +555,17 @@
             this.label13.Size = new System.Drawing.Size(42, 19);
             this.label13.TabIndex = 16;
             this.label13.Text = "اللون";
+            // 
+            // comFactory
+            // 
+            this.comFactory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comFactory.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.comFactory.FormattingEnabled = true;
+            this.comFactory.Location = new System.Drawing.Point(499, 35);
+            this.comFactory.Name = "comFactory";
+            this.comFactory.Size = new System.Drawing.Size(150, 24);
+            this.comFactory.TabIndex = 3;
+            this.comFactory.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
             // 
             // label14
             // 
@@ -490,74 +589,6 @@
             this.label12.Size = new System.Drawing.Size(58, 19);
             this.label12.TabIndex = 15;
             this.label12.Text = "المقاس";
-            // 
-            // comFactory
-            // 
-            this.comFactory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comFactory.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.comFactory.FormattingEnabled = true;
-            this.comFactory.Location = new System.Drawing.Point(499, 35);
-            this.comFactory.Name = "comFactory";
-            this.comFactory.Size = new System.Drawing.Size(150, 24);
-            this.comFactory.TabIndex = 3;
-            this.comFactory.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Neo Sans Arabic", 12F);
-            this.label11.Location = new System.Drawing.Point(62, 9);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 19);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "الفرز";
-            // 
-            // comProduct
-            // 
-            this.comProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comProduct.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.comProduct.FormattingEnabled = true;
-            this.comProduct.Location = new System.Drawing.Point(270, 35);
-            this.comProduct.Name = "comProduct";
-            this.comProduct.Size = new System.Drawing.Size(150, 24);
-            this.comProduct.TabIndex = 9;
-            this.comProduct.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Neo Sans Arabic", 12F);
-            this.label7.Location = new System.Drawing.Point(664, 9);
-            this.label7.Name = "label7";
-            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label7.Size = new System.Drawing.Size(31, 19);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "نوع";
-            // 
-            // comType
-            // 
-            this.comType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comType.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.comType.FormattingEnabled = true;
-            this.comType.Location = new System.Drawing.Point(499, 6);
-            this.comType.Name = "comType";
-            this.comType.Size = new System.Drawing.Size(150, 24);
-            this.comType.TabIndex = 0;
-            this.comType.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Neo Sans Arabic", 12F);
-            this.label4.Location = new System.Drawing.Point(434, 38);
-            this.label4.Name = "label4";
-            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(51, 19);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "الصنف";
             // 
             // tableLayoutPanel7
             // 
@@ -673,37 +704,6 @@
             this.checkEditOffers.TabIndex = 16;
             this.checkEditOffers.CheckedChanged += new System.EventHandler(this.checkEditOffers_CheckedChanged);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(315, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(719, 78);
-            this.panel2.TabIndex = 20;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.comColor);
-            this.panel3.Controls.Add(this.btnSearch);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.comSize);
-            this.panel3.Controls.Add(this.comType);
-            this.panel3.Controls.Add(this.comGroup);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.comSort);
-            this.panel3.Controls.Add(this.comProduct);
-            this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.comFactory);
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Location = new System.Drawing.Point(3, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(713, 78);
-            this.panel3.TabIndex = 0;
-            // 
             // Products_Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -728,13 +728,13 @@
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEditSets.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEditOffers.Properties)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
