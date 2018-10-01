@@ -37,20 +37,56 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>C:\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Dialogs.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraDialogs.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraNavBar.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraTreeList.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.Data.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Dialogs.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.Office.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.Printing.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.RichEdit.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.Utils.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.XtraBars.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraDialogs.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\PointSale_DX\PointSaleDX\PointSaleDX\bin\Debug\DevExpress.XtraEditors.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.XtraGrid.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.XtraLayout.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\PointSale_DX\PointSaleDX\PointSaleDX\bin\Debug\DevExpress.XtraNavBar.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.XtraPrinting.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.XtraTreeList.v17.2.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
@@ -88,6 +124,24 @@
     </Compile>
     <Compile Include="Customer_Record.designer.cs">
       <DependentUpon>Customer_Record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdvancedEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdvancedEditForm.designer.cs">
+      <DependentUpon>AdvancedEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialOrder_Request.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialOrder_Request.designer.cs">
+      <DependentUpon>SpecialOrder_Request.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialOrders_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialOrders_Report.designer.cs">
+      <DependentUpon>SpecialOrders_Report.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer_Report.cs">
       <SubType>Form</SubType>
@@ -184,6 +238,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customer_Record.resx">
       <DependentUpon>Customer_Record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvancedEditForm.resx">
+      <DependentUpon>AdvancedEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialOrder_Request.resx">
+      <DependentUpon>SpecialOrder_Request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialOrders_Report.resx">
+      <DependentUpon>SpecialOrders_Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer_Report.resx">
       <DependentUpon>Customer_Report.cs</DependentUpon>

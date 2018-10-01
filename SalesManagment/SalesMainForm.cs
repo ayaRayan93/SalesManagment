@@ -12,11 +12,13 @@ using DevExpress.XtraTab;
 using DevExpress.XtraGrid;
 using DevExpress.XtraTab.ViewInfo;
 using DevExpress.XtraNavBar;
+using MySql.Data.MySqlClient;
 
 namespace SalesManagment
 {
     public partial class SalesMainForm : DevExpress.XtraEditors.XtraForm
     {
+        MySqlConnection dbconnection;
         XtraTabPage StoreTP;
         bool flag = false;
         public static XtraTabControl tabControlSales;
@@ -29,11 +31,15 @@ namespace SalesManagment
         public static XtraTabPage MainTabPageUpdateCustomer;
         public static XtraTabPage MainTabPagePrintCustomer;
 
+        Timer timer = new Timer();
+        int EmpBranchId = 0;
+
         public SalesMainForm()
         {
             try
             {
                 InitializeComponent();
+                dbconnection = new MySqlConnection(connection.connectionString);
                 StoreTP = xtraTabPageSales;
                 xtraTabControlMainContainer.TabPages.Remove(xtraTabPageSales);
 
@@ -42,12 +48,21 @@ namespace SalesManagment
                 MainTabPageAddCustomer = new XtraTabPage();
                 MainTabPageUpdateCustomer = new XtraTabPage();
                 MainTabPagePrintCustomer = new XtraTabPage();
+
+                EmpBranchId = UserControl.UserBranch(dbconnection);
+                
+                SpecialOrdersFunction();
+
+                //Calculate the time of the actual work of the delegates
+                timer.Interval = 1000 * 60;
+                timer.Tick += new EventHandler(GetNonRequestedSpecialOrders);
+                timer.Start();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-           
+            dbconnection.Close();
         }
 
         private void btnSales_ItemClick(object sender, TileItemEventArgs e)
@@ -180,6 +195,64 @@ namespace SalesManagment
             }
         }
 
+        private void navBarItemSpecialOrdersReport_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            /*try
+            {
+                restForeColorOfNavBarItem();
+                NavBarItem navBarItem = (NavBarItem)sender;
+                navBarItem.Appearance.ForeColor = Color.Blue;
+
+                if (!xtraTabControlSalesContent.Visible)
+                    xtraTabControlSalesContent.Visible = true;
+
+                XtraTabPage xtraTabPage = getTabPage("عرض الطلبات الخاصة");
+                if (xtraTabPage == null)
+                {
+                    xtraTabControlSalesContent.TabPages.Add("عرض الطلبات الخاصة");
+                    xtraTabPage = getTabPage("عرض الطلبات الخاصة");
+                }
+                xtraTabPage.Controls.Clear();
+
+                xtraTabControlSalesContent.SelectedTabPage = xtraTabPage;
+                bindDisplaySpecialOrdersReport(xtraTabPage);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }*/
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (flag == false)
+                {
+                    xtraTabControlMainContainer.TabPages.Insert(1, StoreTP);
+                    flag = true;
+                }
+                xtraTabControlMainContainer.SelectedTabPage = xtraTabControlMainContainer.TabPages[1];
+
+                if (!xtraTabControlSalesContent.Visible)
+                    xtraTabControlSalesContent.Visible = true;
+
+                XtraTabPage xtraTabPage = getTabPage("عرض الطلبات الخاصة");
+                if (xtraTabPage == null)
+                {
+                    xtraTabControlSalesContent.TabPages.Add("عرض الطلبات الخاصة");
+                    xtraTabPage = getTabPage("عرض الطلبات الخاصة");
+                }
+                xtraTabPage.Controls.Clear();
+
+                xtraTabControlSalesContent.SelectedTabPage = xtraTabPage;
+                bindDisplaySpecialOrdersReport(xtraTabPage);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
         private void xtraTabControlStoresContent_CloseButtonClick(object sender, EventArgs e)
         {
@@ -382,6 +455,17 @@ namespace SalesManagment
             objFormBillConfirm.Dock = DockStyle.Fill;
             objFormBillConfirm.Show();
         }
+        //Special Orders Report
+        public void bindDisplaySpecialOrdersReport(XtraTabPage xtraTabPage)
+        {
+            SpecialOrders_Report objForm = new SpecialOrders_Report();
+            objForm.TopLevel = false;
+
+            xtraTabPage.Controls.Add(objForm);
+            objForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            objForm.Dock = DockStyle.Fill;
+            objForm.Show();
+        }
 
         public XtraTabPage getTabPage(string text)
         {
@@ -411,7 +495,28 @@ namespace SalesManagment
             }
         }
 
-      
+        //
+        public void GetNonRequestedSpecialOrders(object sender, EventArgs e)
+        {
+            try
+            {
+                SpecialOrdersFunction();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            dbconnection.Close();
+        }
+
+        public void SpecialOrdersFunction()
+        {
+            string query = "SELECT Count(special_order.SpecialOrder_ID) FROM special_order INNER JOIN dash ON special_order.Dash_ID = dash.Dash_ID where special_order.Record=0 AND dash.Branch_ID=" + EmpBranchId;
+            MySqlCommand command = new MySqlCommand(query, dbconnection);
+            dbconnection.Open();
+            string reader = command.ExecuteScalar().ToString();
+            labelNotify.Text = reader;
+        }
     }
 
     public static class connection

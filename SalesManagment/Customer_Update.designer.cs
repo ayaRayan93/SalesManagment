@@ -947,7 +947,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Customer_Update";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "تسجيل عملاء";
+            this.Text = "تعديل";
             this.Load += new System.EventHandler(this.Customer_Update_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
