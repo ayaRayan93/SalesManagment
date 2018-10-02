@@ -48,7 +48,7 @@ namespace SalesManagment
             //gridView1.PostEditor();
             //gridView1.UpdateCurrentRow();
             gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditFormInplace;
-            gridView1.OptionsEditForm.CustomEditFormLayout = new AdvancedEditForm();
+            gridView1.OptionsEditForm.CustomEditFormLayout = new AdvancedEditForm(EmpBranchId);
             //gridView1.ShowInplaceEditForm();
             //gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.Default;
         }

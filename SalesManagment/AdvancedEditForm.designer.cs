@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comColor = new System.Windows.Forms.ComboBox();
+            this.comSize = new System.Windows.Forms.ComboBox();
+            this.comSort = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.comType = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -67,12 +73,6 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.txtRequestNum = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.comColor = new System.Windows.Forms.ComboBox();
-            this.comSize = new System.Windows.Forms.ComboBox();
-            this.comSort = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
@@ -107,33 +107,109 @@
             this.groupBox1.Location = new System.Drawing.Point(9, 105);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(826, 69);
+            this.groupBox1.Size = new System.Drawing.Size(826, 70);
             this.groupBox1.TabIndex = 75;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "الفلاتر";
             // 
+            // comColor
+            // 
+            this.comColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SetBoundPropertyName(this.comColor, "");
+            this.comColor.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comColor.FormattingEnabled = true;
+            this.comColor.Location = new System.Drawing.Point(189, 41);
+            this.comColor.Name = "comColor";
+            this.comColor.Size = new System.Drawing.Size(100, 21);
+            this.comColor.TabIndex = 10;
+            // 
+            // comSize
+            // 
+            this.comSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SetBoundPropertyName(this.comSize, "");
+            this.comSize.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comSize.FormattingEnabled = true;
+            this.comSize.Location = new System.Drawing.Point(188, 13);
+            this.comSize.Name = "comSize";
+            this.comSize.Size = new System.Drawing.Size(100, 21);
+            this.comSize.TabIndex = 9;
+            // 
+            // comSort
+            // 
+            this.comSort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SetBoundPropertyName(this.comSort, "");
+            this.comSort.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comSort.FormattingEnabled = true;
+            this.comSort.Location = new System.Drawing.Point(41, 13);
+            this.comSort.Name = "comSort";
+            this.comSort.Size = new System.Drawing.Size(100, 21);
+            this.comSort.TabIndex = 11;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.SetBoundPropertyName(this.label16, "");
+            this.label16.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(293, 43);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(35, 16);
+            this.label16.TabIndex = 22;
+            this.label16.Text = "اللون";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.AutoSize = true;
+            this.SetBoundPropertyName(this.label17, "");
+            this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(292, 15);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(50, 16);
+            this.label17.TabIndex = 21;
+            this.label17.Text = "المقاس";
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.SetBoundPropertyName(this.label18, "");
+            this.label18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(146, 15);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(32, 16);
+            this.label18.TabIndex = 20;
+            this.label18.Text = "الفرز";
+            // 
             // btnSearch
             // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(65)))), ((int)(((byte)(146)))));
             this.SetBoundPropertyName(this.btnSearch, "");
-            this.btnSearch.Location = new System.Drawing.Point(55, 39);
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(55, 36);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(72, 23);
+            this.btnSearch.Size = new System.Drawing.Size(80, 30);
             this.btnSearch.TabIndex = 13;
             this.btnSearch.Text = "بحث";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // comType
             // 
+            this.comType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SetBoundPropertyName(this.comType, "");
             this.comType.FormattingEnabled = true;
             this.comType.Location = new System.Drawing.Point(586, 13);
             this.comType.Name = "comType";
             this.comType.Size = new System.Drawing.Size(150, 21);
             this.comType.TabIndex = 5;
+            this.comType.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.SetBoundPropertyName(this.label3, "");
             this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -146,6 +222,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.SetBoundPropertyName(this.label1, "");
             this.label1.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -158,24 +235,29 @@
             // 
             // comProduct
             // 
+            this.comProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SetBoundPropertyName(this.comProduct, "");
             this.comProduct.FormattingEnabled = true;
             this.comProduct.Location = new System.Drawing.Point(361, 41);
             this.comProduct.Name = "comProduct";
             this.comProduct.Size = new System.Drawing.Size(150, 21);
             this.comProduct.TabIndex = 8;
+            this.comProduct.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
             // 
             // comFactory
             // 
+            this.comFactory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SetBoundPropertyName(this.comFactory, "");
             this.comFactory.FormattingEnabled = true;
             this.comFactory.Location = new System.Drawing.Point(586, 41);
             this.comFactory.Name = "comFactory";
             this.comFactory.Size = new System.Drawing.Size(150, 21);
             this.comFactory.TabIndex = 6;
+            this.comFactory.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
             // 
             // label14
             // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.SetBoundPropertyName(this.label14, "");
             this.label14.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -188,6 +270,7 @@
             // 
             // label15
             // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.SetBoundPropertyName(this.label15, "");
             this.label15.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -200,12 +283,14 @@
             // 
             // comGroup
             // 
+            this.comGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SetBoundPropertyName(this.comGroup, "");
             this.comGroup.FormattingEnabled = true;
             this.comGroup.Location = new System.Drawing.Point(361, 13);
             this.comGroup.Name = "comGroup";
             this.comGroup.Size = new System.Drawing.Size(150, 21);
             this.comGroup.TabIndex = 7;
+            this.comGroup.SelectedValueChanged += new System.EventHandler(this.comBox_SelectedValueChanged);
             // 
             // label2
             // 
@@ -369,25 +454,31 @@
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(65)))), ((int)(((byte)(146)))));
             this.SetBoundPropertyName(this.btnAdd, "");
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(9, 369);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(88, 28);
+            this.btnAdd.Size = new System.Drawing.Size(80, 30);
             this.btnAdd.TabIndex = 114;
             this.btnAdd.Text = "اضافة";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnConfirm
             // 
             this.btnConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(65)))), ((int)(((byte)(146)))));
             this.SetBoundPropertyName(this.btnConfirm, "");
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm.ForeColor = System.Drawing.Color.White;
             this.btnConfirm.Location = new System.Drawing.Point(9, 591);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(96, 29);
+            this.btnConfirm.Size = new System.Drawing.Size(100, 30);
             this.btnConfirm.TabIndex = 130;
             this.btnConfirm.Text = "تاكيد  طلب";
-            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.UseVisualStyleBackColor = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // label6
@@ -396,11 +487,11 @@
             this.label6.AutoSize = true;
             this.SetBoundPropertyName(this.label6, "");
             this.label6.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label6.Location = new System.Drawing.Point(463, 77);
+            this.label6.Location = new System.Drawing.Point(458, 77);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 17);
+            this.label6.Size = new System.Drawing.Size(52, 17);
             this.label6.TabIndex = 132;
-            this.label6.Text = "موظف";
+            this.label6.Text = "الموظف";
             // 
             // txtEmployee
             // 
@@ -554,77 +645,9 @@
             this.label12.TabIndex = 146;
             this.label12.Text = "رقم الطلب";
             // 
-            // comColor
-            // 
-            this.comColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SetBoundPropertyName(this.comColor, "");
-            this.comColor.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comColor.FormattingEnabled = true;
-            this.comColor.Location = new System.Drawing.Point(189, 41);
-            this.comColor.Name = "comColor";
-            this.comColor.Size = new System.Drawing.Size(100, 21);
-            this.comColor.TabIndex = 10;
-            // 
-            // comSize
-            // 
-            this.comSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SetBoundPropertyName(this.comSize, "");
-            this.comSize.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comSize.FormattingEnabled = true;
-            this.comSize.Location = new System.Drawing.Point(188, 13);
-            this.comSize.Name = "comSize";
-            this.comSize.Size = new System.Drawing.Size(100, 21);
-            this.comSize.TabIndex = 9;
-            // 
-            // comSort
-            // 
-            this.comSort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SetBoundPropertyName(this.comSort, "");
-            this.comSort.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comSort.FormattingEnabled = true;
-            this.comSort.Location = new System.Drawing.Point(41, 13);
-            this.comSort.Name = "comSort";
-            this.comSort.Size = new System.Drawing.Size(100, 21);
-            this.comSort.TabIndex = 11;
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.SetBoundPropertyName(this.label16, "");
-            this.label16.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(293, 43);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(35, 16);
-            this.label16.TabIndex = 22;
-            this.label16.Text = "اللون";
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.SetBoundPropertyName(this.label17, "");
-            this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(292, 15);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(50, 16);
-            this.label17.TabIndex = 21;
-            this.label17.Text = "المقاس";
-            // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.SetBoundPropertyName(this.label18, "");
-            this.label18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(146, 15);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(32, 16);
-            this.label18.TabIndex = 20;
-            this.label18.Text = "الفرز";
-            // 
             // gridControl1
             // 
+            this.gridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SetBoundPropertyName(this.gridControl1, "");
             this.gridControl1.Location = new System.Drawing.Point(9, 181);
             this.gridControl1.MainView = this.gridView1;
@@ -639,9 +662,12 @@
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView1_RowCellClick);
             // 
             // gridControl2
             // 
+            this.gridControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SetBoundPropertyName(this.gridControl2, "");
             this.gridControl2.Location = new System.Drawing.Point(9, 403);
             this.gridControl2.MainView = this.gridView2;

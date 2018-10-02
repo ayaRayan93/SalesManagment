@@ -17,13 +17,14 @@ namespace SalesManagment
         MySqlConnection dbconnection;
         bool loaded = false;
         string Customer_Type;
-        DataGridViewRow row;
+        DataRowView row1;
         private int[] addedRecordIDs;
         int recordCount = 0;
         private bool Added = false;
         int id;
+        int EmpBranchId = 0;
 
-        public AdvancedEditForm()
+        public AdvancedEditForm(int empBranchId)
         {
             InitializeComponent();
             dbconnection = new MySqlConnection(connection.connectionString);
@@ -31,6 +32,29 @@ namespace SalesManagment
 
             this.SetBoundFieldName(txtRequestNum, "رقم الطلب");
             this.SetBoundPropertyName(txtRequestNum, "EditValue");
+
+            EmpBranchId = empBranchId;
+
+            comType.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comType.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comFactory.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comFactory.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comGroup.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comGroup.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comProduct.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comProduct.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comSupplier.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comSupplier.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comEngCon.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comEngCon.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comCustomer.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comCustomer.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comColor.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comColor.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comSize.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comSize.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comSort.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comSort.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -75,6 +99,33 @@ namespace SalesManagment
                 comProduct.ValueMember = dt.Columns["Product_ID"].ToString();
                 comProduct.Text = "";
 
+                query = "select * from size";
+                da = new MySqlDataAdapter(query, dbconnection);
+                dt = new DataTable();
+                da.Fill(dt);
+                comSize.DataSource = dt;
+                comSize.DisplayMember = dt.Columns["Size_Value"].ToString();
+                comSize.ValueMember = dt.Columns["Size_ID"].ToString();
+                comSize.Text = "";
+
+                query = "select * from color";
+                da = new MySqlDataAdapter(query, dbconnection);
+                dt = new DataTable();
+                da.Fill(dt);
+                comColor.DataSource = dt;
+                comColor.DisplayMember = dt.Columns["Color_Name"].ToString();
+                comColor.ValueMember = dt.Columns["Color_ID"].ToString();
+                comColor.Text = "";
+
+                query = "select * from sort";
+                da = new MySqlDataAdapter(query, dbconnection);
+                dt = new DataTable();
+                da.Fill(dt);
+                comSort.DataSource = dt;
+                comSort.DisplayMember = dt.Columns["Sort_Value"].ToString();
+                comSort.ValueMember = dt.Columns["Sort_ID"].ToString();
+                comSort.Text = "";
+
                 query = "select * from delegate";
                 da = new MySqlDataAdapter(query, dbconnection);
                 dt = new DataTable();
@@ -103,6 +154,7 @@ namespace SalesManagment
             }
             dbconnection.Close();
         }
+
         //check type of customer if engineer,client or contract 
         private void radiotype_CheckedChanged(object sender, EventArgs e)
         {
@@ -156,7 +208,7 @@ namespace SalesManagment
             dbconnection.Close();
         }
 
-        //when select customer(مهندس,مقاول)display in comCustomer the all clients of th customer 
+        //when select customer(مهندس,مقاول,تاجر)display in comCustomer the all clients of th customer 
         private void comEngCon_SelectedValueChanged(object sender, EventArgs e)
         {
             if (loaded)
@@ -183,7 +235,116 @@ namespace SalesManagment
             }
 
         }
-        
+
+        private void comBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (loaded)
+            {
+                ComboBox comBox = (ComboBox)sender;
+
+                switch (comBox.Name)
+                {
+                    case "comType":
+                        {
+                            string query = "select * from color where color.Type_ID=" + comType.SelectedValue.ToString();
+                            MySqlDataAdapter da = new MySqlDataAdapter(query, dbconnection);
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+                            comColor.DataSource = dt;
+                            comColor.DisplayMember = dt.Columns["Color_Name"].ToString();
+                            comColor.ValueMember = dt.Columns["Color_ID"].ToString();
+                            comColor.Text = "";
+
+                            string qall = "";
+                            if (comType.Text != "")
+                            {
+                                qall += " and product.Type_ID=" + comType.SelectedValue.ToString();
+                            }
+                            if (comFactory.Text != "")
+                            {
+                                qall += " and product.Factory_ID=" + comFactory.SelectedValue.ToString();
+                            }
+                            if (comGroup.Text != "")
+                            {
+                                qall += " and product.Product_ID IN (select Product_ID from product_group where Group_ID=" + comGroup.SelectedValue.ToString() + ")";
+                            }
+                            query = "select * from product where product.Product_ID is not null " + qall;
+                            da = new MySqlDataAdapter(query, dbconnection);
+                            dt = new DataTable();
+                            da.Fill(dt);
+                            comProduct.DataSource = dt;
+                            comProduct.DisplayMember = dt.Columns["Product_Name"].ToString();
+                            comProduct.ValueMember = dt.Columns["Product_ID"].ToString();
+                            comProduct.Text = "";
+                        }
+                        break;
+                    case "comFactory":
+                        {
+                            string query = "select * from size where size.Factory_ID=" + comFactory.SelectedValue.ToString();
+                            MySqlDataAdapter da = new MySqlDataAdapter(query, dbconnection);
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+                            comSize.DataSource = dt;
+                            comSize.DisplayMember = dt.Columns["Size_Value"].ToString();
+                            comSize.ValueMember = dt.Columns["Size_ID"].ToString();
+                            comSize.Text = "";
+
+                            string qall = "";
+                            if (comType.Text != "")
+                            {
+                                qall += " and product.Type_ID=" + comType.SelectedValue.ToString();
+                            }
+                            if (comFactory.Text != "")
+                            {
+                                qall += " and product.Factory_ID=" + comFactory.SelectedValue.ToString();
+                            }
+                            if (comGroup.Text != "")
+                            {
+                                qall += " and product.Product_ID IN (select Product_ID from product_group where Group_ID=" + comGroup.SelectedValue.ToString() + ")";
+                            }
+                            query = "select * from product where product.Product_ID is not null " + qall;
+                            da = new MySqlDataAdapter(query, dbconnection);
+                            dt = new DataTable();
+                            da.Fill(dt);
+                            comProduct.DataSource = dt;
+                            comProduct.DisplayMember = dt.Columns["Product_Name"].ToString();
+                            comProduct.ValueMember = dt.Columns["Product_ID"].ToString();
+                            comProduct.Text = "";
+                        }
+                        break;
+                    case "comGroup":
+                        {
+                            string qall = "";
+                            if (comType.Text != "")
+                            {
+                                qall += " and product.Type_ID=" + comType.SelectedValue.ToString();
+                            }
+                            if (comFactory.Text != "")
+                            {
+                                qall += " and product.Factory_ID=" + comFactory.SelectedValue.ToString();
+                            }
+                            if (comGroup.Text != "")
+                            {
+                                qall += " and product.Product_ID IN (select Product_ID from product_group where Group_ID=" + comGroup.SelectedValue.ToString() + ")";
+                            }
+                            string query = "select * from product where product.Product_ID is not null " + qall;
+                            MySqlDataAdapter da = new MySqlDataAdapter(query, dbconnection);
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+                            comProduct.DataSource = dt;
+                            comProduct.DisplayMember = dt.Columns["Product_Name"].ToString();
+                            comProduct.ValueMember = dt.Columns["Product_ID"].ToString();
+                            comProduct.Text = "";
+                        }
+                        break;
+                    case "comProduct":
+                        {
+                        }
+                        break;
+                }
+            }
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             try
@@ -306,30 +467,25 @@ namespace SalesManagment
             }
             dbconnection.Close();
         }
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            row = (DataGridViewRow)gridView1.GetRow(gridView1.GetSelectedRows()[0]);
-
-            string value = row.Cells[0].Value.ToString();
-            txtCode.Text = value;
-        }
+        
         private void btnAdd_Click(object sender, EventArgs e)
         {
             double x = 0;
-            if (!Added && row != null && double.TryParse(txtPrice.Text,out x))
+            if (!Added && row1 != null && double.TryParse(txtPrice.Text,out x))
             {
                 addedRecordIDs[recordCount] = gridView1.GetSelectedRows()[0];
-                /*gridView1.Rows[gridView1.SelectedCells[0].RowIndex].DefaultCellStyle.BackColor = Color.Silver;
+                /*gridView1.Rows[gridView1.SelectedCells[0].RowIndex].DefaultCellStyle.BackColor = Color.Silver;*/
                 recordCount++;
-                /*int n = gridView2.AddNewRow();*/
-                int n=0;
+
+                gridView1.AddNewRow();
+                int n = gridView1.GetRowHandle(gridView1.DataRowCount);
                 foreach (DataGridViewColumn item in gridView1.Columns)
                 {
-                    gridView2.SetRowCellValue(n,item.Index.ToString(), gridView1.GetRowCellDisplayText(row.Index,item.Index.ToString()));
+                    gridView2.SetRowCellValue(n,item.Index.ToString(), gridView1.GetRowCellDisplayText(gridView1.GetSelectedRows()[0],item.Index.ToString()));
 
                 }
-                /*gridView2.Rows[n].Cells[10].Value = txtTotalMeters.Text;
-                gridView2.Rows[n].Cells[11].Value = x;*/
+                gridView2.SetRowCellValue(n, gridView1.Columns[10], txtTotalMeters.Text);
+                gridView2.SetRowCellValue(n, gridView1.Columns[11], x);
 
                 //clear fields
                 txtCode.Text = txtPrice.Text = txtTotalMeters.Text = "";
@@ -340,25 +496,31 @@ namespace SalesManagment
                 return;
             }
         }
+
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            int branchId = 0;
-            /*&&comBranch.Text!=""&& int.TryParse(txtBranchID.Text,out branchId)&&comStore.Text!=""&&txtStoreID.Text!=""*/
-            if ( comDelegate.Text != "" && txtEmployee.Text!="")
+            try
             {
-                dbconnection.Open();
+                int branchId = 0;
+                /*&&comBranch.Text!=""&& int.TryParse(txtBranchID.Text,out branchId)&&comStore.Text!=""&&txtStoreID.Text!=""*/
+                if (comDelegate.Text != "" && txtEmployee.Text != "")
+                {
+                    dbconnection.Open();
 
-                int branchBillNumber = 1;
-                string query = "select BranchBillNumber from requests where Branch_ID="+branchId+" order by BranchBillNumber desc limit 1";
-                MySqlCommand com = new MySqlCommand(query,dbconnection);
-                if (com.ExecuteScalar()!= null)
-                {
-                    branchBillNumber = Convert.ToInt16(com.ExecuteScalar())+1;
-                }
-                try
-                {
+                    int branchBillNumber = 1;
+                    string query = "select BranchBillNumber from requests where Branch_ID=" + branchId + " order by BranchBillNumber desc limit 1";
+                    MySqlCommand com = new MySqlCommand(query, dbconnection);
+                    if (com.ExecuteScalar() != null)
+                    {
+                        branchBillNumber = Convert.ToInt16(com.ExecuteScalar()) + 1;
+                    }
+
+                    query = "select Branch_Name from branch where Branch_ID=" + EmpBranchId;
+                    com = new MySqlCommand(query, dbconnection);
+                    string branchName = com.ExecuteScalar().ToString();
+
                     query = "insert into requests (Supplier_ID,Supplier_Name,Store_ID,Store_Name,Branch_ID,Branch_Name,BranchBillNumber,Customer_ID,Client_ID,Delegate_ID,Employee_Name,Request_Date,Recive_Date,PaidMoney)values(@Supplier_ID,@Supplier_Name,@Store_ID,@Store_Name,@Branch_ID,@Branch_Name,@BranchBillNumber,@Customer_ID,@Client_ID,@Delegate_ID,@Employee_Name,@Request_Date,@Recive_Date,@PaidMoney)";
-                    com = new MySqlCommand(query,dbconnection);
+                    com = new MySqlCommand(query, dbconnection);
                     com.Parameters.Add("@Client_ID", MySqlDbType.Int16);
                     com.Parameters["@Client_ID"].Value = comCustomer.SelectedValue;
                     com.Parameters.Add("@Customer_ID", MySqlDbType.Int16);
@@ -368,7 +530,7 @@ namespace SalesManagment
                     com.Parameters.Add("@Employee_Name", MySqlDbType.VarChar);
                     com.Parameters["@Employee_Name"].Value = txtEmployee.Text;
                     com.Parameters.Add("@Request_Date", MySqlDbType.Date);
-                    com.Parameters["@Request_Date"].Value = dateTimePicker1.Value.Date;             
+                    com.Parameters["@Request_Date"].Value = dateTimePicker1.Value.Date;
                     com.Parameters.Add("@Recive_Date", MySqlDbType.Date);
                     com.Parameters["@Recive_Date"].Value = dateTimePicker2.Value.Date;
                     int res2;
@@ -385,50 +547,15 @@ namespace SalesManagment
                     }
                     com.Parameters.Add("@Supplier_Name", MySqlDbType.VarChar);
                     com.Parameters["@Supplier_Name"].Value = comSupplier.Text;
-                    /*int res1;
-                    if (int.TryParse(txtStoreID.Text, out res1))
-                    {
-                        com.Parameters.Add("@Store_ID", MySqlDbType.Int16);
-                        com.Parameters["@Store_ID"].Value = res1;
-                    }
-                    else
-                    {
-                        MessageBox.Show("insert correct value please :)");
-                        dbconnection.Close();
-                        return;
-                    }*/
-                    com.Parameters.Add("@Store_Name", MySqlDbType.VarChar);
-                    /*com.Parameters["@Store_Name"].Value = comStore.Text;
-                    int res;*/
-            /*if (int.TryParse(txtBranchID.Text, out res))
-            {
-                com.Parameters.Add("@Branch_ID", MySqlDbType.Int16);
-                com.Parameters["@Branch_ID"].Value = res;
-            }
-            else
-            {
-                MessageBox.Show("insert correct value please :)");
-                dbconnection.Close();
-                return;
-            }*/
-            com.Parameters.Add("@Branch_Name", MySqlDbType.VarChar);
-                    /*com.Parameters["@Branch_Name"].Value = comBranch.Text;*/
+
+                    com.Parameters.Add("@Branch_ID", MySqlDbType.Int16);
+                    com.Parameters["@Branch_ID"].Value = EmpBranchId;
+                    
+                    com.Parameters.Add("@Branch_Name", MySqlDbType.VarChar);
+                    com.Parameters["@Branch_Name"].Value = branchName;
                     com.Parameters.Add("@BranchBillNumber", MySqlDbType.Int16);
                     com.Parameters["@BranchBillNumber"].Value = branchBillNumber;
-                    /*double y = 0;
-
-                    if ( double.TryParse(txtPaidMoney.Text, out y))
-                    {
-                       
-                        com.Parameters.Add("@PaidMoney", MySqlDbType.Double);
-                        com.Parameters["@PaidMoney"].Value = y;
-                    }
-                    else
-                    {
-                        MessageBox.Show("insert correct value please :)");
-                        dbconnection.Close();
-                        return;
-                    }*/
+                    
                     com.ExecuteNonQuery();
 
                     query = "select Request_ID from requests order by Request_ID desc limit 1";
@@ -450,21 +577,21 @@ namespace SalesManagment
                             com.Parameters.Add("@Code", MySqlDbType.VarChar);
                             com.Parameters["@Code"].Value = row.Cells["Code"].Value;
                             com.Parameters.Add("@Quantity", MySqlDbType.Double);
-                            com.Parameters["@Quantity"].Value = row.Cells["Total_Meter"].Value; 
+                            com.Parameters["@Quantity"].Value = row.Cells["Total_Meter"].Value;
                             com.Parameters.Add("@Supplier_ID", MySqlDbType.VarChar);
                             com.Parameters["@Supplier_ID"].Value = comSupplier.SelectedValue;
                             com.Parameters.Add("@Price", MySqlDbType.Double);
                             com.Parameters["@Price"].Value = row.Cells["Price"].Value;
-                          
+
                             com.ExecuteNonQuery();
-                            
+
                         }*/
                         MessageBox.Show("Done");
                         dbconnection.Close();
 
                         //لعرض التقرير
                         /*&& txtPaidMoney.Text != ""*/
-                        if (comDelegate.Text != "" && txtEmployee.Text != "" )
+                        if (comDelegate.Text != "" && txtEmployee.Text != "")
                         {
                             DataTable dt = new DataTable();
                             /*for (int i = 0; i < dataGridView2.Columns.Count; i++)
@@ -528,52 +655,33 @@ namespace SalesManagment
                             MessageBox.Show("fill requird fields");
                         }
                     }
+
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
-                }
-                dbconnection.Close();
-            }
-            else
-            {
-                MessageBox.Show("fill requird fields");
-            }
-        }
-
-        private void btnMainForm_Click(object sender, EventArgs e)
-        {
-            /*MainForm f = new MainForm();
-            f.Show();
-            this.Hide();*/
-        }
-
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            try
-            {
-                Environment.Exit(0);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void comBranch_SelectedValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (loaded)
-                {
-                    /*txtBranchID.Text = comBranch.SelectedValue.ToString();*/
+                    MessageBox.Show("fill requird fields");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
+            dbconnection.Close();
+        }
+
+        private void gridView1_RowCellClick(object sender, RowCellClickEventArgs e)
+        {
+            try
+            {
+                row1 = (DataRowView)gridView1.GetRow(gridView1.GetSelectedRows()[0]);
+
+                string value = row1[1].ToString();
+                txtCode.Text = value;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
