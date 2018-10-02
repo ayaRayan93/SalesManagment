@@ -35,21 +35,58 @@
   <ItemGroup>
     <Reference Include="Accessibility" />
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\draft\ccc\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>C:\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.Data.v17.2.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Dialogs.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.Office.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.Printing.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.RichEdit.v17.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.Utils.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.XtraBars.v17.2.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XtraDialogs.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraNavBar.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraTreeList.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\PointSale_DX\PointSaleDX\PointSaleDX\bin\Debug\DevExpress.XtraEditors.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.XtraGrid.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.XtraLayout.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\PointSale_DX\PointSaleDX\PointSaleDX\bin\Debug\DevExpress.XtraNavBar.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.XtraPrinting.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\dxExampleGrid\dxExampleGrid\bin\Debug\DevExpress.XtraTreeList.v17.2.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
@@ -68,21 +105,67 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="VIBlend.WinForms.Controls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=6feea38fef5ea0cf" />
-    <Reference Include="VIBlend.WinForms.Utilities, Version=10.1.0.0, Culture=neutral, PublicKeyToken=970a5af59bc48043" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bill_Confirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bill_Confirm.designer.cs">
+      <DependentUpon>Bill_Confirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_Print.designer.cs">
+      <DependentUpon>Customer_Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_Record.designer.cs">
+      <DependentUpon>Customer_Record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdvancedEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdvancedEditForm.designer.cs">
+      <DependentUpon>AdvancedEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialOrder_Request.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialOrder_Request.designer.cs">
+      <DependentUpon>SpecialOrder_Request.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialOrders_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialOrders_Report.designer.cs">
+      <DependentUpon>SpecialOrders_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_Report.designer.cs">
+      <DependentUpon>Customer_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_Update.designer.cs">
+      <DependentUpon>Customer_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CustomTextBox.designer.cs">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="ItemDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ItemDetails.designer.cs">
+      <DependentUpon>ItemDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -90,23 +173,17 @@
     <Compile Include="Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="OffersSellPrice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OffersSellPrice.Designer.cs">
-      <DependentUpon>OffersSellPrice.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProductsSellPrice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProductsSellPrice.designer.cs">
-      <DependentUpon>ProductsSellPrice.cs</DependentUpon>
-    </Compile>
     <Compile Include="ProductSellPricesReport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ProductSellPricesReport.designer.cs">
       <DependentUpon>ProductSellPricesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products_Report.designer.cs">
+      <DependentUpon>Products_Report.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,17 +193,35 @@
     <Compile Include="ProductsSellPriceForm.Designer.cs">
       <DependentUpon>ProductsSellPriceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuantityUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuantityUpdate.designer.cs">
+      <DependentUpon>QuantityUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="SalesMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SalesMainForm.designer.cs">
       <DependentUpon>SalesMainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RecordSellPriceForm.cs">
+    <Compile Include="SetSellPrice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RecordSellPriceForm.Designer.cs">
-      <DependentUpon>RecordSellPriceForm.cs</DependentUpon>
+    <Compile Include="SetSellPrice.Designer.cs">
+      <DependentUpon>SetSellPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoresDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoresDetails.designer.cs">
+      <DependentUpon>StoresDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TipImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipImage.designer.cs">
+      <DependentUpon>TipImage.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateSellPriceForm.cs">
       <SubType>Form</SubType>
@@ -135,17 +230,41 @@
       <DependentUpon>UpdateSellPriceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Bill_Confirm.resx">
+      <DependentUpon>Bill_Confirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Print.resx">
+      <DependentUpon>Customer_Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Record.resx">
+      <DependentUpon>Customer_Record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvancedEditForm.resx">
+      <DependentUpon>AdvancedEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialOrder_Request.resx">
+      <DependentUpon>SpecialOrder_Request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialOrders_Report.resx">
+      <DependentUpon>SpecialOrders_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Report.resx">
+      <DependentUpon>Customer_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Update.resx">
+      <DependentUpon>Customer_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemDetails.resx">
+      <DependentUpon>ItemDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductsSellPrice.resx">
-      <DependentUpon>ProductsSellPrice.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ProductSellPricesReport.resx">
       <DependentUpon>ProductSellPricesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products_Report.resx">
+      <DependentUpon>Products_Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -161,11 +280,20 @@
     <EmbeddedResource Include="ProductsSellPriceForm.resx">
       <DependentUpon>ProductsSellPriceForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuantityUpdate.resx">
+      <DependentUpon>QuantityUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SalesMainForm.resx">
       <DependentUpon>SalesMainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RecordSellPriceForm.resx">
-      <DependentUpon>RecordSellPriceForm.cs</DependentUpon>
+    <EmbeddedResource Include="SetSellPrice.resx">
+      <DependentUpon>SetSellPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoresDetails.resx">
+      <DependentUpon>StoresDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipImage.resx">
+      <DependentUpon>TipImage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateSellPriceForm.resx">
       <DependentUpon>UpdateSellPriceForm.cs</DependentUpon>
@@ -446,6 +574,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\نقطيه-البيع---white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundBlue.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
