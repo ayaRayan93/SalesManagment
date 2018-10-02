@@ -29,8 +29,8 @@ namespace SalesManagment
             dbconnection = new MySqlConnection(connection.connectionString);
             addedRecordIDs = new int[100];
 
-            //this.SetBoundFieldName(txtSupplier, "Supplier");
-            //this.SetBoundPropertyName(txtSupplier, "EditValue");
+            this.SetBoundFieldName(txtRequestNum, "رقم الطلب");
+            this.SetBoundPropertyName(txtRequestNum, "EditValue");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -186,50 +186,129 @@ namespace SalesManagment
         
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string q1, q2, q3, q4;
-            if (comType.Text == "")
+            try
             {
-                q1 = "select Type_ID from data";
-            }
-            else
-            {
-                q1 = comType.SelectedValue.ToString();
-            }
-            if (comFactory.Text == "")
-            {
-                q2 = "select Factory_ID from data";
-            }
-            else
-            {
-                q2 = comFactory.SelectedValue.ToString();
-            }
-            if (comProduct.Text == "")
-            {
-                q3 = "select Product_ID from data";
-            }
-            else
-            {
-                q3 = comProduct.SelectedValue.ToString();
-            }
-            if (comGroup.Text == "")
-            {
-                q4 = "select Group_ID from data";
-            }
-            else
-            {
-                q4 = comGroup.SelectedValue.ToString();
-            }
+                string q1, q2, q3, q4, qall = "";
+                if (comType.Text == "")
+                {
+                    q1 = "select Type_ID from type";
+                }
+                else
+                {
+                    q1 = comType.SelectedValue.ToString();
+                }
+                if (comFactory.Text == "")
+                {
+                    q2 = "select Factory_ID from factory";
+                }
+                else
+                {
+                    q2 = comFactory.SelectedValue.ToString();
+                }
+                if (comGroup.Text == "")
+                {
+                    q3 = "select Group_ID from groupo";
+                }
+                else
+                {
+                    q3 = comGroup.SelectedValue.ToString();
+                }
+                if (comProduct.Text == "")
+                {
+                    q4 = "select Product_ID from product";
+                }
+                else
+                {
+                    q4 = comProduct.SelectedValue.ToString();
+                }
 
-            string query = "select distinct data.Code as 'كود' , type.Type_Name as 'النوع', factory.Factory_Name as 'المصنع' ,groupo.Group_Name as 'المجموعة', product.Product_Name as 'المنتج' ,data.Colour as 'لون', data.Size as 'المقاس', data.Sort as 'الفرز',data.Classification as 'التصنيف', data.Description as 'الوصف'  from data INNER JOIN type ON type.Type_ID = data.Type_ID INNER JOIN product ON product.Product_ID = data.Product_ID INNER JOIN factory ON data.Factory_ID = factory.Factory_ID INNER JOIN groupo ON data.Group_ID = groupo.Group_ID  where  data.Type_ID IN(" + q1 + ") and  data.Factory_ID  IN(" + q2 + ") and data.Group_ID IN (" + q4 + ") ";
+                if (comSort.Text != "")
+                {
+                    qall += " and data.Sort_ID=" + comSort.SelectedValue.ToString();
+                }
+                if (comSize.Text != "")
+                {
+                    qall += " and data.Size_ID=" + comSize.SelectedValue.ToString();
+                }
+                if (comColor.Text != "")
+                {
+                    qall += " and data.Color_ID=" + comColor.SelectedValue.ToString();
+                }
 
-            MySqlDataAdapter da = new MySqlDataAdapter(query, dbconnection);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
+                dbconnection.Open();
+                //AND size.Factory_ID = factory.Factory_ID AND groupo.Factory_ID = factory.Factory_ID  AND product.Group_ID = groupo.Group_ID  AND factory.Type_ID = type.Type_ID AND color.Type_ID = type.Type_ID
+                string query = "select data.Data_ID,data.Code as 'الكود',CONCAT('(بند) ',product.Product_Name) as 'الاسم',type.Type_Name 'النوع',factory.Factory_Name as 'المصنع',groupo.Group_Name as 'المجموعة',color.Color_Name as 'اللون',size.Size_Value as 'المقاس',sort.Sort_Value as 'الفرز',data.Classification as 'التصنيف',data.Carton as 'الكرتنة',data.Description as 'البيان',sellprice.Price as 'السعر',sellprice.Sell_Discount as 'الخصم',sum(storage.Total_Meters) as 'الكمية' FROM data LEFT JOIN color ON color.Color_ID = data.Color_ID LEFT JOIN size ON size.Size_ID = data.Size_ID LEFT JOIN sort ON sort.Sort_ID = data.Sort_ID INNER JOIN groupo ON data.Group_ID = groupo.Group_ID INNER JOIN factory ON factory.Factory_ID = data.Factory_ID  INNER JOIN product ON product.Product_ID = data.Product_ID  INNER JOIN type ON type.Type_ID = data.Type_ID  INNER JOIN sellprice ON sellprice.Data_ID = data.Data_ID LEFT JOIN storage ON storage.Data_ID = data.Data_ID where  data.Type_ID IN(" + q1 + ") and  data.Factory_ID  IN(" + q2 + ") and data.Group_ID IN (" + q4 + ") and data.Data_ID=0 group by data.Data_ID";
+                MySqlDataAdapter da = new MySqlDataAdapter(query, dbconnection);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                gridControl1.DataSource = dt;
+
+                query = "SELECT data.Data_ID,data.Code as 'الكود',CONCAT('(بند) ',product.Product_Name) as 'الاسم',type.Type_Name 'النوع',factory.Factory_Name as 'المصنع',groupo.Group_Name as 'المجموعة',color.Color_Name as 'اللون',size.Size_Value as 'المقاس',sort.Sort_Value as 'الفرز',data.Classification as 'التصنيف',data.Carton as 'الكرتنة',data.Description as 'البيان',sellprice.Price as 'السعر',sellprice.Sell_Discount as 'الخصم',sellprice.Sell_Price as 'بعد الخصم',sum(storage.Total_Meters) as 'الكمية',sellprice.Price_Type FROM data LEFT JOIN color ON color.Color_ID = data.Color_ID LEFT JOIN size ON size.Size_ID = data.Size_ID LEFT JOIN sort ON sort.Sort_ID = data.Sort_ID INNER JOIN groupo ON data.Group_ID = groupo.Group_ID INNER JOIN factory ON factory.Factory_ID = data.Factory_ID  INNER JOIN product ON product.Product_ID = data.Product_ID  INNER JOIN type ON type.Type_ID = data.Type_ID  INNER JOIN sellprice ON sellprice.Data_ID = data.Data_ID LEFT JOIN storage ON storage.Data_ID = data.Data_ID where data.Type_ID IN(" + q1 + ") and data.Factory_ID IN(" + q2 + ") and data.Group_ID IN (" + q3 + ") and data.Product_ID IN (" + q4 + ") " + qall + " group by data.Data_ID";
+                MySqlCommand comand = new MySqlCommand(query, dbconnection);
+                MySqlDataReader dr = comand.ExecuteReader();
+                while (dr.Read())
+                {
+                    gridView1.AddNewRow();
+                    int rowHandle = gridView1.GetRowHandle(gridView1.DataRowCount);
+                    if (gridView1.IsNewItemRow(rowHandle))
+                    {
+                        if (dr["Price_Type"].ToString() == "لستة")
+                        {
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns[0], dr["Data_ID"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns[1], dr["الكود"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns[2], dr["الاسم"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns[3], dr["النوع"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns[4], dr["المصنع"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns[5], dr["المجموعة"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["اللون"], dr["اللون"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["المقاس"], dr["المقاس"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["الفرز"], dr["الفرز"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["التصنيف"], dr["التصنيف"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["الكرتنة"], dr["الكرتنة"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["البيان"], dr["البيان"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["السعر"], dr["السعر"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["الخصم"], dr["الخصم"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["بعد الخصم"], dr["بعد الخصم"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["الكمية"], dr["الكمية"]);
+
+                        }
+                        else if (dr["Price_Type"].ToString() == "قطعى")
+                        {
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns[0], dr["Data_ID"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns[1], dr["الكود"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns[2], dr["الاسم"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns[3], dr["النوع"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns[4], dr["المصنع"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns[5], dr["المجموعة"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["اللون"], dr["اللون"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["المقاس"], dr["المقاس"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["الفرز"], dr["الفرز"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["التصنيف"], dr["التصنيف"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["الكرتنة"], dr["الكرتنة"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["البيان"], dr["البيان"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["السعر"], dr["بعد الخصم"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["الخصم"], "");
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["بعد الخصم"], dr["بعد الخصم"]);
+                            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["الكمية"], dr["الكمية"]);
+
+                        }
+                    }
+                }
+                dr.Close();
+                if (gridView1.IsLastVisibleRow)
+                {
+                    gridView1.FocusedRowHandle = gridView1.RowCount - 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            dbconnection.Close();
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            row = dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex];
+            row = (DataGridViewRow)gridView1.GetRow(gridView1.GetSelectedRows()[0]);
 
             string value = row.Cells[0].Value.ToString();
             txtCode.Text = value;
@@ -239,17 +318,18 @@ namespace SalesManagment
             double x = 0;
             if (!Added && row != null && double.TryParse(txtPrice.Text,out x))
             {
-                addedRecordIDs[recordCount] = dataGridView1.SelectedCells[0].RowIndex + 1;
-                dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].DefaultCellStyle.BackColor = Color.Silver;
+                addedRecordIDs[recordCount] = gridView1.GetSelectedRows()[0];
+                /*gridView1.Rows[gridView1.SelectedCells[0].RowIndex].DefaultCellStyle.BackColor = Color.Silver;
                 recordCount++;
-                int n = dataGridView2.Rows.Add();
-                foreach (DataGridViewColumn item in dataGridView1.Columns)
+                /*int n = gridView2.AddNewRow();*/
+                int n=0;
+                foreach (DataGridViewColumn item in gridView1.Columns)
                 {
-                    dataGridView2.Rows[n].Cells[item.Index].Value = dataGridView1.Rows[row.Index].Cells[item.Index].Value.ToString();
+                    gridView2.SetRowCellValue(n,item.Index.ToString(), gridView1.GetRowCellDisplayText(row.Index,item.Index.ToString()));
 
                 }
-                dataGridView2.Rows[n].Cells[10].Value = txtTotalMeters.Text;
-                dataGridView2.Rows[n].Cells[11].Value = x;
+                /*gridView2.Rows[n].Cells[10].Value = txtTotalMeters.Text;
+                gridView2.Rows[n].Cells[11].Value = x;*/
 
                 //clear fields
                 txtCode.Text = txtPrice.Text = txtTotalMeters.Text = "";
@@ -359,7 +439,7 @@ namespace SalesManagment
                         id = (int)com.ExecuteScalar();
 
 
-                        foreach (DataGridViewRow row in dataGridView2.Rows)
+                        /*foreach (DataGridViewRow row in dataGridView2.Rows)
                         {
 
                             query = "insert into request_details (Request_ID,Code,Quantity,Price,Supplier_ID) values (@Request_ID,@Code,@Quantity,@Price,@Supplier_ID)";
@@ -378,7 +458,7 @@ namespace SalesManagment
                           
                             com.ExecuteNonQuery();
                             
-                        }
+                        }*/
                         MessageBox.Show("Done");
                         dbconnection.Close();
 
@@ -387,7 +467,7 @@ namespace SalesManagment
                         if (comDelegate.Text != "" && txtEmployee.Text != "" )
                         {
                             DataTable dt = new DataTable();
-                            for (int i = 0; i < dataGridView2.Columns.Count; i++)
+                            /*for (int i = 0; i < dataGridView2.Columns.Count; i++)
                             {
                                 dt.Columns.Add(dataGridView2.Columns[i].Name.ToString());
                             }
@@ -400,7 +480,7 @@ namespace SalesManagment
                                 }
 
                                 dt.Rows.Add(dr);
-                            }
+                            }*/
 
                             if (comCustomer.Text != "")
                             {

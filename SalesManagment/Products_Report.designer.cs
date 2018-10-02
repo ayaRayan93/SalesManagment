@@ -683,9 +683,6 @@
             this.checkEditSets.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkEditSets.Location = new System.Drawing.Point(544, 3);
             this.checkEditSets.Name = "checkEditSets";
-            // 
-            // 
-            // 
             this.checkEditSets.Properties.Caption = "";
             this.checkEditSets.Size = new System.Drawing.Size(25, 19);
             this.checkEditSets.TabIndex = 15;
@@ -696,9 +693,6 @@
             this.checkEditOffers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkEditOffers.Location = new System.Drawing.Point(110, 3);
             this.checkEditOffers.Name = "checkEditOffers";
-            // 
-            // 
-            // 
             this.checkEditOffers.Properties.Caption = "";
             this.checkEditOffers.Size = new System.Drawing.Size(25, 19);
             this.checkEditOffers.TabIndex = 16;

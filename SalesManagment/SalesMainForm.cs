@@ -511,7 +511,7 @@ namespace SalesManagment
 
         public void SpecialOrdersFunction()
         {
-            string query = "SELECT Count(special_order.SpecialOrder_ID) FROM special_order INNER JOIN dash ON special_order.Dash_ID = dash.Dash_ID where special_order.Record=0 AND dash.Branch_ID=" + EmpBranchId;
+            string query = "SELECT Count(special_order.SpecialOrder_ID) FROM special_order INNER JOIN dash ON special_order.Dash_ID = dash.Dash_ID INNER JOIN requests ON special_order.SpecialOrder_ID = requests.SpecialOrder_ID where special_order.Record=0 AND dash.Branch_ID=" + EmpBranchId;
             MySqlCommand command = new MySqlCommand(query, dbconnection);
             dbconnection.Open();
             string reader = command.ExecuteScalar().ToString();

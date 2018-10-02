@@ -38,7 +38,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.comGroup = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.comDelegate = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,19 +47,6 @@
             this.radCon = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
             this.comCustomer = new System.Windows.Forms.ComboBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Factory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Group = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Colour = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GridSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sort = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Classification = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total_Meter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.txtTotalMeters = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -79,18 +65,36 @@
             this.label13 = new System.Windows.Forms.Label();
             this.comSupplier = new System.Windows.Forms.ComboBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRequestNum = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.comColor = new System.Windows.Forms.ComboBox();
+            this.comSize = new System.Windows.Forms.ComboBox();
+            this.comSort = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SetBoundPropertyName(this.groupBox1, "");
+            this.groupBox1.Controls.Add(this.comColor);
+            this.groupBox1.Controls.Add(this.comSize);
+            this.groupBox1.Controls.Add(this.comSort);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.comType);
             this.groupBox1.Controls.Add(this.label3);
@@ -100,10 +104,10 @@
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.comGroup);
-            this.groupBox1.Location = new System.Drawing.Point(67, 105);
+            this.groupBox1.Location = new System.Drawing.Point(9, 105);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(702, 69);
+            this.groupBox1.Size = new System.Drawing.Size(826, 69);
             this.groupBox1.TabIndex = 75;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "الفلاتر";
@@ -111,7 +115,7 @@
             // btnSearch
             // 
             this.SetBoundPropertyName(this.btnSearch, "");
-            this.btnSearch.Location = new System.Drawing.Point(18, 28);
+            this.btnSearch.Location = new System.Drawing.Point(55, 39);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(72, 23);
             this.btnSearch.TabIndex = 13;
@@ -123,17 +127,17 @@
             // 
             this.SetBoundPropertyName(this.comType, "");
             this.comType.FormattingEnabled = true;
-            this.comType.Location = new System.Drawing.Point(461, 13);
+            this.comType.Location = new System.Drawing.Point(586, 13);
             this.comType.Name = "comType";
-            this.comType.Size = new System.Drawing.Size(120, 21);
-            this.comType.TabIndex = 0;
+            this.comType.Size = new System.Drawing.Size(150, 21);
+            this.comType.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.SetBoundPropertyName(this.label3, "");
             this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label3.Location = new System.Drawing.Point(319, 46);
+            this.label3.Location = new System.Drawing.Point(525, 43);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label3.Size = new System.Drawing.Size(44, 17);
@@ -145,7 +149,7 @@
             this.label1.AutoSize = true;
             this.SetBoundPropertyName(this.label1, "");
             this.label1.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label1.Location = new System.Drawing.Point(598, 19);
+            this.label1.Location = new System.Drawing.Point(751, 15);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(26, 17);
@@ -156,26 +160,26 @@
             // 
             this.SetBoundPropertyName(this.comProduct, "");
             this.comProduct.FormattingEnabled = true;
-            this.comProduct.Location = new System.Drawing.Point(182, 40);
+            this.comProduct.Location = new System.Drawing.Point(361, 41);
             this.comProduct.Name = "comProduct";
-            this.comProduct.Size = new System.Drawing.Size(120, 21);
-            this.comProduct.TabIndex = 9;
+            this.comProduct.Size = new System.Drawing.Size(150, 21);
+            this.comProduct.TabIndex = 8;
             // 
             // comFactory
             // 
             this.SetBoundPropertyName(this.comFactory, "");
             this.comFactory.FormattingEnabled = true;
-            this.comFactory.Location = new System.Drawing.Point(461, 40);
+            this.comFactory.Location = new System.Drawing.Point(586, 41);
             this.comFactory.Name = "comFactory";
-            this.comFactory.Size = new System.Drawing.Size(120, 21);
-            this.comFactory.TabIndex = 3;
+            this.comFactory.Size = new System.Drawing.Size(150, 21);
+            this.comFactory.TabIndex = 6;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.SetBoundPropertyName(this.label14, "");
             this.label14.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label14.Location = new System.Drawing.Point(319, 19);
+            this.label14.Location = new System.Drawing.Point(515, 15);
             this.label14.Name = "label14";
             this.label14.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label14.Size = new System.Drawing.Size(65, 17);
@@ -187,7 +191,7 @@
             this.label15.AutoSize = true;
             this.SetBoundPropertyName(this.label15, "");
             this.label15.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label15.Location = new System.Drawing.Point(598, 46);
+            this.label15.Location = new System.Drawing.Point(740, 43);
             this.label15.Name = "label15";
             this.label15.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label15.Size = new System.Drawing.Size(48, 17);
@@ -198,23 +202,10 @@
             // 
             this.SetBoundPropertyName(this.comGroup, "");
             this.comGroup.FormattingEnabled = true;
-            this.comGroup.Location = new System.Drawing.Point(182, 13);
+            this.comGroup.Location = new System.Drawing.Point(361, 13);
             this.comGroup.Name = "comGroup";
-            this.comGroup.Size = new System.Drawing.Size(120, 21);
-            this.comGroup.TabIndex = 6;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SetBoundPropertyName(this.dataGridView1, "");
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 182);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridView1.Size = new System.Drawing.Size(828, 181);
-            this.dataGridView1.TabIndex = 76;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.comGroup.Size = new System.Drawing.Size(150, 21);
+            this.comGroup.TabIndex = 7;
             // 
             // label2
             // 
@@ -222,7 +213,7 @@
             this.label2.AutoSize = true;
             this.SetBoundPropertyName(this.label2, "");
             this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label2.Location = new System.Drawing.Point(456, 45);
+            this.label2.Location = new System.Drawing.Point(457, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 17);
             this.label2.TabIndex = 78;
@@ -232,11 +223,12 @@
             // 
             this.comDelegate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SetBoundPropertyName(this.comDelegate, "");
+            this.comDelegate.Enabled = false;
             this.comDelegate.Font = new System.Drawing.Font("Tahoma", 10F);
             this.comDelegate.FormattingEnabled = true;
-            this.comDelegate.Location = new System.Drawing.Point(317, 41);
+            this.comDelegate.Location = new System.Drawing.Point(303, 6);
             this.comDelegate.Name = "comDelegate";
-            this.comDelegate.Size = new System.Drawing.Size(121, 24);
+            this.comDelegate.Size = new System.Drawing.Size(150, 24);
             this.comDelegate.TabIndex = 77;
             // 
             // label4
@@ -244,7 +236,7 @@
             this.label4.AutoSize = true;
             this.SetBoundPropertyName(this.label4, "");
             this.label4.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label4.Location = new System.Drawing.Point(175, 17);
+            this.label4.Location = new System.Drawing.Point(165, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(119, 17);
             this.label4.TabIndex = 105;
@@ -256,8 +248,8 @@
             this.comEngCon.FormattingEnabled = true;
             this.comEngCon.Location = new System.Drawing.Point(11, 17);
             this.comEngCon.Name = "comEngCon";
-            this.comEngCon.Size = new System.Drawing.Size(159, 21);
-            this.comEngCon.TabIndex = 104;
+            this.comEngCon.Size = new System.Drawing.Size(150, 21);
+            this.comEngCon.TabIndex = 12;
             this.comEngCon.SelectedValueChanged += new System.EventHandler(this.comEngCon_SelectedValueChanged);
             this.comEngCon.TextChanged += new System.EventHandler(this.comEngCon_SelectedValueChanged);
             // 
@@ -266,11 +258,12 @@
             this.radioButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButton3.AutoSize = true;
             this.SetBoundPropertyName(this.radioButton3, "");
-            this.radioButton3.Location = new System.Drawing.Point(85, 9);
+            this.radioButton3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.Location = new System.Drawing.Point(82, 8);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radioButton3.Size = new System.Drawing.Size(51, 17);
-            this.radioButton3.TabIndex = 102;
+            this.radioButton3.Size = new System.Drawing.Size(56, 20);
+            this.radioButton3.TabIndex = 16;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "عميل";
             this.radioButton3.UseVisualStyleBackColor = true;
@@ -281,11 +274,12 @@
             this.radEng.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radEng.AutoSize = true;
             this.SetBoundPropertyName(this.radEng, "");
-            this.radEng.Location = new System.Drawing.Point(241, 9);
+            this.radEng.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radEng.Location = new System.Drawing.Point(207, 8);
             this.radEng.Name = "radEng";
             this.radEng.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radEng.Size = new System.Drawing.Size(60, 17);
-            this.radEng.TabIndex = 101;
+            this.radEng.Size = new System.Drawing.Size(68, 20);
+            this.radEng.TabIndex = 14;
             this.radEng.TabStop = true;
             this.radEng.Text = "مهندس";
             this.radEng.UseVisualStyleBackColor = true;
@@ -296,11 +290,12 @@
             this.radCon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radCon.AutoSize = true;
             this.SetBoundPropertyName(this.radCon, "");
-            this.radCon.Location = new System.Drawing.Point(163, 9);
+            this.radCon.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radCon.Location = new System.Drawing.Point(144, 8);
             this.radCon.Name = "radCon";
             this.radCon.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radCon.Size = new System.Drawing.Size(52, 17);
-            this.radCon.TabIndex = 100;
+            this.radCon.Size = new System.Drawing.Size(57, 20);
+            this.radCon.TabIndex = 15;
             this.radCon.TabStop = true;
             this.radCon.Text = "مقاول";
             this.radCon.UseVisualStyleBackColor = true;
@@ -311,7 +306,7 @@
             this.label9.AutoSize = true;
             this.SetBoundPropertyName(this.label9, "");
             this.label9.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label9.Location = new System.Drawing.Point(214, 43);
+            this.label9.Location = new System.Drawing.Point(204, 43);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(40, 17);
             this.label9.TabIndex = 108;
@@ -323,106 +318,8 @@
             this.comCustomer.FormattingEnabled = true;
             this.comCustomer.Location = new System.Drawing.Point(11, 43);
             this.comCustomer.Name = "comCustomer";
-            this.comCustomer.Size = new System.Drawing.Size(159, 21);
-            this.comCustomer.TabIndex = 107;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SetBoundPropertyName(this.dataGridView2, "");
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Code,
-            this.Type,
-            this.Factory,
-            this.Group,
-            this.Product,
-            this.Colour,
-            this.GridSize,
-            this.Sort,
-            this.Classification,
-            this.Description,
-            this.Total_Meter,
-            this.Price});
-            this.dataGridView2.Location = new System.Drawing.Point(7, 403);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridView2.Size = new System.Drawing.Size(828, 152);
-            this.dataGridView2.TabIndex = 109;
-            // 
-            // Code
-            // 
-            this.Code.HeaderText = "الكود";
-            this.Code.Name = "Code";
-            this.Code.ReadOnly = true;
-            // 
-            // Type
-            // 
-            this.Type.HeaderText = "النوع";
-            this.Type.Name = "Type";
-            this.Type.ReadOnly = true;
-            // 
-            // Factory
-            // 
-            this.Factory.HeaderText = "المصنع";
-            this.Factory.Name = "Factory";
-            this.Factory.ReadOnly = true;
-            // 
-            // Group
-            // 
-            this.Group.HeaderText = "المجموعة";
-            this.Group.Name = "Group";
-            this.Group.ReadOnly = true;
-            // 
-            // Product
-            // 
-            this.Product.HeaderText = "المنتج";
-            this.Product.Name = "Product";
-            this.Product.ReadOnly = true;
-            // 
-            // Colour
-            // 
-            this.Colour.HeaderText = "اللون";
-            this.Colour.Name = "Colour";
-            this.Colour.ReadOnly = true;
-            // 
-            // GridSize
-            // 
-            this.GridSize.HeaderText = "المقاس";
-            this.GridSize.Name = "GridSize";
-            this.GridSize.ReadOnly = true;
-            // 
-            // Sort
-            // 
-            this.Sort.HeaderText = "الفرز";
-            this.Sort.Name = "Sort";
-            this.Sort.ReadOnly = true;
-            // 
-            // Classification
-            // 
-            this.Classification.HeaderText = "التصنيف";
-            this.Classification.Name = "Classification";
-            this.Classification.ReadOnly = true;
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "الوصف";
-            this.Description.Name = "Description";
-            this.Description.ReadOnly = true;
-            // 
-            // Total_Meter
-            // 
-            this.Total_Meter.HeaderText = "اجمالي عدد الامتار";
-            this.Total_Meter.Name = "Total_Meter";
-            this.Total_Meter.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "السعر";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
+            this.comCustomer.Size = new System.Drawing.Size(150, 21);
+            this.comCustomer.TabIndex = 13;
             // 
             // label10
             // 
@@ -430,7 +327,7 @@
             this.label10.AutoSize = true;
             this.SetBoundPropertyName(this.label10, "");
             this.label10.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label10.Location = new System.Drawing.Point(484, 375);
+            this.label10.Location = new System.Drawing.Point(470, 375);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(115, 17);
             this.label10.TabIndex = 113;
@@ -441,10 +338,10 @@
             this.txtTotalMeters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SetBoundPropertyName(this.txtTotalMeters, "");
             this.txtTotalMeters.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtTotalMeters.Location = new System.Drawing.Point(336, 371);
+            this.txtTotalMeters.Location = new System.Drawing.Point(344, 371);
             this.txtTotalMeters.Name = "txtTotalMeters";
-            this.txtTotalMeters.Size = new System.Drawing.Size(134, 24);
-            this.txtTotalMeters.TabIndex = 112;
+            this.txtTotalMeters.Size = new System.Drawing.Size(120, 24);
+            this.txtTotalMeters.TabIndex = 3;
             // 
             // label5
             // 
@@ -462,6 +359,7 @@
             // 
             this.txtCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SetBoundPropertyName(this.txtCode, "");
+            this.txtCode.Enabled = false;
             this.txtCode.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtCode.Location = new System.Drawing.Point(607, 371);
             this.txtCode.Name = "txtCode";
@@ -484,7 +382,7 @@
             // 
             this.btnConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SetBoundPropertyName(this.btnConfirm, "");
-            this.btnConfirm.Location = new System.Drawing.Point(9, 561);
+            this.btnConfirm.Location = new System.Drawing.Point(9, 591);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(96, 29);
             this.btnConfirm.TabIndex = 130;
@@ -498,7 +396,7 @@
             this.label6.AutoSize = true;
             this.SetBoundPropertyName(this.label6, "");
             this.label6.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label6.Location = new System.Drawing.Point(456, 77);
+            this.label6.Location = new System.Drawing.Point(463, 77);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 17);
             this.label6.TabIndex = 132;
@@ -509,17 +407,17 @@
             this.txtEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SetBoundPropertyName(this.txtEmployee, "");
             this.txtEmployee.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtEmployee.Location = new System.Drawing.Point(317, 73);
+            this.txtEmployee.Location = new System.Drawing.Point(303, 73);
             this.txtEmployee.Name = "txtEmployee";
-            this.txtEmployee.Size = new System.Drawing.Size(121, 24);
-            this.txtEmployee.TabIndex = 133;
+            this.txtEmployee.Size = new System.Drawing.Size(150, 24);
+            this.txtEmployee.TabIndex = 2;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SetBoundPropertyName(this.dateTimePicker1, "");
             this.dateTimePicker1.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(515, 41);
+            this.dateTimePicker1.Location = new System.Drawing.Point(516, 40);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(229, 24);
             this.dateTimePicker1.TabIndex = 134;
@@ -529,7 +427,7 @@
             this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SetBoundPropertyName(this.dateTimePicker2, "");
             this.dateTimePicker2.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.dateTimePicker2.Location = new System.Drawing.Point(515, 73);
+            this.dateTimePicker2.Location = new System.Drawing.Point(516, 73);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(229, 24);
             this.dateTimePicker2.TabIndex = 135;
@@ -540,7 +438,7 @@
             this.label7.AutoSize = true;
             this.SetBoundPropertyName(this.label7, "");
             this.label7.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label7.Location = new System.Drawing.Point(750, 77);
+            this.label7.Location = new System.Drawing.Point(751, 77);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 17);
             this.label7.TabIndex = 136;
@@ -552,7 +450,7 @@
             this.label8.AutoSize = true;
             this.SetBoundPropertyName(this.label8, "");
             this.label8.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label8.Location = new System.Drawing.Point(757, 45);
+            this.label8.Location = new System.Drawing.Point(758, 44);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 17);
             this.label8.TabIndex = 137;
@@ -575,10 +473,10 @@
             this.txtPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SetBoundPropertyName(this.txtPrice, "");
             this.txtPrice.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtPrice.Location = new System.Drawing.Point(135, 371);
+            this.txtPrice.Location = new System.Drawing.Point(157, 371);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(134, 24);
-            this.txtPrice.TabIndex = 138;
+            this.txtPrice.Size = new System.Drawing.Size(120, 24);
+            this.txtPrice.TabIndex = 4;
             // 
             // groupBox2
             // 
@@ -590,7 +488,7 @@
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Location = new System.Drawing.Point(9, 27);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(298, 74);
+            this.groupBox2.Size = new System.Drawing.Size(285, 74);
             this.groupBox2.TabIndex = 140;
             this.groupBox2.TabStop = false;
             // 
@@ -600,7 +498,7 @@
             this.label13.AutoSize = true;
             this.SetBoundPropertyName(this.label13, "");
             this.label13.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label13.Location = new System.Drawing.Point(456, 14);
+            this.label13.Location = new System.Drawing.Point(463, 44);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(42, 17);
             this.label13.TabIndex = 144;
@@ -612,35 +510,37 @@
             this.SetBoundPropertyName(this.comSupplier, "");
             this.comSupplier.Font = new System.Drawing.Font("Tahoma", 10F);
             this.comSupplier.FormattingEnabled = true;
-            this.comSupplier.Location = new System.Drawing.Point(317, 10);
+            this.comSupplier.Location = new System.Drawing.Point(303, 40);
             this.comSupplier.Name = "comSupplier";
-            this.comSupplier.Size = new System.Drawing.Size(121, 24);
-            this.comSupplier.TabIndex = 143;
+            this.comSupplier.Size = new System.Drawing.Size(150, 24);
+            this.comSupplier.TabIndex = 1;
             // 
             // radioButton1
             // 
             this.radioButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButton1.AutoSize = true;
             this.SetBoundPropertyName(this.radioButton1, "");
-            this.radioButton1.Location = new System.Drawing.Point(14, 9);
+            this.radioButton1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(28, 8);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radioButton1.Size = new System.Drawing.Size(43, 17);
-            this.radioButton1.TabIndex = 145;
+            this.radioButton1.Size = new System.Drawing.Size(48, 20);
+            this.radioButton1.TabIndex = 17;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "تاجر";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radiotype_CheckedChanged);
             // 
-            // textBox1
+            // txtRequestNum
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SetBoundPropertyName(this.textBox1, "");
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox1.Location = new System.Drawing.Point(623, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 24);
-            this.textBox1.TabIndex = 147;
+            this.txtRequestNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SetBoundPropertyName(this.txtRequestNum, "");
+            this.txtRequestNum.Enabled = false;
+            this.txtRequestNum.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtRequestNum.Location = new System.Drawing.Point(645, 6);
+            this.txtRequestNum.Name = "txtRequestNum";
+            this.txtRequestNum.Size = new System.Drawing.Size(100, 24);
+            this.txtRequestNum.TabIndex = 147;
             // 
             // label12
             // 
@@ -648,11 +548,114 @@
             this.label12.AutoSize = true;
             this.SetBoundPropertyName(this.label12, "");
             this.label12.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label12.Location = new System.Drawing.Point(760, 14);
+            this.label12.Location = new System.Drawing.Point(761, 10);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(68, 17);
             this.label12.TabIndex = 146;
             this.label12.Text = "رقم الطلب";
+            // 
+            // comColor
+            // 
+            this.comColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SetBoundPropertyName(this.comColor, "");
+            this.comColor.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comColor.FormattingEnabled = true;
+            this.comColor.Location = new System.Drawing.Point(189, 41);
+            this.comColor.Name = "comColor";
+            this.comColor.Size = new System.Drawing.Size(100, 21);
+            this.comColor.TabIndex = 10;
+            // 
+            // comSize
+            // 
+            this.comSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SetBoundPropertyName(this.comSize, "");
+            this.comSize.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comSize.FormattingEnabled = true;
+            this.comSize.Location = new System.Drawing.Point(188, 13);
+            this.comSize.Name = "comSize";
+            this.comSize.Size = new System.Drawing.Size(100, 21);
+            this.comSize.TabIndex = 9;
+            // 
+            // comSort
+            // 
+            this.comSort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SetBoundPropertyName(this.comSort, "");
+            this.comSort.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comSort.FormattingEnabled = true;
+            this.comSort.Location = new System.Drawing.Point(41, 13);
+            this.comSort.Name = "comSort";
+            this.comSort.Size = new System.Drawing.Size(100, 21);
+            this.comSort.TabIndex = 11;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.SetBoundPropertyName(this.label16, "");
+            this.label16.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(293, 43);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(35, 16);
+            this.label16.TabIndex = 22;
+            this.label16.Text = "اللون";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.AutoSize = true;
+            this.SetBoundPropertyName(this.label17, "");
+            this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(292, 15);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(50, 16);
+            this.label17.TabIndex = 21;
+            this.label17.Text = "المقاس";
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.SetBoundPropertyName(this.label18, "");
+            this.label18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(146, 15);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(32, 16);
+            this.label18.TabIndex = 20;
+            this.label18.Text = "الفرز";
+            // 
+            // gridControl1
+            // 
+            this.SetBoundPropertyName(this.gridControl1, "");
+            this.gridControl1.Location = new System.Drawing.Point(9, 181);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.gridControl1.Size = new System.Drawing.Size(826, 182);
+            this.gridControl1.TabIndex = 148;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
+            // gridControl2
+            // 
+            this.SetBoundPropertyName(this.gridControl2, "");
+            this.gridControl2.Location = new System.Drawing.Point(9, 403);
+            this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.gridControl2.Size = new System.Drawing.Size(826, 182);
+            this.gridControl2.TabIndex = 149;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.Name = "gridView2";
             // 
             // AdvancedEditForm
             // 
@@ -660,7 +663,9 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.gridControl2);
+            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.txtRequestNum);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label13);
@@ -680,23 +685,23 @@
             this.Controls.Add(this.txtTotalMeters);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCode);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radEng);
             this.Controls.Add(this.radCon);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comDelegate);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Name = "AdvancedEditForm";
-            this.Size = new System.Drawing.Size(843, 596);
+            this.Size = new System.Drawing.Size(843, 626);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -714,7 +719,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox comGroup;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comDelegate;
         private System.Windows.Forms.Label label4;
@@ -724,7 +728,6 @@
         private System.Windows.Forms.RadioButton radCon;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comCustomer;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtTotalMeters;
         private System.Windows.Forms.Label label5;
@@ -742,21 +745,19 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox comSupplier;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Factory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Group;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Product;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Colour;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GridSize;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sort;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Classification;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total_Meter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRequestNum;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comColor;
+        private System.Windows.Forms.ComboBox comSize;
+        private System.Windows.Forms.ComboBox comSort;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
     }
 }
 

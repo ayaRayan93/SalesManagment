@@ -72,7 +72,7 @@ namespace SalesManagment
             {
                 //this.gridView1.FocusedRowHandle = GridControl.NewItemRowHandle;
                 //this.gridView1.ShowPopupEditForm();
-                XtraTabPage xtraTabPage = getTabPage("tabPageAddCustomer");
+                /*XtraTabPage xtraTabPage = getTabPage("tabPageAddCustomer");
                 if (xtraTabPage == null)
                 {
                     SalesMainForm.MainTabPageAddCustomer.Controls.Clear();
@@ -125,7 +125,7 @@ namespace SalesManagment
                     //panelAddCustomer.Controls.Add(form);
                     SalesMainForm.MainTabPageAddCustomer.Controls.Add(form);
                     form.Show();
-                }
+                }*/
             }
             catch (Exception ex)
             {
@@ -137,7 +137,7 @@ namespace SalesManagment
         public void search()
         {
             DataTable sourceData = new DataTable();
-            MySqlDataAdapter adapterCustomer = new MySqlDataAdapter("SELECT special_order.Description as 'الوصف' FROM special_order INNER JOIN dash ON special_order.Dash_ID = dash.Dash_ID where special_order.Record=0 AND dash.Branch_ID=" + EmpBranchId, conn);
+            MySqlDataAdapter adapterCustomer = new MySqlDataAdapter("SELECT requests.BranchBillNumber as 'رقم الطلب',special_order.Description as 'الوصف' FROM special_order INNER JOIN dash ON special_order.Dash_ID = dash.Dash_ID INNER JOIN requests ON special_order.SpecialOrder_ID = requests.SpecialOrder_ID where special_order.Record=0 AND dash.Branch_ID=" + EmpBranchId, conn);
             adapterCustomer.Fill(sourceData);
             gridControl1.DataSource = sourceData;
         }
